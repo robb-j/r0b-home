@@ -1,0 +1,7 @@
+.page-block:first-child {
+  padding-top: 3.25rem
+}
+
+.button.is-circle {
+  border-color: rgba(255, 255, 255, 0.4)
+}
