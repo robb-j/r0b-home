@@ -6,3 +6,5 @@ node_modules
 coverage
 *.env
 .DS_Store
+r0b
+r0b.tar.gz

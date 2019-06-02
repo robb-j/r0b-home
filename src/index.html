@@ -6,9 +6,7 @@
   <title>Rob Anderson</title>
   <link rel="stylesheet" href="design/styles.css">
   <link rel="stylesheet" href="custom.css">
-  <!-- @import url('https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap') -->
-  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Kalam&display=swap" rel="stylesheet">
-  <!-- <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Patrick+Hand&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -35,26 +33,37 @@
   </header>
   <main>
     <article class="page-block is-liberty has-slope-after">
-      <section class="section">
+      <section class="section is-large">
         <div class="container has-text-white">
           <div class="about-me">
-            <img class="profile-pic" width="128" height="128" src="img/circle.png">
+            <img class="profile-pic" width="128" height="128" src="img/me.jpeg">
             <p class="strapline"> I'm making ... stuff </p>
             <div class="links">
               <a class="button is-circle is-twitter">
-                <svg href="design/assets/fa/twitter-brands.svg">
+                <svg>
+                  <use xlink:href="design/assets/fa/twitter-brands.svg#twitter"></use>
+                </svg>
               </a>
               <a class="button is-circle is-github">
-                <svg href="design/assets/fa/github-brands.svg">
+                <svg>
+                  <use xlink:href="design/assets/fa/github-brands.svg#github"></use>
+                </svg>
               </a>
               <a class="button is-circle is-dockerhub">
-                <svg href="design/assets/fa/docker-brands.svg">
+                <svg>
+                  <use xlink:href="design/assets/fa/docker-brands.svg#docker"></use>
+                </svg>
               </a>
               <a class="button is-circle is-instagram">
-                <svg href="design/assets/fa/instagram-brands.svg">
+                <svg>
+                  <use xlink:href="design/assets/fa/instagram-brands.svg#instagram"></use>
+                </svg>
               </a>
               <a class="button is-circle is-scholar">
                 <svg href="design/assets/fa/graduation-cap-solid.svg">
+                <svg>
+                  <use xlink:href="design/assets/fa/graduation-cap-solid.svg#cap"></use>
+                </svg>
               </a>
             </div>
           </div>
@@ -62,7 +71,7 @@
       </section>
     </article>
     <article class="page-block is-paper is-inbetween">
-      <section class="section">
+      <section class="section is-large">
         <div class="container">
           <div class="portfolio-section">
               <div class="clean-card popup-card">
@@ -101,22 +110,31 @@
       </section>
     </article>
     <article class="page-block is-magenta has-slope-before has-slope-after">
-      <section class="section">
+      <section class="section is-large">
         <div class="container">
           <div class="a4-section">
             <div class="a4-page content">
               <h2> Blog </h2>
               <p> Sometimes I write things down that I think are intereseting </p>
               <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Vestibulum id ligula porta felis euismod semper. </p>
+              <ol>
+                <li>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</li>
+                <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
+                <li>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</li>
+              </ol>
+              <p> Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+              <p class="has-text-right">
+                <a class="view-more" href="#">More</a>
+              </p>
             </div>
           </div>
         </div>
       </section>
     </article>
     <article class="page-block is-paper is-inbetween">
-      <section class="section">
+      <section class="section is-large">
         <div class="container">
-          <div class="trello-board">
+          <div class="trello-board is-abstract">
             <div class="board-header">
               <h3>My current projects</h3>
             </div>
@@ -178,12 +196,16 @@
                 </div>
               </div>
             </div>
+            
+            <p class="has-text-right">
+              <a class="view-more is-light" href="#">More</a>
+            </p>
           </div>
         </div>
       </section>
     </article>
   </main>
-  <footer class="page-footer">
+  <footer class="page-footer is-paper">
     Made by 
     <a href="https://t.r0b.io">@robbb_j</a>
     and 

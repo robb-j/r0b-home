@@ -5,3 +5,8 @@
 .button.is-circle {
   border-color: rgba(255, 255, 255, 0.4)
 }
+
+.trello-board.is-abstract {
+  background-size: cover;
+  background-image: url(./img/abstract-background.jpg)
+}
