@@ -1,12 +1,23 @@
 .page-block:first-child {
-  padding-top: 3.25rem
+  padding-top: 3.25rem;
 }
 
 .button.is-circle {
-  border-color: rgba(255, 255, 255, 0.4)
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .trello-board.is-abstract {
   background-size: cover;
-  background-image: url(./img/abstract-background.jpg)
+  background-image: url(./img/abstract-background.jpg);
+}
+
+.a4-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.trello-view-more {
+  text-align: right;
+  padding: 1rem;
 }
