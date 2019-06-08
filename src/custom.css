@@ -21,3 +21,63 @@
   text-align: right;
   padding: 1rem;
 }
+
+.button.is-circle {
+  transition: transform 0.15s ease;
+}
+
+.button.is-circle:hover {
+  transform: scale(1.05);
+}
+
+.about-me .view-more {
+  position: relative;
+  top: -2px;
+  margin-left: 0.75em;
+}
+
+footer {
+  position: relative;
+}
+
+.glitch-pixel {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 6px;
+  height: 6px;
+  background-color: black;
+}
+
+body:not(.is-glitched) .glitched {
+  display: none;
+}
+
+body.is-glitched {
+  overflow: hidden;
+}
+
+@keyframes glitched {
+  from {
+    background: transparent;
+  }
+  to {
+    background: black;
+  }
+}
+
+.glitched {
+  position: fixed;
+  transition: background 3s ease;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: 4s ease glitched forwards;
+  z-index: 100;
+}
+
+.glitched iframe {
+  height: 100vh;
+  width: 100vw;
+}

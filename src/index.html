@@ -23,10 +23,10 @@
 
       <div class="navbar-menu">
         <div class="navbar-end">
-          <a class="navbar-item" href="#"> About </a>
-          <a class="navbar-item" href="#"> Portfolio </a>
-          <a class="navbar-item" href="#"> Blog </a>
-          <a class="navbar-item" href="#"> Labs </a>
+          <a class="navbar-item" href="https://about.r0b.io"> About </a>
+          <a class="navbar-item" href="https://projects.r0b.io"> Portfolio </a>
+          <a class="navbar-item" href="https://blog.r0b.io"> Blog </a>
+          <a class="navbar-item" href="https://labs.r0b.io"> Labs </a>
         </div>
       </div>
     </nav>
@@ -37,34 +37,37 @@
         <div class="container has-text-white">
           <div class="about-me">
             <img class="profile-pic" width="128" height="128" src="img/me.jpeg">
-            <p class="strapline"> I'm making ... stuff </p>
+            <p class="strapline">
+              I'm Rob, I make ...
+              <span class="skill">stuff</span>
+            </p>
             <div class="links">
-              <a class="button is-circle is-twitter">
+              <a class="button is-circle is-twitter" href="https://twitter.com/Robbb_J">
                 <svg>
                   <use xlink:href="design/assets/fa/twitter-brands.svg#twitter"></use>
                 </svg>
               </a>
-              <a class="button is-circle is-github">
+              <a class="button is-circle is-github" href="https://github.com/robb-j">
                 <svg>
                   <use xlink:href="design/assets/fa/github-brands.svg#github"></use>
                 </svg>
               </a>
-              <a class="button is-circle is-dockerhub">
+              <a class="button is-circle is-dockerhub" href="https://hub.docker.com/u/robbj">
                 <svg>
                   <use xlink:href="design/assets/fa/docker-brands.svg#docker"></use>
                 </svg>
               </a>
-              <a class="button is-circle is-instagram">
+              <a class="button is-circle is-instagram" href="https://www.instagram.com/robb_j/">
                 <svg>
                   <use xlink:href="design/assets/fa/instagram-brands.svg#instagram"></use>
                 </svg>
               </a>
-              <a class="button is-circle is-scholar">
-                <svg href="design/assets/fa/graduation-cap-solid.svg">
+              <a class="button is-circle is-scholar" href="https://scholar.google.co.uk/citations?user=sL5l7hIAAAAJ&hl=en">
                 <svg>
                   <use xlink:href="design/assets/fa/graduation-cap-solid.svg#cap"></use>
                 </svg>
               </a>
+              <a class="view-more is-light" href="https://about.r0b.io">More</a>
             </div>
           </div>
         </div>
@@ -77,33 +80,33 @@
               <div class="clean-card popup-card">
                 <h3 class="card-title">Latest Projects</h3>
                 <div class="card-content">
-                  <p>I'm a digital creator making things on the web.</p>
+                  <p>
+                    I'm a developer making apps and services on the web.
+                    I've made technologies like digital posters, interview tagging interfaces, JavaScript frameworks and native apps.
+                  </p>
                 </div>
               </div>
             
             <div class="project-card">
               <a class="card-cover-image" href="#">
-                <div style="background-image: url(./img/project/husky.png)">
-                </div>
+                <div class="loading-placeholder"></div>
               </a>
             </div>
             
             <div class="project-card">
               <a class="card-cover-image" href="#">
-                <div style="background-image: url(./img/project/gabber.png)">
-                </div>
+                <div class="loading-placeholder"></div>
               </a>
             </div>
             
             <div class="project-card">
               <a class="card-cover-image" href="#">
-                <div style="background-image: url(./img/project/golden-retriever.png)">
-                </div>
+                <div class="loading-placeholder"></div>
               </a>
             </div>
             
             <div class="view-more-holder">
-              <a class="view-more is-light" href="#">More</a>
+              <a class="view-more is-light" href="https://projects.r0b.io">More</a>
             </div>
           </div>
         </div>
@@ -126,7 +129,7 @@
                 <p> Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
               </div>
               <p class="has-text-right">
-                <a class="view-more" href="#">More</a>
+                <a class="view-more" href="https://blog.r0b.io">More</a>
               </p>
             </div>
           </div>
@@ -171,11 +174,6 @@
                     <p><a href="#">Husky CMS</a></p>
                   </div>
                 </div>
-                <div class="project-card">
-                  <div class="card-content">
-                    <p><a href="#">Security Audit</a></p>
-                  </div>
-                </div>
               </div>
               
               <div class="trello-list">
@@ -200,7 +198,7 @@
             </div>
             
             <p class="trello-view-more">
-              <a class="view-more is-light" href="#">More</a>
+              <a class="view-more is-light" href="https://labs.r0b.io">More</a>
             </p>
           </div>
         </div>
@@ -208,10 +206,13 @@
     </article>
   </main>
   <footer class="page-footer is-paper">
+    <span class="glitch-pixel"></span>
     Made by 
     <a href="https://t.r0b.io">@robbb_j</a>
     and 
     <a href="https://github.com/robb-j/r0b-home">Open Source</a>
   </footer>
+  <div class="glitched"></div>
+  <script src="logic.js"></script>
 </body>
 </html>
