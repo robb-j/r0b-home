@@ -133,6 +133,8 @@ function animateText(elem, toText, duration) {
     stages.push(toText.slice(0, i + 1))
   }
 
+  elem.classList.add('has-text-animation')
+
   let tick = () => {
     let currentDuration = Date.now() - start
     let index = Math.floor(
@@ -142,6 +144,7 @@ function animateText(elem, toText, duration) {
     elem.textContent = stages[index]
 
     if (index < stages.length - 1) window.requestAnimationFrame(tick)
+    else elem.classList.remove('has-text-animation')
   }
 
   window.requestAnimationFrame(tick)
