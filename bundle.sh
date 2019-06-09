@@ -4,7 +4,7 @@ set -e
 
 mkdir r0b
 
-cp src/custom.css src/index.html r0b/
+cp src/custom.css src/logic.js src/index.html r0b/
 
 cp -R src/img r0b/
 cp -RH src/design r0b/
