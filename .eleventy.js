@@ -4,6 +4,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('node_modules/@robb_j/r0b-design/dist')
   eleventyConfig.addPassthroughCopy('src/img')
   eleventyConfig.addPassthroughCopy('src/css')
+  eleventyConfig.addPassthroughCopy('src/js')
 
   eleventyConfig.addFilter('r0bAsset', function(value) {
     if (!value) throw new Error('Invalid r0bAsset')
@@ -16,7 +17,7 @@ module.exports = function(eleventyConfig) {
       output: 'dist',
       includes: '_includes'
     },
-    templateFormats: ['njk', 'md'],
+    templateFormats: ['html", "njk", "md", "js'],
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk'
   }

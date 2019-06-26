@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Rob Anderson</title>
-  <link rel="stylesheet" href="design/styles.css">
-  <link rel="stylesheet" href="custom.css">
-  <link rel="icon" href="design/assets/png/favicon.png">
+  <link rel="stylesheet" href="{{'styles.css' | r0bAsset | url}}">
+  <link rel="stylesheet" href="{{'css/custom.css' | url}}">
+  <link rel="icon" href="{{'png/favicon.png' | r0bAsset}}">
   <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Patrick+Hand&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <nav class="navbar is-transparent is-fixed-top" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a class="navbar-item" href="#">
-          <img src="design/assets/svg/r0b.svg" alt="r0b">
+        <a class="navbar-item" href="/">
+          <img src="{{'svg/r0b.svg' | r0bAsset}}" alt="r0b">
         </a>
 
         <a role="button" class="navbar-burger burger">
@@ -26,10 +26,9 @@
 
       <div class="navbar-menu">
         <div class="navbar-end">
-          <a class="navbar-item" href="https://about.r0b.io"> About </a>
+          {# <a class="navbar-item" href="https://about.r0b.io"> About </a> #}
           <a class="navbar-item" href="https://projects.r0b.io"> Portfolio </a>
           <a class="navbar-item" href="https://blog.r0b.io"> Blog </a>
-          <a class="navbar-item" href="https://labs.r0b.io"> Labs </a>
         </div>
       </div>
     </nav>
@@ -47,30 +46,30 @@
             <div class="links">
               <a class="button is-circle is-twitter" href="https://twitter.com/Robbb_J">
                 <svg>
-                  <use xlink:href="design/assets/fa/twitter-brands.svg#twitter"></use>
+                  <use xlink:href="{{'fa/twitter-brands.svg' | r0bAsset}}#twitter"></use>
                 </svg>
               </a>
               <a class="button is-circle is-github" href="https://github.com/robb-j">
                 <svg>
-                  <use xlink:href="design/assets/fa/github-brands.svg#github"></use>
+                  <use xlink:href="{{'fa/github-brands.svg' | r0bAsset}}#github"></use>
                 </svg>
               </a>
               <a class="button is-circle is-dockerhub" href="https://hub.docker.com/u/robbj">
                 <svg>
-                  <use xlink:href="design/assets/fa/docker-brands.svg#docker"></use>
+                  <use xlink:href="{{'fa/docker-brands.svg' | r0bAsset}}#docker"></use>
                 </svg>
               </a>
               <a class="button is-circle is-instagram" href="https://www.instagram.com/robb_j/">
                 <svg>
-                  <use xlink:href="design/assets/fa/instagram-brands.svg#instagram"></use>
+                  <use xlink:href="{{'fa/instagram-brands.svg' | r0bAsset}}#instagram"></use>
                 </svg>
               </a>
               <a class="button is-circle is-scholar" href="https://scholar.google.co.uk/citations?user=sL5l7hIAAAAJ&hl=en">
                 <svg>
-                  <use xlink:href="design/assets/fa/graduation-cap-solid.svg#cap"></use>
+                  <use xlink:href="{{'fa/graduation-cap-solid.svg' | r0bAsset}}#cap"></use>
                 </svg>
               </a>
-              <a class="view-more is-light" href="https://about.r0b.io">More</a>
+              {# <a class="view-more is-light" href="https://about.r0b.io">More</a> #}
             </div>
           </div>
         </div>
@@ -144,65 +143,29 @@
         <div class="container">
           <div class="trello-board is-abstract">
             <div class="board-header">
-              <h3>My current projects</h3>
+              <h3>⚗️ Experiments and tools</h3>
             </div>
             <div class="board-lists">
-              <div class="trello-list">
-                <p class="list-title">⭐️ Upcoming</p>
-                <div class="project-card">
-                  <a class="card-cover-image" href="#">
-                    <div style="background-image: url(img/project/make-place.png)"></div>
-                  </a>
-                  <div class="card-content">
-                    <p><a href="#">Make Place</a></p>
-                  </div>
-                </div>
-                <div class="project-card">
-                  <a class="card-cover-image" href="#">
-                    <div style="background-image: url(img/project/golden-retriever.png)"></div>
-                  </a>
-                  <div class="card-content">
-                    <p><a href="#">Golden retriever: personal searching</a></p>
-                  </div>
-                </div>
-              </div>
               
+              {% for list in labs %}
               <div class="trello-list">
-                <p class="list-title">🔥 In progress</p>
+                <p class="list-title">{{ list.name }}</p>
+                
+                {% for project in list.projects %}
                 <div class="project-card">
-                  <a class="card-cover-image" href="#">
-                    <div style="background-image: url(img/project/husky.png)"></div>
+                  <a class="card-cover-image" href="{{ project.href }}">
+                    <div style="background-image: url({{ project.image }})"></div>
                   </a>
                   <div class="card-content">
-                    <p><a href="#">Husky CMS</a></p>
+                    <p><a href="{{ project.href }}">{{ project.name }}</a></p>
                   </div>
                 </div>
+                {% endfor %}
+                
               </div>
-              
-              <div class="trello-list">
-                <p class="list-title">📦 Just finished</p>
-                <div class="project-card">
-                  <a class="card-cover-image" href="#">
-                    <div style="background-image: url(img/project/catalyst.png)"></div>
-                  </a>
-                  <div class="card-content">
-                    <p><a href="#">Not-Equal: Catalyst</a></p>
-                  </div>
-                </div>
-                <div class="project-card">
-                  <a class="card-cover-image" href="#">
-                    <div style="background-image: url(img/project/beagle.png)"></div>
-                  </a>
-                  <div class="card-content">
-                    <p><a href="#">Beagle dashboard</a></p>
-                  </div>
-                </div>
-              </div>
+                
+              {% endfor %}
             </div>
-            
-            <p class="trello-view-more">
-              <a class="view-more is-light" href="https://labs.r0b.io">More</a>
-            </p>
           </div>
         </div>
       </section>
@@ -216,6 +179,6 @@
     <a href="https://github.com/robb-j/r0b-home">Open Source</a>
   </footer>
   <div class="glitched"></div>
-  <script src="logic.js"></script>
+  <script src="{{ '/js/logic.js' | url }}"></script>
 </body>
 </html>

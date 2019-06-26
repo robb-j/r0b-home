@@ -6,10 +6,10 @@
   border-color: rgba(255, 255, 255, 0.4);
 }
 
-/* .trello-board.is-abstract {
+.trello-board.is-abstract {
   background-size: cover;
-  background-image: url(./img/abstract-background.jpg);
-} */
+  background-image: url(../img/abstract-background.jpg);
+}
 
 .a4-page {
   display: flex;
@@ -108,8 +108,4 @@ body.is-glitched {
   );
   background-size: 200% 200%;
   animation: barberpole 10s linear infinite;
-}
-
-.is-paper {
-  background-image: url(/node_modules/@robb_j/r0b-design/dist/);
 }

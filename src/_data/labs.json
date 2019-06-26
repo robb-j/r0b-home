@@ -1,0 +1,42 @@
+[
+  {
+    "name": "⭐️ Ideas",
+    "projects": [
+      {
+        "name": "Make Place",
+        "href": "https://make.place",
+        "image": "img/project/make-place.png"
+      },
+      {
+        "name": "Golden retriever",
+        "href": "https://search.r0b.io",
+        "image": "img/project/golden-retriever.png"
+      }
+    ]
+  },
+  {
+    "name": "🔥 In progress",
+    "projects": [
+      {
+        "name": "Husky CMS",
+        "href": "https://github.com/unplatform/husky-cms",
+        "image": "img/project/husky.png"
+      }
+    ]
+  },
+  {
+    "name": "📦 Just finished",
+    "projects": [
+      {
+        "name": "Not-Equal: Catalyst",
+        "href": "https://catalyst.not-equal.tech",
+        "image": "img/project/catalyst.png"
+      },
+      {
+        "name": "Beagle dashboard",
+        "href": "https://beagle.andrsn.uk",
+        "image": "img/project/beagle.png"
+      }
+    ]
+  }
+]

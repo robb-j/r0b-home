@@ -1,5 +1,5 @@
 ---
-layout: index.njk
+layout: home.njk
 title: Hey!
 ---
 
