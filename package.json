@@ -20,8 +20,10 @@
     "node": ">=8"
   },
   "dependencies": {
-    "@robb_j/r0b-design": "^0.1.0",
-    "dotenv": "^7.0.0"
+    "@11ty/eleventy": "^0.8.3",
+    "@robb_j/r0b-design": "^0.2.2",
+    "dotenv": "^7.0.0",
+    "pug": "^2.0.4"
   },
   "devDependencies": {
     "eslint": "^5.14.0",

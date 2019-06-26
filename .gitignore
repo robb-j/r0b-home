@@ -2,9 +2,10 @@
 # Ignore files from git source control
 #
 
-node_modules
+/node_modules
 coverage
 *.env
 .DS_Store
 r0b
 r0b.tar.gz
+dist
