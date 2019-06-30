@@ -151,7 +151,7 @@ function animateText(elem, toText, duration) {
 }
 
 window
-  .fetch(`${projectsUrl}/project.json`)
+  .fetch(`${projectsUrl}/projects.json`)
   .then(r => r.json())
   .then(r => renderProjects(r.projects))
 
