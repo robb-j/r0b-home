@@ -141,7 +141,7 @@ function animateText(elem, toText, duration) {
       Math.min(1, currentDuration / duration) * (stages.length - 1)
     )
 
-    elem.textContent = stages[index]
+    elem.innerHTML = stages[index] || '&nbsp'
 
     if (index < stages.length - 1) window.requestAnimationFrame(tick)
     else elem.classList.remove('has-text-animation')

@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^0.8.3",
-    "@robb_j/r0b-design": "^0.2.6",
+    "@robb_j/r0b-design": "^0.2.7",
     "dotenv": "^7.0.0",
     "pug": "^2.0.4"
   },
