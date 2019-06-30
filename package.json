@@ -13,7 +13,8 @@
     "prettier": "prettier --write '**/*.{js,json,css,md,ts,tsx}'",
     "preversion": "npm run test -s",
     "start": "node -r dotenv/config src/index.js",
-    "test": "jest"
+    "test": "jest",
+    "deploy": "eleventy && rsync -azv --delete dist/* root@r0b.io:/srv/static/home"
   },
   "keywords": [],
   "engines": {
