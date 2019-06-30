@@ -1,4 +1,4 @@
-let { PROJECTS_URL: projectsUrl = 'https://rob.andrsn.uk' } =
+let { PROJECTS_URL: projectsUrl = 'https://projects.r0b.io' } =
   window.CONFIG || {}
 
 // ↑ ↑ ↓ ↓ ← → ← → B A
@@ -151,7 +151,7 @@ function animateText(elem, toText, duration) {
 }
 
 window
-  .fetch(`${projectsUrl}/projects.json`)
+  .fetch(`${projectsUrl}/project.json`)
   .then(r => r.json())
   .then(r => renderProjects(r.projects))
 
