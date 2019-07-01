@@ -119,19 +119,10 @@
           <div class="a4-section">
             <div class="a4-page">
               <div class="content">
-                <h2> Blog (coming soon)</h2>
-                <p> Sometimes I write things down that I think are intereseting </p>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Vestibulum id ligula porta felis euismod semper. </p>
-                <ol>
-                  <li>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</li>
-                  <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
-                  <li>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</li>
-                </ol>
-                <p> Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
-              </div>
-              <p class="has-text-right">
+                {{ content | safe }}
+              {# <p class="has-text-right">
                 <a class="view-more" href="https://blog.r0b.io">More</a>
-              </p>
+              </p> #}
             </div>
           </div>
         </div>
