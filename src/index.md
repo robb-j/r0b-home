@@ -5,7 +5,7 @@ title: Hey!
 
 ## About me
 
-I am a developer interested in making things both on the web and as apps.
+I'm a developer interested in making web platforms and services.
 By day I'm a Research Software Engineer at [Open Lab](https://openlab.ncl.ac.uk), a cross-disciplinary research group at Newcastle University.
 I make technologies to support researcher projects ranging from [transport engagements](https://metrofutures.org.uk) through [geolocation based tools](https://make.place/spotter/) all the way to [global WhatsApp games](https://whatfutures.org/).
 

@@ -110,8 +110,16 @@ body.is-glitched {
   animation: barberpole 10s linear infinite;
 }
 
+.a4-page .content h2 {
+  font-weight: 700;
+}
+
+.a4-page .content * {
+  font-family: Nunito;
+}
+
 .a4-page .content a {
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: solid underline #ccc;
   color: inherit;
 }
