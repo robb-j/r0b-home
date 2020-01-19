@@ -1,7 +1,38 @@
 # r0b-home
 
-Coming soon...
+My personal website, a static site generated with [11ty](https://www.11ty.dev/)
+using [r0b-design](https://github.com/robb-j/r0b-design/)
+and pushed to [r0b.io](r0b.io).
 
----
+## dev scripts
 
-> This project was set up by [puggle](https://npm.im/puggle)
+```bash
+# Run the generator
+# -> .eleventy.js is the entrypoint
+# -> Outputs to _site which is git-ignored
+npm run build
+
+# Run the dev server
+# -> Runs on http://localhost:3000
+# -> Reloads on change using BrowserSync
+npm run serve
+
+# Deploy the site (WIP)
+# -> Need ssh access to r0b.io
+npm run deploy
+
+# Manually lint code
+npm run lint
+```
+
+## dev setup
+
+- prettier.io on git commit
+- eslint w/ standard for javascript errors
+- editorconfig for indentation management
+
+## future work
+
+- migrate to use https://github.com/robb-j/http-tar-unpacker/
+- merge style changes back into r0b-design
+- add opengraph tags for page(s)
