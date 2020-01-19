@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "coverage": "jest --coverage",
-    "dev": "NODE_ENV=development nodemon -w src -x 'node -r dotenv/config' src/index.js",
+    "serve": "eleventy --serve",
     "lint": "eslint src",
     "prettier": "prettier --write '**/*.{js,json,css,md,ts,tsx}'",
     "preversion": "npm run test -s",

@@ -1,11 +1,11 @@
 [
   {
-    "name": "⭐️ Ideas",
+    "name": "🚀 Personal projects",
     "projects": [
       {
-        "name": "Make Place",
-        "href": "https://make.place",
-        "image": "img/project/make-place.png"
+        "name": "Husky CMS",
+        "href": "https://github.com/unplatform/husky-cms",
+        "image": "img/project/husky.png"
       },
       {
         "name": "Golden retriever",
@@ -15,27 +15,32 @@
     ]
   },
   {
-    "name": "🔥 In progress",
+    "name": "🔭 Open Lab",
     "projects": [
       {
-        "name": "Husky CMS",
-        "href": "https://github.com/unplatform/husky-cms",
-        "image": "img/project/husky.png"
-      }
-    ]
-  },
-  {
-    "name": "📦 Just finished",
-    "projects": [
+        "name": "Make place",
+        "href": "https://make.place",
+        "image": "img/project/make-place.png"
+      },
       {
         "name": "Not-Equal: Catalyst",
         "href": "https://catalyst.not-equal.tech",
         "image": "img/project/catalyst.png"
       },
       {
-        "name": "Beagle dashboard",
-        "href": "https://beagle.andrsn.uk",
-        "image": "img/project/beagle.png"
+        "name": "Gabber",
+        "href": "https://gabber.audio",
+        "image": "img/project/gabber.png"
+      }
+    ]
+  },
+  {
+    "name": "📦 Misc",
+    "projects": [
+      {
+        "name": "What Futures",
+        "href": "https://whatfutures.org",
+        "image": "img/project/what-futures.png"
       }
     ]
   }
