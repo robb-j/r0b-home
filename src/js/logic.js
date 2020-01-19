@@ -1,11 +1,11 @@
-let { PROJECTS_URL: projectsUrl = 'https://projects.r0b.io' } =
+const { PROJECTS_URL: projectsUrl = 'https://projects.r0b.io' } =
   window.CONFIG || {}
 
 // ↑ ↑ ↓ ↓ ← → ← → B A
-let konamiCodes = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
+const konamiCodes = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
 
 // Things for the strapline
-let randomThings = [
+const randomThings = [
   'stuff',
   'games',
   'websites',
@@ -23,14 +23,14 @@ let randomThings = [
 ]
 
 // The element to add glitches to
-let glitched = document.querySelector('.glitched')
+const glitched = document.querySelector('.glitched')
 
 //
 // Create a dom element
 //
 function h(tagName, attrs = {}, children = []) {
-  let elem = Object.assign(document.createElement(tagName), attrs)
-  for (let child of children) elem.append(child)
+  const elem = Object.assign(document.createElement(tagName), attrs)
+  for (const child of children) elem.append(child)
   return elem
 }
 
@@ -86,7 +86,7 @@ konamify(() => {
 })
 
 function getProjectCover(project) {
-  let found = project.attachments.find(
+  const found = project.attachments.find(
     img => img.id === project.idAttachmentCover
   )
 
@@ -94,16 +94,16 @@ function getProjectCover(project) {
 }
 
 function renderProjects(projects) {
-  let section = document.querySelector('.portfolio-section')
+  const section = document.querySelector('.portfolio-section')
   if (!section) return
 
   section.querySelectorAll('.project-card').forEach(elem => elem.remove())
 
   for (let i = 0; i < 3; i++) {
-    let proj = projects[i]
+    const proj = projects[i]
     if (!proj) break
 
-    let img = getProjectCover(proj)
+    const img = getProjectCover(proj)
 
     section.insertBefore(
       h('div', { className: 'project-card' }, [
@@ -122,8 +122,8 @@ function renderProjects(projects) {
 // Animate text of an element between two values
 //
 function animateText(elem, toText, duration) {
-  let start = Date.now()
-  let stages = []
+  const start = Date.now()
+  const stages = []
 
   for (let i = 0; i < elem.textContent.length; i++) {
     stages.push(elem.textContent.slice(0, -i - 1))
@@ -135,9 +135,9 @@ function animateText(elem, toText, duration) {
 
   elem.classList.add('has-text-animation')
 
-  let tick = () => {
-    let currentDuration = Date.now() - start
-    let index = Math.floor(
+  const tick = () => {
+    const currentDuration = Date.now() - start
+    const index = Math.floor(
       Math.min(1, currentDuration / duration) * (stages.length - 1)
     )
 
@@ -156,10 +156,10 @@ window
   .then(r => renderProjects(r.projects))
 
 window.setInterval(() => {
-  let elem = document.querySelector('.strapline .skill')
+  const elem = document.querySelector('.strapline .skill')
   if (!elem) return
 
-  let toPickFrom = randomThings.filter(skill => skill !== elem.textContent)
+  const toPickFrom = randomThings.filter(skill => skill !== elem.textContent)
 
   animateText(
     elem,
