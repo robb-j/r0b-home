@@ -22,9 +22,7 @@ jobs:
             ${{ runner.os }}-
 
       - name: Install Dependencies
-        run: npm install --no-fund --no-audit
-        env:
-          NODE_ENV: production
+        run: npm install --no-fund --no-audit --production
 
       - name: Build assets
         run: npm run build
