@@ -1,17 +1,18 @@
-name: CI
+name: Generate and deploy site
 
 on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Install dependencies
-      run: NODE_ENV=production npm ci
-    - name: Zip assets
-      run: tar -zcvf archive.tar.gz -C dist .
-    - name: Upload zip
-      run: 'curl --silent --header "Authorization: Bearer $DEPLOY_KEY" --form archive=@archive.tar.gz $DEPLOY_URL'
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: NODE_ENV=production npm ci
+      - name: Build assets
+        run: npm run build
+      - name: Zip assets
+        run: tar -zcvf archive.tar.gz -C dist .
+      - name: Upload zip
+        run: 'curl --silent --header "Authorization: Bearer $DEPLOY_KEY" --form archive=@archive.tar.gz $DEPLOY_URL'
