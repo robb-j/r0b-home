@@ -1,6 +1,8 @@
 name: Generate and deploy site
 
-on: [push]
+on:
+  push:
+    branches: [master]
 
 jobs:
   build:
