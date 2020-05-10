@@ -11,29 +11,25 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Cache node modules
-        uses: actions/cache@v1
-        env:
-          cache-name: cache-node-modules
+      - name: use Node.js
+        uses: actions/setup-node@v1
         with:
-          path: ~/.npm # npm cache files are stored in `~/.npm` on Linux/macOS
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          node-version: '12.x'
+
+      - name: cache node modules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
+            ${{ runner.OS }}-node-
+            ${{ runner.OS }}-
 
-      - name: Install Dependencies
-        run: npm install --no-fund --no-audit --production
+      - name: install dependencies
+        run: npm ci
 
-      - name: Build assets
-        run: npm run build
-
-      - name: Zip assets
-        run: tar -zcvf archive.tar.gz -C dist .
-
-      - name: Upload zip
-        run: 'curl --silent --header "Authorization: Bearer $DEPLOY_KEY" --form archive=@archive.tar.gz $DEPLOY_URL'
+      - name: run deploy
+        run: ./bin/deploy
         env:
           DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
           DEPLOY_URL: ${{ secrets.DEPLOY_URL }}
