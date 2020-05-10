@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -euxo pipefail
+
 #
 # Source deploy.env if it exists
 #
