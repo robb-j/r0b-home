@@ -45,13 +45,20 @@ tar -czf archive.tar.gz -C dist .
 du -hs archive.tar.gz
 
 #
-# POST the archive to http-tar-unpacker
+# POST the archive to http-tar-unpacker v1
 #
 echo "uploading archive.tar.gz"
 curl --fail --silent \
   --header "Authorization: Bearer $DEPLOY_KEY" \
-  --header "Content-Type: application/gzip" \
-  --data-binary @archive.tar.gz \
+  --form archive=@archive.tar.gz \
   $DEPLOY_URL
 
-
+#
+# POST the archive to http-tar-unpacker v2
+#
+# echo "uploading archive.tar.gz"
+# curl --fail --silent \
+#   --header "Authorization: Bearer $DEPLOY_KEY" \
+#   --header "Content-Type: application/gzip" \
+#   --data-binary @archive.tar.gz \
+#   $DEPLOY_URL
