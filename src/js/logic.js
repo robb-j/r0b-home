@@ -68,6 +68,7 @@ window.addEventListener('keydown', e => {
 //
 konamify(() => {
   window.document.body.classList.add('is-glitched')
+  window.fathom.trackGoal('J1C7FJSY', 0)
 
   setTimeout(() => {
     glitched.innerHTML = ''
