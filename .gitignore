@@ -8,5 +8,5 @@ coverage
 .DS_Store
 r0b
 r0b.tar.gz
-dist
+_site
 archive.tar.gz
