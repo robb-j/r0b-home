@@ -2,6 +2,7 @@
 title: WhatFutures
 subtitle: A global future forcasting game run through WhatsApp
 coverImage: /img/projects/what-futures.png
+date: 2017-09-14
 ---
 
 # WhatFutures

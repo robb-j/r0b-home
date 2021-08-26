@@ -2,7 +2,7 @@
 title: 'NotEqual: Catalyst'
 subtitle: An experimental call-for-proposal system
 coverImage: /img/projects/catalyst.png
-date: 2020-04-10
+date: 2019-12-13
 ---
 
 # NotEqual: Catalyst

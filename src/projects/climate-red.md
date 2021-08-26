@@ -2,6 +2,7 @@
 title: Climate Red
 subtitle: A decentralised virtual conference schedule
 coverImage: /img/projects/climate-red.png
+date: 2020-09-09
 ---
 
 # Climate:Red
