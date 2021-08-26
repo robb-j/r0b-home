@@ -1,0 +1,32 @@
+---
+layout: html.njk
+---
+
+{% include 'header.njk' %}
+
+<main>
+  <section class="page-block has-slope-after">
+    <div class="container">
+      
+      <h1 class="title is-1 has-text-white">{{ title }}</h1>
+      <p class="subtitle is-4 has-text-white">{{ subtitle }}</p>
+    </div>
+  </section>
+  
+  <section class="section">
+    <div class="container">
+      <p class="buttons is-size-4">
+        <a class="button is-text" href="{{ '/' | url }}">
+          ← Home
+        </a>
+      </p>
+      <div class="projectGrid">
+        {% for project in collections.projects | newestFirst %}
+        {% include 'project-card.njk' %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include 'footer.njk' %}

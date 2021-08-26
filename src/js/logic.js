@@ -1,6 +1,3 @@
-const { PROJECTS_URL: projectsUrl = 'https://projects.r0b.io' } =
-  window.CONFIG || {}
-
 // ↑ ↑ ↓ ↓ ← → ← → B A
 const konamiCodes = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
 
@@ -76,8 +73,8 @@ konamify(() => {
       h('iframe', {
         width: window.screen.width,
         height: window.screen.height,
-        src:
-          'https://www.youtube-nocookie.com/embed/5CdoyqsNdaE?controls=0&autoplay=1',
+        src: 'https://www.youtube.com/embed/5CdoyqsNdaE?controls=0&autoplay=1',
+        title: 'YouTube video player',
         frameborder: '0',
         allow: 'autoplay; encrypted-media; picture-in-picture',
         allowfullscreen: true
@@ -85,39 +82,6 @@ konamify(() => {
     )
   }, 5000)
 })
-
-function getProjectCover(project) {
-  const found = project.attachments.find(
-    img => img.id === project.idAttachmentCover
-  )
-
-  return found && found.url
-}
-
-function renderProjects(projects) {
-  const section = document.querySelector('.portfolio-section')
-  if (!section) return
-
-  section.querySelectorAll('.project-card').forEach(elem => elem.remove())
-
-  for (let i = 0; i < 3; i++) {
-    const proj = projects[i]
-    if (!proj) break
-
-    const img = getProjectCover(proj)
-
-    section.insertBefore(
-      h('div', { className: 'project-card' }, [
-        h(
-          'a',
-          { className: 'card-cover-image', href: projectsUrl + proj.href },
-          [h('div', { style: `background-image: url(${img})` })]
-        )
-      ]),
-      section.querySelector('.view-more-holder')
-    )
-  }
-}
 
 //
 // Animate text of an element between two values
@@ -150,11 +114,6 @@ function animateText(elem, toText, duration) {
 
   window.requestAnimationFrame(tick)
 }
-
-window
-  .fetch(`${projectsUrl}/projects.json`)
-  .then(r => r.json())
-  .then(r => renderProjects(r.projects))
 
 window.setInterval(() => {
   const elem = document.querySelector('.strapline .skill')

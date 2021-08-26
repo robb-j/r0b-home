@@ -1,0 +1,14 @@
+{
+  "actions": {
+    "build": {
+      "enabled": true,
+      "script": "#!/bin/sh\nnpm run build"
+    },
+    "run": {
+      "enabled": true,
+      "script": "#!/bin/sh\nnpm run serve"
+    }
+  },
+  "identifier": "FE7BCF67-86AD-475A-B668-CA4D9DBE8E48",
+  "openLogOnRun": "fail"
+}

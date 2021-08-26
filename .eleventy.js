@@ -8,13 +8,26 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter('r0bAsset', function(value) {
     if (!value) throw new Error('Invalid r0bAsset')
-    return join('node_modules/@robb_j/r0b-design/dist', value)
+    return join('/node_modules/@robb_j/r0b-design/dist', value)
+  })
+
+  eleventyConfig.addFilter('newestFirst', function(collection) {
+    const output = Array.from(collection)
+    output.sort((a, b) => {
+      return b.date.getTime() - a.date.getTime()
+    })
+    return output
+  })
+
+  eleventyConfig.addFilter('slice', function(collection, start, end) {
+    return collection.slice(start, end)
   })
 
   return {
     dir: {
       input: 'src',
-      includes: '_includes'
+      includes: '_includes',
+      layouts: '_layouts'
     },
     templateFormats: ['html', 'njk', 'md'],
     htmlTemplateEngine: 'njk',

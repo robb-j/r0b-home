@@ -1,0 +1,13 @@
+{# 'project' must be set #}
+
+<div class="projectCard">
+  <a href="{{ project.url }}">
+    <div class="projectCard-cover" style="background-image: url({{ project.data.coverImage | url }})">
+    </div>
+  </a>
+  <div class="projectCard-banner">
+    <a href="{{ project.url }}">
+      {{ project.data.title }}
+    </a>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+---
+layout: html.njk
+---
+
+{% include 'header.njk' %}
+
+<main>
+  <section class="page-block has-slope-after">
+    <div class="container">
+      <h1 class="title is-1 has-text-white">{{ title }}</h1>
+      <p class="subtitle is-4 has-text-white">{{ subtitle }}</p>
+    </div>
+  </section>
+  <div class="container">
+    <p class="buttons is-size-4">
+      <a href="{{ '/projects' }}" class="button is-text">← Projects</a>
+    </p>
+  </div>
+  <section class="section">
+    <div class="container">
+      <div class="content">
+        {{ content | safe }}
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include 'footer.njk' %}

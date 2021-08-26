@@ -1,20 +1,13 @@
 {
   "name": "@robb_j/r0b-home",
-  "description": "Rob Anderson's homepage",
-  "version": "0.0.0",
   "private": true,
   "repository": "robb-j/r0b-home",
-  "author": "",
-  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src",
     "serve": "eleventy --serve",
-    "prettier": "prettier --write '**/*.{js,json,css,md,ts,tsx}'",
-    "build": "eleventy",
-    "deploy": "eleventy && rsync -azv --delete dist/* root@r0b.io:/srv/static/home"
+    "format": "prettier --write '**/*.{js,json,css,md,ts,tsx}'",
+    "build": "eleventy"
   },
-  "keywords": [],
   "engines": {
     "node": ">=8"
   },
@@ -52,6 +45,5 @@
       "prettier --write",
       "git add"
     ]
-  },
-  "main": "src/index.js"
+  }
 }

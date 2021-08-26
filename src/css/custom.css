@@ -118,3 +118,51 @@ body.is-glitched {
   text-decoration: solid underline #ccc;
   color: inherit;
 }
+
+/* 
+  Project cards v2
+*/
+.projectGrid {
+  background-color: #ededed;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.projectCard {
+  background: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 3px 1px rgba(0, 0, 0, 0.05);
+}
+
+.projectCard-cover {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.projectCard-banner {
+  padding: 8px 16px;
+}
+
+@media screen and (min-width: 767px) {
+  .projectGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .projectGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1408px) {
+  .projectGrid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
