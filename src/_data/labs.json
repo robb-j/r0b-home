@@ -5,17 +5,17 @@
       {
         "name": "Personal blog",
         "href": "https://blog.r0b.io",
-        "image": "img/projects/r0b-blog.png"
+        "image": "/img/projects/r0b-blog.png"
       },
       {
         "name": "Snake",
         "href": "https://snake.andrsn.uk",
-        "image": "img/projects/snek.png"
+        "image": "/img/projects/snek.png"
       },
       {
         "name": "Golden Retriever",
         "href": "https://search.r0b.io",
-        "image": "img/project/golden-retriever.png"
+        "image": "/img/project/golden-retriever.png"
       }
     ]
   },
@@ -25,22 +25,22 @@
       {
         "name": "Climate Red",
         "href": "https://climate-red.openlab.dev",
-        "image": "img/projects/climate-red.png"
+        "image": "/img/projects/climate-red.png"
       },
       {
         "name": "Not-Equal: Catalyst",
         "href": "https://catalyst.not-equal.tech",
-        "image": "img/project/catalyst.png"
+        "image": "/img/project/catalyst.png"
       },
       {
         "name": "Iris Msg",
         "href": "https://irismsg.io",
-        "image": "img/project/iris-msg.png"
+        "image": "/img/project/iris-msg.png"
       },
       {
         "name": "Gabber",
         "href": "https://gabber.audio",
-        "image": "img/project/gabber.png"
+        "image": "/img/project/gabber.png"
       }
     ]
   },
@@ -50,12 +50,12 @@
       {
         "name": "Open Lab",
         "href": "https://openlab.ncl.ac.uk",
-        "image": "img/projects/openlab.png"
+        "image": "/img/projects/openlab.png"
       },
       {
         "name": "Digital Citizens",
         "href": "https://digitalcitizens.uk",
-        "image": "img/projects/digitalcitizens.png"
+        "image": "/img/projects/digitalcitizens.png"
       }
     ]
   },
@@ -65,7 +65,7 @@
       {
         "name": "What Futures",
         "href": "https://whatfutures.org",
-        "image": "img/project/what-futures.png"
+        "image": "/img/project/what-futures.png"
       }
     ]
   }
