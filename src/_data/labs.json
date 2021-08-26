@@ -15,7 +15,7 @@
       {
         "name": "Golden Retriever",
         "href": "https://search.r0b.io",
-        "image": "/img/project/golden-retriever.png"
+        "image": "/img/projects/golden-retriever.png"
       }
     ]
   },
@@ -30,17 +30,17 @@
       {
         "name": "Not-Equal: Catalyst",
         "href": "https://catalyst.not-equal.tech",
-        "image": "/img/project/catalyst.png"
+        "image": "/img/projects/catalyst.png"
       },
       {
         "name": "Iris Msg",
         "href": "https://irismsg.io",
-        "image": "/img/project/iris-msg.png"
+        "image": "/img/projects/iris-msg.png"
       },
       {
         "name": "Gabber",
         "href": "https://gabber.audio",
-        "image": "/img/project/gabber.png"
+        "image": "/img/projects/gabber.png"
       }
     ]
   },
@@ -65,7 +65,7 @@
       {
         "name": "What Futures",
         "href": "https://whatfutures.org",
-        "image": "/img/project/what-futures.png"
+        "image": "/img/projects/what-futures.png"
       }
     ]
   }
