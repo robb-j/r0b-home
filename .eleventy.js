@@ -1,36 +1,28 @@
-const { join } = require('path')
+const shortcodes = require('./11ty/shortcodes')
+const filters = require('./11ty/filters')
+const { PATH_PREFIX } = require('./11ty/env')
 
-module.exports = function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy('node_modules/@robb_j/r0b-design/dist')
-  eleventyConfig.addPassthroughCopy('src/img')
-  eleventyConfig.addPassthroughCopy('src/css')
-  eleventyConfig.addPassthroughCopy('src/js')
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addWatchTarget('./src/js/')
 
-  eleventyConfig.addFilter('r0bAsset', function(value) {
-    if (!value) throw new Error('Invalid r0bAsset')
-    return join('/node_modules/@robb_j/r0b-design/dist', value)
+  eleventyConfig.addPassthroughCopy({
+    'node_modules/@robb_j/r0b-design/dist': 'css/r0b',
+    'src/css': 'css',
+    'src/img': 'img',
   })
 
-  eleventyConfig.addFilter('newestFirst', function(collection) {
-    const output = Array.from(collection)
-    output.sort((a, b) => {
-      return b.date.getTime() - a.date.getTime()
-    })
-    return output
-  })
-
-  eleventyConfig.addFilter('slice', function(collection, start, end) {
-    return collection.slice(start, end)
-  })
+  eleventyConfig.addPlugin(filters)
+  eleventyConfig.addPlugin(shortcodes)
 
   return {
     dir: {
-      input: 'src',
+      input: 'content',
       includes: '_includes',
-      layouts: '_layouts'
+      layouts: '_layouts',
     },
-    templateFormats: ['html', 'njk', 'md'],
+    pathPrefix: PATH_PREFIX,
+    templateFormats: ['11ty.js', 'njk', 'md'],
     htmlTemplateEngine: 'njk',
-    markdownTemplateEngine: 'njk'
+    markdownTemplateEngine: 'njk',
   }
 }

@@ -23,9 +23,9 @@
     "name": "🔭 Open Lab",
     "projects": [
       {
-        "name": "Climate Red",
-        "href": "https://climate-red.openlab.dev",
-        "image": "/img/projects/climate-red.png"
+        "name": "Planet Red",
+        "href": "https://plantredsummit.com",
+        "image": "/img/projects/planet-red.png"
       },
       {
         "name": "Not-Equal: Catalyst",
@@ -66,6 +66,11 @@
         "name": "What Futures",
         "href": "https://whatfutures.org",
         "image": "/img/projects/what-futures.png"
+      },
+      {
+        "name": "Climate Red",
+        "href": "https://climate-red.openlab.dev",
+        "image": "/img/projects/climate-red.png"
       }
     ]
   }

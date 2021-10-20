@@ -16,7 +16,7 @@ const randomThings = [
   'easter eggs',
   'brownies',
   'open source',
-  'trello boards'
+  'trello boards',
 ]
 
 // The element to add glitches to
@@ -37,7 +37,7 @@ function h(tagName, attrs = {}, children = []) {
 function konamify(block) {
   let nextKey = 0
 
-  window.addEventListener('keydown', e => {
+  window.addEventListener('keydown', (e) => {
     if (e.keyCode === konamiCodes[nextKey]) {
       nextKey++
       if (nextKey >= konamiCodes.length) {
@@ -53,7 +53,7 @@ function konamify(block) {
 //
 // Reset the glitch if they press ESCAPE
 //
-window.addEventListener('keydown', e => {
+window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     window.document.body.classList.remove('is-glitched')
     glitched.innerHTML = ''
@@ -77,7 +77,7 @@ konamify(() => {
         title: 'YouTube video player',
         frameborder: '0',
         allow: 'autoplay; encrypted-media; picture-in-picture',
-        allowfullscreen: true
+        allowfullscreen: true,
       })
     )
   }, 5000)
@@ -119,7 +119,7 @@ window.setInterval(() => {
   const elem = document.querySelector('.strapline .skill')
   if (!elem) return
 
-  const toPickFrom = randomThings.filter(skill => skill !== elem.textContent)
+  const toPickFrom = randomThings.filter((skill) => skill !== elem.textContent)
 
   animateText(
     elem,
@@ -127,3 +127,31 @@ window.setInterval(() => {
     1200
   )
 }, 5000)
+
+window.addEventListener('DOMContentLoaded', () => {
+  for (const grid of document.querySelectorAll('.imageGrid')) {
+    /** @type {HTMLDialogElement} */
+    let dialog = null
+
+    function closeDialog(grid) {
+      if (!dialog) return
+      dialog.parentElement.removeChild(dialog)
+      grid.classList.remove('imageGrid-hasDialog')
+      dialog = null
+    }
+
+    for (const image of grid.querySelectorAll('.imageGrid-image')) {
+      image.addEventListener('click', (e) => {
+        if (dialog) closeDialog(grid)
+
+        grid.classList.add('imageGrid-hasDialog')
+
+        dialog = h('dialog', { className: 'imageGrid-dialog', open: true }, [
+          h('img', { src: image.src, alt: image.alt }),
+        ])
+        dialog.addEventListener('click', (e) => closeDialog(grid))
+        grid.prepend(dialog)
+      })
+    }
+  }
+})

@@ -166,3 +166,38 @@ body.is-glitched {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
+
+/* 
+  Image Grid
+*/
+.imageGrid {
+  display: grid;
+  grid: auto / repeat(3, 1fr);
+  gap: 8px;
+  transition: grid-row 300ms ease, grid-column 300ms ease;
+}
+.imageGrid.imageGrid-hasDialog {
+  grid: auto / repeat(8, 1fr);
+}
+.imageGrid-image {
+  cursor: zoom-in;
+}
+.imageGrid-dialog {
+  grid-column: 1 / -1;
+  cursor: zoom-out;
+
+  animation: imageGridDialog 500ms ease;
+  animation-fill-mode: both;
+}
+@keyframes imageGridDialog {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+  }
+}
