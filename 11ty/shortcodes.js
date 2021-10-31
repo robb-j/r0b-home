@@ -12,6 +12,12 @@ module.exports = function (eleventyConfig) {
     return `<div class="imageGrid">${contents}</div>`
   })
 
+  eleventyConfig.addShortcode('figure', (image, text) => {
+    const img = `<img src="${image}" alt="${text}">`
+    const caption = `<figcaption>${text}</figcaption>`
+    return `<figure class="figureImage">${img}${caption}</figure>`
+  })
+
   //
   // ...
   //

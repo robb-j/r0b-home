@@ -137,6 +137,11 @@ window.addEventListener('DOMContentLoaded', () => {
       if (!dialog) return
       dialog.parentElement.removeChild(dialog)
       grid.classList.remove('imageGrid-hasDialog')
+
+      for (const image of grid.querySelectorAll('.imageGrid-image')) {
+        image.classList.remove('is-expanded')
+      }
+
       dialog = null
     }
 
@@ -145,6 +150,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if (dialog) closeDialog(grid)
 
         grid.classList.add('imageGrid-hasDialog')
+        image.classList.add('is-expanded')
 
         dialog = h('dialog', { className: 'imageGrid-dialog', open: true }, [
           h('img', { src: image.src, alt: image.alt }),
@@ -154,4 +160,10 @@ window.addEventListener('DOMContentLoaded', () => {
       })
     }
   }
+
+  // for (const figure of document.querySelectorAll('.figureImage')) {
+  //   figure.addEventListener('click', () => {
+  //     figure.classList.toggle('is-expanded')
+  //   })
+  // }
 })

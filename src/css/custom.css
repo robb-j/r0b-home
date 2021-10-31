@@ -7,6 +7,10 @@
   padding-bottom: 0;
 }
 
+.container.is-small {
+  max-width: 770px;
+}
+
 .button.is-circle {
   border-color: rgba(255, 255, 255, 0.4);
 }
@@ -186,6 +190,11 @@ body.is-glitched {
 }
 .imageGrid-image {
   cursor: zoom-in;
+  transition: transform 300ms ease, opacity 300ms ease;
+}
+.imageGrid-image.is-expanded {
+  opacity: 0.8;
+  transform: scale(0.8);
 }
 .imageGrid-dialog {
   grid-column: 1 / -1;
@@ -205,4 +214,24 @@ body.is-glitched {
   100% {
     opacity: 1;
   }
+}
+
+/*
+  Figure Image 
+*/
+.figureImage {
+  max-width: 640px;
+  margin: 2rem auto !important;
+}
+
+/*
+  Guttering
+*/
+.guttering {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.guttering-pulled {
+  margin-left: -2rem;
+  margin-right: -2rem;
 }
