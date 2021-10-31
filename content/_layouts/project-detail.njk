@@ -6,18 +6,19 @@ layout: html.njk
 
 <main>
   <section class="page-block has-slope-after">
-    <div class="container">
-      <h1 class="title is-1 has-text-white">{{ title }}</h1>
-      <p class="subtitle is-4 has-text-white">{{ subtitle }}</p>
-    </div>
+    <section class="section is-flat">
+      <div class="container">
+        <h1 class="title is-1 has-text-white">{{ title }}</h1>
+        <p class="subtitle is-4 has-text-white">{{ subtitle }}</p>
+      </div>
+    </section>
   </section>
-  <div class="container">
-    <p class="buttons is-size-4">
-      <a href="{{ '/projects' }}" class="button is-text">← Projects</a>
-    </p>
-  </div>
   <section class="section">
     <div class="container">
+      <p class="buttons is-size-4">
+        <a href="{{ '/projects' }}" class="button is-text">← Projects</a>
+      </p>
+      
       <div class="content">
         {{ content | safe }}
       </div>

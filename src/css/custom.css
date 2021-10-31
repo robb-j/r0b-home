@@ -2,6 +2,11 @@
   padding-top: 3.25rem;
 }
 
+.section.is-flat {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .button.is-circle {
   border-color: rgba(255, 255, 255, 0.4);
 }
