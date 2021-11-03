@@ -1,11 +1,4 @@
-const path = require('path')
-
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addFilter('r0bAsset', (value) => {
-    if (!value) throw new Error('Invalid r0bAsset')
-    return path.join('/css/r0b', value)
-  })
-
   eleventyConfig.addFilter('newestFirst', (collection) => {
     const output = Array.from(collection)
     output.sort((a, b) => {

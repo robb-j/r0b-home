@@ -6,7 +6,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./src/js/')
 
   eleventyConfig.addPassthroughCopy({
-    'node_modules/@robb_j/r0b-design/dist': 'css/r0b',
+    'node_modules/@robb_j/r0b-design/dist': 'r0b',
     'src/css': 'css',
     'src/img': 'img',
   })

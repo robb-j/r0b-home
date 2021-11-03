@@ -1,4 +1,4 @@
-# r0b-home
+# r0b-home [![Netlify Status](https://api.netlify.com/api/v1/badges/ed3d45ba-da8f-471d-9e03-da6a2e4668ec/deploy-status)](https://app.netlify.com/sites/sharp-newton-2d30e6/deploys)
 
 My personal website, a static site generated with [11ty](https://www.11ty.dev/)
 using [r0b-design](https://github.com/robb-j/r0b-design/)
@@ -6,7 +6,7 @@ and pushed to [r0b.io](r0b.io).
 
 ## dev scripts
 
-```bash
+```sh
 # Run the generator
 # -> .eleventy.js is the entrypoint
 # -> Outputs to _site which is git-ignored
@@ -33,6 +33,5 @@ npm run lint
 
 ## future work
 
-- migrate to use https://github.com/robb-j/http-tar-unpacker/
 - merge style changes back into r0b-design
 - add opengraph tags for page(s)
