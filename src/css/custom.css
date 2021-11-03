@@ -156,7 +156,13 @@ body.is-glitched {
   padding: 8px 16px;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (max-width: 767px) {
+  .projectCard:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .projectGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
