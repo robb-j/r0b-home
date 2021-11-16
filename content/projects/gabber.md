@@ -21,10 +21,9 @@ images:
 ## Overview
 
 Gabber is a mobile app and web platform for running interviews.
-The web platform lets you setup a project with topics to talk about and the mobile app is used to record the conversation and track which topic is being talked about.
-The web platform shows conversations, with timestamped topics,
-and allows annotations and playlists to be created,
-that can then be used to create reports.
+The web platform lets you setup a project with topics to talk about and a mobile app for recording conversations and tracking which topics are being talked about.
+The web platform then shows those conversations, with timestamped topics,
+and allows annotations and playlists to be created for the purpose of reporting findings.
 
 {% imagegrid images %}
 
