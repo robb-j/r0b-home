@@ -2,6 +2,15 @@
   padding-top: 3.25rem;
 }
 
+.section.is-flat {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.container.is-small {
+  max-width: 770px;
+}
+
 .button.is-circle {
   border-color: rgba(255, 255, 255, 0.4);
 }
@@ -117,4 +126,144 @@ body.is-glitched {
   font-weight: 700;
   text-decoration: solid underline #ccc;
   color: inherit;
+}
+
+/* 
+  Project cards v2
+*/
+.projectGrid {
+  background-color: #ededed;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.projectCard {
+  background: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 3px 1px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.projectCard-cover {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.projectCard-banner {
+  padding: 8px 16px;
+}
+
+.projectCard-comingSoon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  cursor: not-allowed;
+}
+.projectCard-comingSoon span {
+  color: white;
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  transform: rotate(-7deg);
+  text-shadow: 1px 1px 2px black;
+}
+
+@media screen and (max-width: 767px) {
+  .projectCard:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .projectGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .projectGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1408px) {
+  .projectGrid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/* 
+  Image Grid
+*/
+.imageGrid {
+  display: grid;
+  grid: auto / repeat(3, 1fr);
+  gap: 8px;
+  transition: grid-row 300ms ease, grid-column 300ms ease;
+}
+.imageGrid.imageGrid-hasDialog {
+  grid: auto / repeat(8, 1fr);
+}
+.imageGrid-image {
+  cursor: zoom-in;
+  transition: transform 300ms ease, opacity 300ms ease;
+}
+.imageGrid-image.is-expanded {
+  opacity: 0.8;
+  transform: scale(0.8);
+}
+.imageGrid-dialog {
+  grid-column: 1 / -1;
+  cursor: zoom-out;
+
+  animation: imageGridDialog 500ms ease;
+  animation-fill-mode: both;
+}
+@keyframes imageGridDialog {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*
+  Figure Image 
+*/
+.figureImage {
+  max-width: 640px;
+  margin: 2rem auto !important;
+}
+
+/*
+  Guttering
+*/
+.guttering {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.guttering-pulled {
+  margin-left: -2rem;
+  margin-right: -2rem;
 }

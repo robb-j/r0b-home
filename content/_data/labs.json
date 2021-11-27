@@ -1,0 +1,77 @@
+[
+  {
+    "name": "🚀 Personal projects",
+    "projects": [
+      {
+        "name": "Personal blog",
+        "href": "https://blog.r0b.io",
+        "image": "/img/projects/r0b-blog.png"
+      },
+      {
+        "name": "Snake",
+        "href": "https://snake.andrsn.uk",
+        "image": "/img/projects/snek.png"
+      },
+      {
+        "name": "Golden Retriever",
+        "href": "https://search.r0b.io",
+        "image": "/img/projects/golden-retriever.png"
+      }
+    ]
+  },
+  {
+    "name": "🔭 Open Lab",
+    "projects": [
+      {
+        "name": "Planet Red",
+        "href": "https://plantredsummit.com",
+        "image": "/img/projects/planet-red.png"
+      },
+      {
+        "name": "Not-Equal: Catalyst",
+        "href": "https://catalyst.not-equal.tech",
+        "image": "/img/projects/catalyst.png"
+      },
+      {
+        "name": "Iris Msg",
+        "href": "https://irismsg.io",
+        "image": "/img/projects/iris-msg.png"
+      },
+      {
+        "name": "Gabber",
+        "href": "https://gabber.audio",
+        "image": "/img/projects/gabber.png"
+      }
+    ]
+  },
+  {
+    "name": "💻 Websites",
+    "projects": [
+      {
+        "name": "Open Lab",
+        "href": "https://openlab.ncl.ac.uk",
+        "image": "/img/projects/openlab.png"
+      },
+      {
+        "name": "Digital Citizens",
+        "href": "https://digitalcitizens.uk",
+        "image": "/img/projects/digitalcitizens.png"
+      }
+    ]
+  },
+  {
+    "name": "📦 Misc",
+    "projects": [
+      {
+        "name": "What Futures",
+        "href": "https://whatfutures.org",
+        "image": "/img/projects/what-futures.png"
+      },
+      {
+        "name": "Climate Red",
+        "href": "https://climate-red.openlab.dev",
+        "image": "/img/projects/climate-red.png"
+      }
+    ]
+  }
+]

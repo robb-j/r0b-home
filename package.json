@@ -1,42 +1,32 @@
 {
   "name": "@robb_j/r0b-home",
-  "description": "Rob Anderson's homepage",
-  "version": "0.0.0",
   "private": true,
   "repository": "robb-j/r0b-home",
-  "author": "",
-  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src",
     "serve": "eleventy --serve",
-    "prettier": "prettier --write '**/*.{js,json,css,md,ts,tsx}'",
-    "build": "eleventy",
-    "deploy": "eleventy && rsync -azv --delete dist/* root@r0b.io:/srv/static/home"
+    "format": "prettier --write '**/*.{js,json,css,md,ts,tsx}'",
+    "build": "eleventy"
   },
-  "keywords": [],
   "engines": {
     "node": ">=8"
   },
   "dependencies": {
-    "@11ty/eleventy": "^0.11.0",
-    "@robb_j/r0b-design": "^0.2.7",
-    "dotenv": "^8.2.0",
-    "pug": "^2.0.4"
+    "@robb_j/r0b-design": "^0.2.7"
   },
   "devDependencies": {
-    "eslint": "^7.2.0",
-    "eslint-config-prettier": "^6.11.0",
+    "@11ty/eleventy": "^0.12.1",
+    "esbuild": "^0.13.12",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^6.15.0",
     "eslint-config-standard": "^14.1.1",
-    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "husky": "^4.2.5",
-    "jest": "^26.0.1",
-    "lint-staged": "^10.2.11",
-    "nodemon": "^2.0.4",
-    "prettier": "^1.19.1"
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-standard": "^4.1.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.2.3",
+    "prettier": "^2.4.1"
   },
   "prettier": {
     "semi": false,
@@ -52,6 +42,5 @@
       "prettier --write",
       "git add"
     ]
-  },
-  "main": "src/index.js"
+  }
 }

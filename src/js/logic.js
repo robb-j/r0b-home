@@ -1,6 +1,3 @@
-const { PROJECTS_URL: projectsUrl = 'https://projects.r0b.io' } =
-  window.CONFIG || {}
-
 // ↑ ↑ ↓ ↓ ← → ← → B A
 const konamiCodes = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
 
@@ -19,7 +16,7 @@ const randomThings = [
   'easter eggs',
   'brownies',
   'open source',
-  'trello boards'
+  'trello boards',
 ]
 
 // The element to add glitches to
@@ -40,7 +37,7 @@ function h(tagName, attrs = {}, children = []) {
 function konamify(block) {
   let nextKey = 0
 
-  window.addEventListener('keydown', e => {
+  window.addEventListener('keydown', (e) => {
     if (e.keyCode === konamiCodes[nextKey]) {
       nextKey++
       if (nextKey >= konamiCodes.length) {
@@ -56,7 +53,7 @@ function konamify(block) {
 //
 // Reset the glitch if they press ESCAPE
 //
-window.addEventListener('keydown', e => {
+window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     window.document.body.classList.remove('is-glitched')
     glitched.innerHTML = ''
@@ -76,48 +73,15 @@ konamify(() => {
       h('iframe', {
         width: window.screen.width,
         height: window.screen.height,
-        src:
-          'https://www.youtube-nocookie.com/embed/5CdoyqsNdaE?controls=0&autoplay=1',
+        src: 'https://www.youtube.com/embed/5CdoyqsNdaE?controls=0&autoplay=1',
+        title: 'YouTube video player',
         frameborder: '0',
         allow: 'autoplay; encrypted-media; picture-in-picture',
-        allowfullscreen: true
+        allowfullscreen: true,
       })
     )
   }, 5000)
 })
-
-function getProjectCover(project) {
-  const found = project.attachments.find(
-    img => img.id === project.idAttachmentCover
-  )
-
-  return found && found.url
-}
-
-function renderProjects(projects) {
-  const section = document.querySelector('.portfolio-section')
-  if (!section) return
-
-  section.querySelectorAll('.project-card').forEach(elem => elem.remove())
-
-  for (let i = 0; i < 3; i++) {
-    const proj = projects[i]
-    if (!proj) break
-
-    const img = getProjectCover(proj)
-
-    section.insertBefore(
-      h('div', { className: 'project-card' }, [
-        h(
-          'a',
-          { className: 'card-cover-image', href: projectsUrl + proj.href },
-          [h('div', { style: `background-image: url(${img})` })]
-        )
-      ]),
-      section.querySelector('.view-more-holder')
-    )
-  }
-}
 
 //
 // Animate text of an element between two values
@@ -151,16 +115,11 @@ function animateText(elem, toText, duration) {
   window.requestAnimationFrame(tick)
 }
 
-window
-  .fetch(`${projectsUrl}/projects.json`)
-  .then(r => r.json())
-  .then(r => renderProjects(r.projects))
-
 window.setInterval(() => {
   const elem = document.querySelector('.strapline .skill')
   if (!elem) return
 
-  const toPickFrom = randomThings.filter(skill => skill !== elem.textContent)
+  const toPickFrom = randomThings.filter((skill) => skill !== elem.textContent)
 
   animateText(
     elem,
@@ -168,3 +127,43 @@ window.setInterval(() => {
     1200
   )
 }, 5000)
+
+window.addEventListener('DOMContentLoaded', () => {
+  for (const grid of document.querySelectorAll('.imageGrid')) {
+    /** @type {HTMLDialogElement} */
+    let dialog = null
+
+    function closeDialog(grid) {
+      if (!dialog) return
+      dialog.parentElement.removeChild(dialog)
+      grid.classList.remove('imageGrid-hasDialog')
+
+      for (const image of grid.querySelectorAll('.imageGrid-image')) {
+        image.classList.remove('is-expanded')
+      }
+
+      dialog = null
+    }
+
+    for (const image of grid.querySelectorAll('.imageGrid-image')) {
+      image.addEventListener('click', (e) => {
+        if (dialog) closeDialog(grid)
+
+        grid.classList.add('imageGrid-hasDialog')
+        image.classList.add('is-expanded')
+
+        dialog = h('dialog', { className: 'imageGrid-dialog', open: true }, [
+          h('img', { src: image.src, alt: image.alt }),
+        ])
+        dialog.addEventListener('click', (e) => closeDialog(grid))
+        grid.prepend(dialog)
+      })
+    }
+  }
+
+  // for (const figure of document.querySelectorAll('.figureImage')) {
+  //   figure.addEventListener('click', () => {
+  //     figure.classList.toggle('is-expanded')
+  //   })
+  // }
+})

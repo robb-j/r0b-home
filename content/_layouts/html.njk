@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{{ title + ' |' if title }} {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/r0b/styles.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/css/custom.css' | url }}" />
+    <link rel="icon" href="{{ '/r0b/png/favicon.png' | url }}" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Nunito:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      property="og:title"
+      content="{{ meta.title or title or site.title }}"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="{{ (meta.image or 'static/img/opengraph.png') | fullUrl }}"
+    />
+    <meta property="og:url" content="{{ page.url | fullUrl }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@{{ site.twitter }}" />
+    <meta property="og:description" content="{{ meta.summary or summary }}" />
+  </head>
+  <body>
+    {{ content | safe }}
+    <div class="glitched"></div>
+    <script src="{{ '/js/logic.js' | url }}"></script>
+    <!-- Fathom - beautiful, simple website analytics -->
+    <script src="https://truthful-stirring.r0b.io/script.js" data-site="LYDSSVMX" defer></script>
+    <!-- / Fathom -->
+  </body>
+</html>
