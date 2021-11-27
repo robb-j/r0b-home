@@ -98,7 +98,7 @@ layout: html.njk
             </div>
           </div>
           
-          {% for project in collections.projects | newestFirst | slice(0,3) %}
+          {% for project in collections.projects | newestFirst | notDraft | slice(0,3) %}
             {% include 'project-card.njk' %}
           {% endfor %}
 

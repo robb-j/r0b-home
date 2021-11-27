@@ -3,6 +3,7 @@ title: Open Lab Website
 subtitle: A virtual conference about the climate crisis
 coverImage: /img/projects/openlab.png
 date: 2020-07-01
+draft: true
 ---
 
 # Open Lab Website

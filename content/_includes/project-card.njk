@@ -1,6 +1,9 @@
 {# 'project' must be set #}
 
 <div class="projectCard">
+  {% if project.data.draft %}
+  <p class="projectCard-comingSoon"><span>TODO:</span></p>
+  {% endif %}
   <a href="{{ project.url }}">
     <div class="projectCard-cover" style="background-image: url({{ project.data.coverImage | url }})">
     </div>

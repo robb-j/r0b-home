@@ -3,6 +3,7 @@ title: Planet Red
 subtitle: A virtual conference about the climate crisis
 coverImage: /img/projects/planet-red.png
 date: 2021-10-20
+draft: true
 ---
 
 # Planet:Red

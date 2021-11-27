@@ -3,6 +3,7 @@ title: Mozfest 2021 Schedule
 subtitle: The schedule interface for the virtual Mozilla Festival in 2021
 coverImage: /img/projects/mozfest.png
 date: 2021-03-08
+draft: true
 ---
 
 # Mozilla Festival 2021 Schedule

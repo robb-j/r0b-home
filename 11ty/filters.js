@@ -10,4 +10,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('slice', (collection, start, end) => {
     return collection.slice(start, end)
   })
+
+  eleventyConfig.addFilter('notDraft', (collection) => {
+    return collection.filter((item) => !item.data.draft)
+  })
 }

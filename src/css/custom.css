@@ -142,6 +142,7 @@ body.is-glitched {
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 3px 1px rgba(0, 0, 0, 0.05);
+  position: relative;
 }
 
 .projectCard-cover {
@@ -154,6 +155,31 @@ body.is-glitched {
 
 .projectCard-banner {
   padding: 8px 16px;
+}
+
+.projectCard-comingSoon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  cursor: not-allowed;
+}
+.projectCard-comingSoon span {
+  color: white;
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  transform: rotate(-7deg);
+  text-shadow: 1px 1px 2px black;
 }
 
 @media screen and (max-width: 767px) {
