@@ -2,6 +2,9 @@
 title: Iris Msg
 subtitle: An innovative SMS donation tools for Greek solidarity movements.
 coverImage: /img/projects/iris-msg.png
+meta:
+  image: /img/projects/iris-msg.png
+  summary: TODO
 date: 2019-07-27
 draft: true
 ---

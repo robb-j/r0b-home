@@ -2,6 +2,9 @@
 title: Climate Red
 subtitle: A decentralised virtual conference schedule
 coverImage: /img/projects/climate-red.png
+meta:
+  image: /img/projects/climate-red.png
+  summary: TODO
 date: 2020-09-09
 draft: true
 ---

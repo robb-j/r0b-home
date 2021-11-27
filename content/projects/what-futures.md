@@ -1,7 +1,10 @@
 ---
 title: WhatFutures
-subtitle: A global future forcasting game run through WhatsApp
+subtitle: A global future forecasting game run through WhatsApp
 coverImage: /img/projects/what-futures.png
+meta:
+  image: /img/projects/what-futures.png
+  summary: A low-tech global future forecasting game run entirely through WhatsApp
 date: 2017-09-14
 images:
   - src: '/img/what-futures/01-home.png'

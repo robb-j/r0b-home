@@ -2,6 +2,9 @@
 title: Husky CMS
 subtitle: An experimental Trello-based website CMS
 coverImage: /img/projects/husky.png
+meta:
+  image: /img/projects/husky.png
+  summary: TODO
 date: 2019-05-29
 draft: true
 ---
