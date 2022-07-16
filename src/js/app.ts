@@ -1,7 +1,18 @@
 // ↑ ↑ ↓ ↓ ← → ← → B A
-const konamiCodes = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
+const konamiCodes = [
+  'ArrowUp',
+  'ArrowUp',
+  'ArrowDown',
+  'ArrowDown',
+  'ArrowLeft',
+  'ArrowRight',
+  'ArrowLeft',
+  'ArrowRight',
+  'b',
+  'a',
+]
 
-// Things for the strapline
+// Things for the strap-line
 const randomThings = [
   'stuff',
   'games',
@@ -20,25 +31,30 @@ const randomThings = [
 ]
 
 // The element to add glitches to
-const glitched = document.querySelector('.glitched')
+const glitched = document.querySelector('.glitched')!
 
 //
 // Create a dom element
 //
-function h(tagName, attrs = {}, children = []) {
+function h(
+  tagName: string,
+  attrs: Record<string, unknown> = {},
+  children: HTMLElement[] = []
+): HTMLElement {
   const elem = Object.assign(document.createElement(tagName), attrs)
   for (const child of children) elem.append(child)
   return elem
 }
 
 //
-// Listen for the konami code and execute a block of code
+// Listen for the Konami code and execute a block of code
 //
-function konamify(block) {
+function konamify(block: () => void) {
   let nextKey = 0
 
   window.addEventListener('keydown', (e) => {
-    if (e.keyCode === konamiCodes[nextKey]) {
+    console.log(e.key)
+    if (e.key === konamiCodes[nextKey]) {
       nextKey++
       if (nextKey >= konamiCodes.length) {
         block()
@@ -55,13 +71,14 @@ function konamify(block) {
 //
 window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
+    e.preventDefault()
     window.document.body.classList.remove('is-glitched')
     glitched.innerHTML = ''
   }
 })
 
 //
-// Do something magical when they enter the konami code
+// Do something magical when they enter the Konami code
 //
 konamify(() => {
   window.document.body.classList.add('is-glitched')
@@ -86,12 +103,12 @@ konamify(() => {
 //
 // Animate text of an element between two values
 //
-function animateText(elem, toText, duration) {
+function animateText(elem: Element, toText: string, duration: number) {
   const start = Date.now()
-  const stages = []
+  const stages: string[] = []
 
-  for (let i = 0; i < elem.textContent.length; i++) {
-    stages.push(elem.textContent.slice(0, -i - 1))
+  for (let i = 0; i < elem.textContent!.length; i++) {
+    stages.push(elem.textContent!.slice(0, -i - 1))
   }
 
   for (let i = 0; i < toText.length; i++) {
@@ -130,32 +147,37 @@ window.setInterval(() => {
 
 window.addEventListener('DOMContentLoaded', () => {
   for (const grid of document.querySelectorAll('.imageGrid')) {
-    /** @type {HTMLDialogElement} */
-    let dialog = null
+    let currentDialog: HTMLDialogElement | null = null
 
-    function closeDialog(grid) {
-      if (!dialog) return
-      dialog.parentElement.removeChild(dialog)
+    function closeDialog(grid: Element) {
+      if (!currentDialog) return
+      if (currentDialog.parentElement) {
+        currentDialog.parentElement.removeChild(currentDialog)
+      }
       grid.classList.remove('imageGrid-hasDialog')
 
       for (const image of grid.querySelectorAll('.imageGrid-image')) {
         image.classList.remove('is-expanded')
       }
 
-      dialog = null
+      currentDialog = null
     }
 
     for (const image of grid.querySelectorAll('.imageGrid-image')) {
-      image.addEventListener('click', (e) => {
-        if (dialog) closeDialog(grid)
+      if (!(image instanceof HTMLImageElement)) continue
+
+      image.addEventListener('click', () => {
+        closeDialog(grid)
 
         grid.classList.add('imageGrid-hasDialog')
         image.classList.add('is-expanded')
 
-        dialog = h('dialog', { className: 'imageGrid-dialog', open: true }, [
-          h('img', { src: image.src, alt: image.alt }),
-        ])
-        dialog.addEventListener('click', (e) => closeDialog(grid))
+        let dialog = h(
+          'dialog',
+          { className: 'imageGrid-dialog', open: true },
+          [h('img', { src: image.src, alt: image.alt })]
+        )
+        dialog.addEventListener('click', () => closeDialog(grid))
         grid.prepend(dialog)
       })
     }

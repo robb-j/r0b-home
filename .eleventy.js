@@ -1,7 +1,10 @@
+const UserConfig = require('@11ty/eleventy/src/UserConfig')
+
 const shortcodes = require('./11ty/shortcodes')
 const filters = require('./11ty/filters')
 const { PATH_PREFIX } = require('./11ty/env')
 
+/** @param {UserConfig} eleventyConfig */
 module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./src/js/')
 

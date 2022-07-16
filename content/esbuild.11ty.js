@@ -13,10 +13,10 @@ module.exports = class {
 
   async render() {
     await esbuild.build({
-      entryPoints: ['src/js/logic.js'],
+      entryPoints: ['src/js/app.ts'],
       bundle: true,
       minify: isProduction,
-      outdir: '_site/js',
+      outdir: '_site/dist',
       sourcemap: !isProduction,
       target: isProduction ? 'es6' : 'esnext',
     })
