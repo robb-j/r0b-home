@@ -18,16 +18,13 @@ const randomThings = [
   'games',
   'websites',
   'frameworks',
+  'libraries',
   'apps',
   'code',
   'tech',
   'things',
-  'experiences',
   'tools',
   'easter eggs',
-  'brownies',
-  'open source',
-  'trello boards',
 ]
 
 // The element to add glitches to
@@ -144,48 +141,3 @@ window.setInterval(() => {
     1200
   )
 }, 5000)
-
-window.addEventListener('DOMContentLoaded', () => {
-  for (const grid of document.querySelectorAll('.imageGrid')) {
-    let currentDialog: HTMLDialogElement | null = null
-
-    function closeDialog(grid: Element) {
-      if (!currentDialog) return
-      if (currentDialog.parentElement) {
-        currentDialog.parentElement.removeChild(currentDialog)
-      }
-      grid.classList.remove('imageGrid-hasDialog')
-
-      for (const image of grid.querySelectorAll('.imageGrid-image')) {
-        image.classList.remove('is-expanded')
-      }
-
-      currentDialog = null
-    }
-
-    for (const image of grid.querySelectorAll('.imageGrid-image')) {
-      if (!(image instanceof HTMLImageElement)) continue
-
-      image.addEventListener('click', () => {
-        closeDialog(grid)
-
-        grid.classList.add('imageGrid-hasDialog')
-        image.classList.add('is-expanded')
-
-        let dialog = h(
-          'dialog',
-          { className: 'imageGrid-dialog', open: true },
-          [h('img', { src: image.src, alt: image.alt })]
-        )
-        dialog.addEventListener('click', () => closeDialog(grid))
-        grid.prepend(dialog)
-      })
-    }
-  }
-
-  // for (const figure of document.querySelectorAll('.figureImage')) {
-  //   figure.addEventListener('click', () => {
-  //     figure.classList.toggle('is-expanded')
-  //   })
-  // }
-})
