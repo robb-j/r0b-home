@@ -11,12 +11,127 @@ draft: true
 
 # Husky CMS
 
-Dignissim augue maecenas velit auctor est elementum eu donec augue amet tempor. Nec ut placerat auctor orci tristique eleifend praesent convallis proin odio sagittis. Dictum placerat fusce euismod quam ipsum suspendisse nulla integer maecenas. Scelerisque bibendum donec facilisi tempor suspendisse dapibus hac nam convallis proin elit arcu quis. Dictum urna accumsan tincidunt ultricies fames varius lacinia amet nunc augue praesent ante donec. Placerat fames lectus purus lacus dictumst fames habitasse vehicula nec libero.
+## Overview
 
-Pharetra pretium nibh magna adipiscing facilisis rhoncus luctus lectus sem ultrices facilisi. Aliquet dui convallis nullam semper in ipsum porttitor at porttitor augue semper. Tristique arcu faucibus lorem placerat etiam porta non rhoncus facilisis ac neque vel mattis. Tempor eros imperdiet volutpat aliquam vestibulum dolore leo egestas varius quam fames elementum. Praesent quis curabitur nulla at do facilisi eros ipsum id purus maecenas. Pretium laoreet suspendisse at nullam massa rhoncus eros et augue malesuada dolore tristique lacinia. Ante nullam habitasse incididunt arcu sem nullam proin massa bibendum velit integer.
+Husky was an experiment for creating a website and managing it's content directly from a [Trello board](https://trello.com).
+The cards on the Trello board are interpreted in different ways, depending on the list they are in, to generate a website.
+Husky is packaged as a docker container and extensively uses environment variables to configure the site.
 
-Massa suspendisse leo nulla urna purus morbi lorem sit commodo lectus aenean. Ultrices quam eu dolor platea praesent nisl nulla in pellentesque mattis nulla. Eleifend augue ante ut dictum elit pharetra eu malesuada bibendum sed. Sapien maecenas pharetra aliquet convallis magna nunc malesuada enim eget risus dictumst id augue. Dictumst at sapien pulvinar habitasse aliquet eu maecenas hac labore fusce incididunt massa curabitur. Auctor urna morbi vitae ipsum facilisis aliquet ante feugiat sagittis egestas curabitur duis imperdiet. Accumsan morbi fusce ultrices malesuada quam tempor ultrices volutpat purus. Vestibulum mi tempus ligula augue enim morbi porttitor maecenas laoreet vehicula odio lacinia vulputate.
+## Features
 
-Ante phasellus justo ultrices in hac egestas iaculis amet nunc donec pellentesque magna ligula consectetur. Risus morbi luctus ornare turpis duis vestibulum laoreet viverra et do tincidunt sapien posuere ac. Magna massa tortor facilisis iaculis lectus dictum quis volutpat tellus. Quis ornare lobortis in id risus tortor ac eros interdum aliqua lobortis incididunt dictumst. Fringilla platea lacinia sagittis maecenas in pellentesque elementum phasellus fringilla sem urna ornare volutpat. Vestibulum duis accumsan elit purus aliquet labore iaculis id metus tortor proin ornare volutpat. Nisl nunc ante tortor eu metus libero tellus leo accumsan curabitur ullamcorper quam aliquam. Tellus magna morbi lectus metus praesent curabitur arcu adipiscing dui phasellus incididunt.
+### Page types
 
-Faucibus cursus urna volutpat eiusmod leo gravida eiusmod vehicula mattis fermentum dictumst. Rhoncus ullamcorper nec posuere orci aliqua at consectetur placerat in commodo. Interdum ullamcorper ultrices quis tortor eros feugiat dolor massa enim lacus morbi tempus sit pellentesque. Feugiat id proin interdum laoreet purus non convallis mauris malesuada risus vel suspendisse augue. Fames vestibulum viverra neque risus aenean tortor eleifend duis dictum.
+Husky is built to allow different types of pages to be created in Trello.
+Page types are defined using different lists in Trello.
+So there is one list for regular pages, one for projects and another for blog posts.
+Each type can be turned on or of by setting the relevant environment variables.
+
+**Basic pages**
+
+Basic pages are simple static pages.
+Each card on the list is turned into a page under a slug that is generated using the card's title.
+So `About us` would be available at `/about-us`.
+There's a special case for the card named `Home`, which is made into the homepage at `/`.
+
+**Project pages**
+
+Project pages are presented in a grid that's filterable by the tags that are on the cards.
+Each project also uses the card's cover image when shown in the grid, pulling through the asset from Trello.
+
+**Blog pages**
+
+Blog pages are an ordered set of posts, all on one page. And work nicely for chronological posts
+like a news feed or blog.
+
+### Configuration
+
+Hooking up Husky to Trello requires linking up page types to different Trello lists.
+This is done by passing environment variables to the container.
+
+There are basic variables, that setup the basic site.
+Like the site's name, credentials to access Trello
+and the id of the list for the basic pages.
+
+```env
+SITE_NAME=My fancy site
+TRELLO_APP_KEY=top_secret
+TRELLO_TOKEN=also_top_secret
+
+PAGE_LIST=<trello_id>
+```
+
+Then you can turn on the blog and list pages by setting the various `_LIST` variables
+and further configure the pages themselves with a name, title and subtitle:
+
+```env
+BLOG_LIST=<trello_id>
+BLOG_SLUG=my-blog
+BLOG_NAME=Rob's Blog
+BLOG_TITLE=Rob's Blog
+BLOG_SUBTITLE=Really really interesting stuff...
+
+PROJECT_LIST=<trello_id>
+PROJECT_SLUG=portfolio
+PROJECT_NAME=My portfolio
+PROJECT_TITLE=Portfolio
+PROJECT_SUBTITLE=All the cool stuff
+```
+
+For further customisation you can set these extra variables,
+which allow you to load custom CSS or JavaScript onto the page.
+This works especially well with volume-mounting files into the container,
+any files inside of `/app/static` are automatically served over http.
+
+```env
+CUSTOM_CSS_URL=/extra-styles.css
+CUSTOM_JS_URL=/my-script.js
+CUSTOM_BRAND_URL=/brand.img
+```
+
+### Plugins
+
+Plugins are used internally to register the different page types and they can be overridden
+or added to by mounting a plugin into `/app/plugins` into the container.
+A plugin looks something like this:
+
+```js
+function route(ctx) {
+  const message = process.env.MESSAGE
+  ctx.renderPug('my_template', 'My Page', { message })
+}
+
+module.exports = function (husky, utils) {
+  husky.registerPage('my_page', {
+    name: 'My Page',
+    templates: ['my_template'],
+    variables: ['MESSAGE'],
+    routes: {
+      './': route,
+    },
+  })
+}
+```
+
+Plugins get access to a Husky object that is used to register a page plugin.
+It can require custom environment variables be set and setup relative routes to add to the http server.
+There are also "content" plugins that are be rendered at the bottom of each page.
+
+## Technology
+
+### Tech A
+
+...
+
+### Tech B
+
+...
+
+### Tech C
+
+...
+
+## Links
+
+- [Link A](...)
+- [Link B](...)
+- [Link C](...)
