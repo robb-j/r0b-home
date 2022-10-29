@@ -1,15 +1,15 @@
 ---
-title: Climate Red
-subtitle: A decentralised virtual conference schedule
-coverImage: /img/projects/climate-red.png
+title: Deconf
+subtitle: A virtual conference about the climate crisis
+coverImage: /img/projects/deconf.png
 meta:
-  image: /img/projects/climate-red.png
+  image: /img/projects/deconf.png
   summary: TODO
-date: 2020-09-09
+date: 2022-10-01
 draft: true
 ---
 
-# Climate:Red
+# Deconf
 
 Dictumst sed tempus accumsan fringilla placerat nibh enim in sit magna. Eget id nullam tortor curabitur posuere luctus suspendisse sed id justo laoreet. Maecenas praesent tempus nisl dolor tincidunt maecenas quis eros ornare platea. Ultricies auctor est malesuada nullam lobortis maecenas fusce porttitor lorem. Porta fermentum velit nulla lacus tellus tortor tempus dignissim nisl lacus. Eiusmod mattis etiam duis sit posuere incididunt incididunt dolor eros nec. Tortor orci dolore hendrerit vestibulum odio iaculis neque nec urna eu cursus egestas tortor faucibus. Fusce ullamcorper lobortis convallis habitasse auctor orci ac praesent accumsan semper porta lacus.
 

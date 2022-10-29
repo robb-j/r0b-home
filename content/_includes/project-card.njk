@@ -5,8 +5,7 @@
   <p class="projectCard-comingSoon"><span>TODO:</span></p>
   {% endif %}
   <a href="{{ project.url }}">
-    <div class="projectCard-cover" style="background-image: url({{ project.data.coverImage | url }})">
-    </div>
+    <img class="projectCard-cover" src="{{ project.data.coverImage | url }}" alt="{{ project.data.title }}">
   </a>
   <div class="projectCard-banner">
     <a href="{{ project.url }}">
