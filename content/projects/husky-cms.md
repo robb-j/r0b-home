@@ -7,15 +7,15 @@ meta:
   summary: An experimental Trello-based website CMS
 date: 2019-05-29
 images:
-  - src: '/img/husky-cms/01-home.png'
+  - src: ./src/img/husky-cms/01-home.png
     alt: A Husky CMS homepage
-  - src: '/img/husky-cms/02-blog.png'
+  - src: ./src/img/husky-cms/02-blog.png
     alt: The blog page
-  - src: '/img/husky-cms/03-projects.png'
+  - src: ./src/img/husky-cms/03-projects.png
     alt: The project grid
-  - src: '/img/husky-cms/04-project.png'
+  - src: ./src/img/husky-cms/04-project.png
     alt: A project detail page
-  - src: '/img/husky-cms/05-board.png'
+  - src: ./src/img/husky-cms/05-board.png
     alt: The Trello board powering the whole website
 ---
 
@@ -52,7 +52,7 @@ Project pages are presented in as a nice grid where each card is a cell that sho
 It automatically creates filters based on the labels on the card and users assigned to it.
 You can use the filters to find cards that only have certain labels set or associated people.
 
-{% figure '/img/husky-cms/03-projects.png', 'Viewing a project grid with filters down the side' %}
+{% figure './src/img/husky-cms/03-projects.png', 'Viewing a project grid with filters down the side' %}
 
 Clicking on a cell opens up that project in full and it renders like a basic page with a breadcrumb
 to go back to the home page.
@@ -70,7 +70,7 @@ Because everything is based in Trello, lots of the hard work for a CMS is alread
 Access control can be provided by Trello and team-mates already familiar with it
 already know how to use the app.
 
-{% figure '/img/husky-cms/05-board.png', 'The Trello board powering the whole website' %}
+{% figure './src/img/husky-cms/05-board.png', 'The Trello board powering the whole website' %}
 
 As Husky only pulls from certain lists, Kanban-like flows can be used around them to create workflows
 for content. For instance, a "Draft" list can be used for content that is in-progress

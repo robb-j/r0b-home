@@ -1,3 +1,4 @@
+/** @param {import("@11ty/eleventy/src/UserConfig")} eleventyConfig */
 module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('newestFirst', (collection) => {
     const output = Array.from(collection)

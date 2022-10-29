@@ -7,15 +7,15 @@ meta:
   summary: An experimental call-for-proposal system using Trello, Google forms and a website to bring it all together
 date: 2019-12-13
 images:
-  - src: '/img/catalyst/01-home.png'
+  - src: ./src/img/catalyst/01-home.png
     alt: The Catalyst homepage
-  - src: '/img/catalyst/02-detail.png'
+  - src: ./src/img/catalyst/02-detail.png
     alt: A page about one of the catalyst projects
-  - src: '/img/catalyst/03-trello-board.png'
+  - src: ./src/img/catalyst/03-trello-board.png
     alt: The Trello board powering the entire website
-  - src: '/img/catalyst/04-trello-card.png'
+  - src: ./src/img/catalyst/04-trello-card.png
     alt: What one of the Trello card looks like
-  - src: '/img/catalyst/05-google-form.png'
+  - src: ./src/img/catalyst/05-google-form.png
     alt: The Google form used to submit a catalyst project
 ---
 
@@ -37,7 +37,7 @@ with a Google Form automatically creating Trello cards in a structured way.
 
 The homepage takes you straight to the project directory and gives you options to filter projects by different tags and themes or perform a text-based query. Being built in Vue.js, the filtering is applied immediately so results appear straight away.
 
-{% figure '/img/catalyst/01-home.png', 'The Catalyst home page with searching and filtering' %}
+{% figure './src/img/catalyst/01-home.png', 'The Catalyst home page with searching and filtering' %}
 
 Each of the projects is a card on Trello, so the themes and categories are actually Trello labels and the text-based search matches the card's title and description. To achieve different types of label, a structuring system was used, e.g. `theme:algorithms` or `category:accountabilty-and-care`. With some string functions they are grouped and turned into human readable messages for the website.
 
@@ -45,7 +45,7 @@ Each of the projects is a card on Trello, so the themes and categories are actua
 
 Clicking on a project takes you to it's dedicated page. Here you can read the project description and contact the author if you'd like to collaborate.
 
-{% figure '/img/catalyst/02-detail.png', 'A project detail page with rendered markdown' %}
+{% figure './src/img/catalyst/02-detail.png', 'A project detail page with rendered markdown' %}
 
 The main content of the page is generated based on the Trello card's description. The descriptions are written in markdown and Catalyst turns that into nicely formatted HTML for easy reading. The result is a nice page with easy to read information.
 
@@ -133,7 +133,7 @@ A [CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/
 
 This was externalised from the website process to enable horizontal scaling. If the data was stored in-memory, then each process would need to run a scrape, using up CPU and requests, and there could be discrepancies if some instances had scraped and other's hadn't. Using a separate CronJob meant that Redis was the single source of truth and all instance of the website only had to read it from it.
 
-{% figure '/img/catalyst/03-trello-board.png', 'The Trello board powering the entire website' %}
+{% figure './src/img/catalyst/03-trello-board.png', 'The Trello board powering the entire website' %}
 
 A human process was needed to ensure the cards looked alright and the questions were answered correctly. To arrange this, the list that the cards were created at was different from the list the the scraper used to render the website. Card from the Google Form were created on the "inbox" list and the website only rendered cards on the "public" list. This meant that an administrator could open up Trello, look at the inbox, inspect and/or edit the card then drag it to the "public" list to publish it.
 

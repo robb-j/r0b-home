@@ -7,15 +7,15 @@ meta:
   summary: A web platform for geographical place-making activities and consultation
 date: 2017-07-01
 images:
-  - src: '/img/make-place/01-map.png'
+  - src: ./src/img/make-place/01-map.png
     alt: The Make Place map
-  - src: '/img/make-place/02-pin.png'
+  - src: ./src/img/make-place/02-pin.png
     alt: A pin popup
-  - src: '/img/make-place/03-filters.png'
+  - src: ./src/img/make-place/03-filters.png
     alt: Map filters
-  - src: '/img/make-place/04-pick.png'
+  - src: ./src/img/make-place/04-pick.png
     alt: Pick a location for a new pin
-  - src: '/img/make-place/05-form.png'
+  - src: ./src/img/make-place/05-form.png
     alt: Fill out information about a new pin
 ---
 

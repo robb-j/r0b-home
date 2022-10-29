@@ -7,15 +7,15 @@ meta:
   summary: A privacy-focussed platform for facilitating structured conversations, collaborative analysis and open reporting
 date: 2018-06-04
 images:
-  - src: '/img/gabber/01-home.png'
+  - src: ./src/img/gabber/01-home.png
     alt: The Gabber homepage
-  - src: '/img/gabber/02-projects.png'
+  - src: ./src/img/gabber/02-projects.png
     alt: Creating a new project and viewing your own projects
-  - src: '/img/gabber/03-sessions.png'
+  - src: ./src/img/gabber/03-sessions.png
     alt: Viewing the audio sessions that have happened under a project
-  - src: '/img/gabber/04-session.png'
+  - src: ./src/img/gabber/04-session.png
     alt: View an audio session in detail and see contributed annotations
-  - src: '/img/gabber/05-consent.png'
+  - src: ./src/img/gabber/05-consent.png
     alt: Managing your consent after taking part in a session, choosing how your audio can be shared and how it will look
 ---
 
@@ -73,7 +73,7 @@ When a conversation is recorded, the participant's emails are taken
 so that they could be emailed to give their consent.
 The email contained a link to the web platform where the participant can explore the different levels of consent they can give and submit consent back to the facilitator. The web platform was strict and would not show any conversation without the consent of all parties that were involved.
 
-{% figure '/img/gabber/05-consent.png', 'Exploring and managing consent as a participant' %}
+{% figure './src/img/gabber/05-consent.png', 'Exploring and managing consent as a participant' %}
 
 First, the participant can listen back to their audio recording,
 to provide context and review what was said.
@@ -94,7 +94,7 @@ It showed a simplified waveform of the audio, to familiarise the interaction wit
 There are simple options to play, pause and track the audio to any point
 and the topics being discussed were shown underneath the waveform.
 
-{% figure '/img/gabber/04-session.png', 'Viewing an audio conversation in Gabber' %}
+{% figure './src/img/gabber/04-session.png', 'Viewing an audio conversation in Gabber' %}
 
 Clicking a topic in the sidebar or under the audio navigated the playback to the exact point that topic was marked as starting. This meant you could find specific topics being talked about.
 

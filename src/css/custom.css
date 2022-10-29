@@ -17,7 +17,7 @@
 
 .trello-board.is-abstract {
   background-size: cover;
-  background-image: url(../img/abstract-background.jpg);
+  background-image: url(/img/abstract-background.jpg);
 }
 
 .a4-page {
@@ -222,7 +222,8 @@ body.is-glitched {
   border-radius: 1rem 1rem 0.4rem 0.4rem;
   padding: 1rem;
 }
-.imageGrid img {
+.imageGrid img,
+.imageGrid picture {
   flex: 0 0 auto;
   width: 600px;
 }

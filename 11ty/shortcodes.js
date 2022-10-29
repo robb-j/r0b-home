@@ -1,19 +1,34 @@
+const Image = require('@11ty/eleventy-img')
+
+// https://github.com/11ty/eleventy-img/issues/107
+
+/** @param {import("@11ty/eleventy/src/UserConfig")} eleventyConfig */
 module.exports = function (eleventyConfig) {
   //
   // imagegrid
   //
-  eleventyConfig.addShortcode('imagegrid', (images) => {
-    const contents = images
-      .map(
-        (img) =>
-          `<img class="imageGrid-image" src="${img.src}" alt="${img.alt}" title="${img.alt}" />`
-      )
-      .join('')
-    return `<div class="imageGrid">${contents}</div>`
+  eleventyConfig.addNunjucksAsyncShortcode('imagegrid', async (images) => {
+    const contents = await Promise.all(
+      images.map(async ({ src, alt }) => {
+        const stats = await Image(src, {
+          widths: [1200, 1200],
+          formats: ['webp', 'auto'],
+          outputDir: './_site/img/',
+        })
+        return Image.generateHTML(stats, { alt, loading: 'lazy' })
+      })
+    )
+
+    return `<div class="imageGrid">${contents.join('')}</div>`
   })
 
-  eleventyConfig.addShortcode('figure', (image, text) => {
-    const img = `<img src="${image}" alt="${text}">`
+  eleventyConfig.addNunjucksAsyncShortcode('figure', async (src, text) => {
+    const stats = await Image(src, {
+      widths: [1200, 1200],
+      formats: ['webp', 'auto'],
+      outputDir: './_site/img/',
+    })
+    const img = Image.generateHTML(stats, { alt: text, loading: 'lazy' })
     const caption = `<figcaption>${text}</figcaption>`
     return `<figure class="figureImage">${img}${caption}</figure>`
   })

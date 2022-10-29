@@ -7,19 +7,19 @@ meta:
   summary: A low-tech global future forecasting game run entirely through WhatsApp
 date: 2017-09-14
 images:
-  - src: '/img/what-futures/01-home.png'
+  - src: ./src/img/what-futures/01-home.png
     alt: The WhatFutures homepage
-  - src: '/img/what-futures/02-leaderboard.png'
+  - src: ./src/img/what-futures/02-leaderboard.png
     alt: The leaderboard of submissions from the game
-  - src: '/img/what-futures/03-response.png'
+  - src: ./src/img/what-futures/03-response.png
     alt: A response to a WhatFutures challenge
-  - src: '/img/what-futures/04-fg-overview.png'
+  - src: ./src/img/what-futures/04-fg-overview.png
     alt: The Future Guide dashboard
-  - src: '/img/what-futures/05-fg-team.png'
+  - src: ./src/img/what-futures/05-fg-team.png
     alt: Future Guide team management interface
-  - src: '/img/what-futures/06-game-admin.png'
+  - src: ./src/img/what-futures/06-game-admin.png
     alt: A Game Administrator's dashboard
-  - src: '/img/what-futures/07-super-admin.png'
+  - src: ./src/img/what-futures/07-super-admin.png
     alt: The Super Admin's overview interface
 ---
 
@@ -57,7 +57,7 @@ The top-level dashboard let the overall super-admin view the different running g
 and advance their state.
 For example, moving a game from _signup_ to _running_.
 
-{% figure '/img/what-futures/07-super-admin.png', 'Super admin dashboard' %}
+{% figure './src/img/what-futures/07-super-admin.png', 'Super admin dashboard' %}
 
 **2. Game Admin**
 
@@ -73,7 +73,7 @@ At the time there was no public API for WhatsApp, so a human-powered approach wa
 After a game went live, players were distributed between the Future Guide's,
 who were responsible for manually interacting with WhatsApp to create and manage those conversations.
 
-{% figure '/img/what-futures/04-fg-overview.png', 'Future Guide dashboard' %}
+{% figure './src/img/what-futures/04-fg-overview.png', 'Future Guide dashboard' %}
 
 This dashboard showed the tasks a Future Guide needed to do and helped guide them through their work,
 that included:
