@@ -47,7 +47,7 @@ More recently it's been used to host the [Participatory Design Conference](https
 ### Climate:Red
 
 Climate:Red was the prototypical conference for the project.
-It was a virtual conference concieved in 2019to connect [IFRC](https://www.ifrc.org)
+It was a virtual conference concieved in 2019 to connect [IFRC](https://www.ifrc.org)
 volunteers around the world around the climate crisis.
 It was designed to be cross-cutting to break down the usual barriers between different parts of the organisation.
 
@@ -105,6 +105,12 @@ A story describes the component and provide tools to run it in an isolated envir
 Each component has a story which lets it be developed in isolation.
 The storybook is then deployed as a static website which lets component-users
 find the components they want to use and how to find them.
+
+A key feature of the UI framework is the schedule interface which lets attendees browse
+the schedule for their conference in chronological order.
+During the conference, the interface adapts to the current time and timezone.
+Sessions that are live are brought right to the forefront, sessions that have passed are tucked away
+and upcoming sessions are easily accissible.
 
 ### deconf-api
 
