@@ -34,11 +34,11 @@ images:
 
 ## Overview
 
-Deconf is a codename for work towards improving global virtual conferences.
-It started off as a climate conference with the [IFRC](https://solferinoacademy.com),
+Deconf is a codename for work towards improving virtual conferences.
+It started off as a global climate conference with the [IFRC](https://solferinoacademy.com),
 was made into libraries that were used to run the virtual [MozFest](https://www.mozillafestival.org/) schedule
 and has been continously improved from running more and more conferences.
-More recently it's been used to host the [Participatory Design Conference](https://pdc2022.org).
+Most recently, it's been used to host the [Participatory Design Conference](https://pdc2022.org).
 
 {% imagegrid images %}
 
@@ -51,7 +51,7 @@ It was a virtual conference concieved in 2019 to connect [IFRC](https://www.ifrc
 volunteers around the world around the climate crisis.
 It was designed to be cross-cutting to break down the usual barriers between different parts of the organisation.
 
-{% figure images[1].src, 'The Climate:Red schedule, the home of the conference' %}
+{% figure images[1].src, 'The Climate:Red schedule, the home of the conference.' %}
 
 The conference featured was a 36 hour continuous conference with official sessions
 interspersed with crowd-sourced volunteer-ran workshops to share their experiences.
@@ -65,6 +65,8 @@ and languages they speak and they would be paired with another volunteer to have
 
 MozFest 2021 was the next deconf conference that ran virtually and in Amsterdam from March 8th to March 19th 2021.
 
+{% figure images[5].src, 'The MozFest \'22 Plaza, reimagined from the Climate:Red atrium with more widgets.' %}
+
 After Climate:Red, the conference app was converted into two libraries, one for the frontend and one for the backend.
 It took the experiences of the conference and logic to host it
 and packaged it up for more conferences to be created with them.
@@ -73,9 +75,7 @@ provides Vue.js components and logic to create a web app.
 The backend library, [@openlab/deconf-api-toolkit](https://www.npmjs.com/package/@openlab/deconf-api-toolkit),
 bundles up the Node.js logic for registration, attendance and conference information.
 
-{% figure images[5].src, 'The MozFest Plaza, reimagined from the Climate:Red atrium with more widgets' %}
-
-MozFest 2021 was then written using these deconf libraries. This took the learnings from Climate:Red and
+MozFest 2021 was then written using these libraries. This took the learnings from Climate:Red and
 allowed them to be used for Mozilla's first virtual conference.
 
 ### Planet:Red
@@ -83,6 +83,50 @@ allowed them to be used for Mozilla's first virtual conference.
 After MozFest, Climate:Red was rebuilt using the very frameworks that were made from it.
 It was a virtual conference for the IFRC to connect volunteers and form an agenda
 that the organisation took to [Cop26](https://ukcop26.org).
+
+## Features
+
+### The schedule
+
+The first feature of the UI framework is the schedule which lets attendees browse
+the sessions in a conference in chronological order.
+During the conference, the interface adapts to the current time and timezone.
+Sessions that are live are brought right to the top, sessions that have passed are tucked away
+and upcoming sessions are easily accessible.
+
+{% figure images[7].src, 'The schedule interface, showing live and upcoming sessions and the secret dev control.' %}
+
+There is also a secret development control which acts as a time-machine to make it easy to develop on the interface.
+It acts like a TV remote control to explore the schedule at different times.
+The time the control sets is used everywhere else on the website which needs a time,
+so any temporal component can be controlled.
+
+### The atrium
+
+The atrium is the homepage for a conference, like at a physical conference it is the first stop and provides the information you need to attend.
+
+{% figure images[8].src, 'The PDC atrium, with introductory information and quick links to external resources.' %}
+
+The atrium is a hub for all things related to the conference.
+There is the main content front-and-center with the option for custom blocks in there too.
+Down the right there are widgets depending on if the user is signed in or not.
+If not registered yet there are extra actions to log in or register.
+There is a "live visitors" widget which shows the exact number of visitors currently on the website,
+which brings a nice liveness to the experience.
+
+### A session
+
+A session is an event that happens at a conference, its the page with all the information and timings to attend.
+
+{% figure images[6].src, 'The live Opening Circle at MozFest 2022 with video and embedded in the page.' %}
+
+This is a time based interface too, so it changes based on when you view it and you can control it with the dev control.
+
+Before the session it advertises the session and desribes how it will work.
+Leading up to the session there is a countdown to get people excited.
+During the session the links to attend appear, as long as the user is signed in.
+It intellligently embeds links like YouTube or Vimeo videos or creates actions to things like Zoom or Teams rooms.
+After the session the page shows archive links to document the session and what happened.
 
 ## The libraries
 
@@ -98,19 +142,13 @@ and makes sure everything lines up.
 [deconf-ui](https://github.com/digitalinteraction/deconf-ui-toolkit)
 encapsulates the key front-end logic required to create your own virtual conference.
 
-{% figure images[3].src, 'The UI storybook. Used to showcase, discover and develop the Vue.js components' %}
+{% figure images[3].src, 'The UI storybook. Used to showcase, discover and develop the Vue.js components.' %}
 
 To explore the components, they are split up into stories.
 A story describes the component and provide tools to run it in an isolated environment.
 Each component has a story which lets it be developed in isolation.
 The storybook is then deployed as a static website which lets component-users
 find the components they want to use and how to find them.
-
-A key feature of the UI framework is the schedule interface which lets attendees browse
-the schedule for their conference in chronological order.
-During the conference, the interface adapts to the current time and timezone.
-Sessions that are live are brought right to the forefront, sessions that have passed are tucked away
-and upcoming sessions are easily accissible.
 
 ### deconf-api
 
@@ -119,7 +157,7 @@ wraps up the backend logic needed to host a virtual conference.
 This includes the logic for the http routes and sockets needed
 and helpers to pull information from git repos and [pretalx](https://pretalx.com/).
 
-{% figure images[4].src, 'The API documentation, generated using typedoc. Used to explore the API' %}
+{% figure images[4].src, 'The API documentation, generated using typedoc. Used to explore the API.' %}
 
 This documentation is directly generated using [typedoc](https://typedoc.org), so you know it is up-to-date.
 The types are shipped alongside the UI and API libraries so there's help inside IDEs too.
