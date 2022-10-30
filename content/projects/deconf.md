@@ -6,7 +6,6 @@ meta:
   image: /img/projects/deconf.png
   summary: A virtual conference framework and platform
 date: 2022-10-01
-draft: true
 images:
   - src: ./src/img/deconf/cr-01.png
     alt: The original virtual conference, Climate:Red
@@ -78,11 +77,16 @@ bundles up the Node.js logic for registration, attendance and conference informa
 MozFest 2021 was then written using these libraries. This took the learnings from Climate:Red and
 allowed them to be used for Mozilla's first virtual conference.
 
-### Planet:Red
+### More
 
-After MozFest, Climate:Red was rebuilt using the very frameworks that were made from it.
+**Planet:Red** — After MozFest, Climate:Red was rebuilt using the very frameworks that were made from it.
 It was a virtual conference for the IFRC to connect volunteers and form an agenda
 that the organisation took to [Cop26](https://ukcop26.org).
+
+**MozFest 22** — Deconf was used to run MozFest again, gaining the upgrades developed for Planet:Red and adding back its own.
+
+**PDC2022** — The Participatory Design Conference used deconf for their Newcastle and global conferences
+and contributed back usability and fixes to the libraries.
 
 ## Features
 
