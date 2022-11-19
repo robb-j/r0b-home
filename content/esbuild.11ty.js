@@ -13,12 +13,15 @@ module.exports = class {
 
   async render() {
     await esbuild.build({
-      entryPoints: ['src/js/app.ts'],
+      entryPoints: ['src/js/app.ts', 'src/css/styles.css'],
       bundle: true,
       minify: isProduction,
       outdir: '_site/dist',
       sourcemap: !isProduction,
       target: isProduction ? 'es6' : 'esnext',
+      loader: {
+        '.png': 'base64',
+      },
     })
   }
 }

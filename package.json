@@ -9,6 +9,7 @@
     "build": "eleventy"
   },
   "dependencies": {
+    "@openlab/alembic": "^0.2.4",
     "@robb_j/r0b-design": "^0.2.7"
   },
   "devDependencies": {

@@ -1,0 +1,138 @@
+@import '@openlab/alembic/reset.css';
+@import '@openlab/alembic/layouts.css';
+
+:root {
+  /* ... */
+  --measure: 60ch;
+
+  --family-baloo: 'Baloo Bhai', system-ui, sans-serif;
+
+  /* https://github.com/robb-j/r0b-design/blob/master/src/styles/base/variables.sass */
+  --color-yellow: #ffdd57;
+  --color-magenta: #92374d;
+  --color-berry: #8c5483;
+  --color-liberty: #4a5899;
+  /* --color-offBlue: #559CAD; */
+  /* --color-silver: #c0b2aa; */
+  /* --color-deepKoamaru: #392b58; */
+  /* --color-bluePen: #00188a; */
+}
+
+html {
+  font-family: system-ui, sans-serif;
+  line-height: 1.4;
+}
+
+.navbar {
+  font-family: var(--family-baloo);
+}
+.navbar-item {
+  font-size: 1.05em;
+  color: #f5f5f5;
+  text-shadow: -1px 1px 0 #4a4a4a, 1px 1px 0 #4a4a4a, 1px -1px 0 #4a4a4a,
+    -1px -1px 0 #4a4a4a;
+  text-decoration: none;
+}
+.navbar-item:hover {
+  color: var(--color-yellow);
+}
+
+.profilePic {
+  border-radius: 290486px;
+  grid-row: 1/3;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3),
+    -0.5px -0.5px 0 rgba(255, 255, 255, 0.7);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 256px 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'profile message'
+    'profile links  ';
+  grid-gap: 0 1.5em;
+  width: 100%;
+}
+.hero [data-hero='picture'] {
+  grid-area: profile;
+}
+.hero [data-hero='message'] {
+  grid-area: message;
+  align-self: end;
+}
+.hero [data-hero='links'] {
+  grid-area: links;
+  /* align-self: start; */
+}
+
+.circleButton {
+  color: white;
+  cursor: pointer;
+  line-height: 0;
+  padding: 0.35em;
+  border-radius: 100%;
+  font-size: 2.5em;
+  border: var(--s-5) solid rgba(255, 255, 255, 0.4);
+  transition: transform 300ms ease;
+}
+.circleButton:hover {
+  transform: scale(1.05);
+}
+.circleButton[data-accent='twitter'] {
+  background-color: #1ca1f2;
+}
+.circleButton[data-accent='github'] {
+  background-color: black;
+}
+.circleButton[data-accent='dockerhub'] {
+  background-color: #066da5;
+}
+.circleButton[data-accent='instagram'] {
+  background-image: linear-gradient(-135deg, #1400c8, #b900b4, #f50000);
+}
+.circleButton[data-accent='scholar'] {
+  background-color: #4c90fe;
+}
+
+.r0bBrand {
+  transform: rotate(-10deg);
+}
+
+.welcomeMessage {
+  font-weight: 200;
+  font-size: 3em;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+.pageBlock {
+  position: relative;
+  color: var(--block-color);
+  background-color: var(--block-background);
+}
+.pageBlock[data-block='first'] {
+  --block-color: white;
+  --block-background: var(--color-liberty);
+  margin-block-end: 7vw;
+}
+.pageBlock[data-block='second'] {
+  margin-block: -7vw;
+  padding-block: 7vw;
+  background-image: url(./paper.png);
+  background-repeat: repeat;
+}
+.pageBlock[data-accent='magenta'] {
+  --block-color: white;
+  --block-background: var(--color-magenta);
+}
+.pageBlock[data-block='first']::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  bottom: -7vw;
+  border-left: 100vw solid var(--block-background, #8c5483);
+  border-bottom: 7vw solid transparent;
+  border-top: 1px solid var(--block-background, #8c5483);
+}

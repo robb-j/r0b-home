@@ -2,163 +2,89 @@
 layout: html.njk
 ---
 
-{% include 'header.njk' %}
-
-<main>
-  <article class="page-block is-liberty has-slope-after">
-    <section class="section is-medium">
-      <div class="container has-text-white">
-        <div class="about-me">
-          <img
-            class="profile-pic"
-            width="128"
-            height="128"
-            src="img/me.jpeg"
-          />
-          <p class="strapline">
-            <span class="buildup">I'm rob, I make ... </span>
-            <span class="skill">stuff</span>
-          </p>
-          <div class="links">
-            <a
-              class="button is-circle is-twitter"
-              href="https://twitter.com/Robbb_J"
+<div class="pageBlock" data-block="first">
+  <cover-layout minHeight="600px" centered="center-layout" class="firstBlock" space="var(--s0)">
+    <div class="navbar">
+      <cluster-layout space="var(--s0)">
+        <a class="navbar-item" href="/">
+          <img src="{{ '/r0b/svg/r0b.svg' | url }}" alt="r0b" width="53" height="28" class="r0bBrand" />
+        </a>
+        
+        <div style="flex: 1;"></div>
+        
+        <a class="navbar-item" href="https://blog.r0b.io">Blog</a>
+        <a class="navbar-item" href="{{ '/projects' | url }}">Portfolio</a>
+      </cluster-layout>
+    </div>
+    
+    <center-layout max="120ch" style="width: 100%">
+      <div class="hero">
+        <frame-layout ratio="1:1" data-hero="picture">
+          <picture>
+            <img 
+              class="profilePic"
+              width="256"
+              height="256"
+              src="{{ '/img/me.jpeg' | url }}"
             >
-              <svg>
-                <use
-                  xlink:href="{{
-                    '/r0b/fa/twitter-brands.svg' | url
-                  }}#twitter"
-                ></use>
-              </svg>
-            </a>
-            <a
-              class="button is-circle is-github"
-              href="https://github.com/robb-j"
-            >
-              <svg>
-                <use
-                  xlink:href="{{
-                    '/r0b/fa/github-brands.svg' | url
-                  }}#github"
-                ></use>
-              </svg>
-            </a>
-            <a
-              class="button is-circle is-dockerhub"
-              href="https://hub.docker.com/u/robbj"
-            >
-              <svg>
-                <use
-                  xlink:href="{{
-                    '/r0b/fa/docker-brands.svg' | url
-                  }}#docker"
-                ></use>
-              </svg>
-            </a>
-            <a
-              class="button is-circle is-instagram"
-              href="https://www.instagram.com/robb_j/"
-            >
-              <svg>
-                <use
-                  xlink:href="{{
-                    '/r0b/fa/instagram-brands.svg' | url
-                  }}#instagram"
-                ></use>
-              </svg>
-            </a>
-            <a
-              class="button is-circle is-scholar"
-              href="https://scholar.google.co.uk/citations?user=sL5l7hIAAAAJ&hl=en"
-            >
-              <svg>
-                <use
-                  xlink:href="{{
-                    '/r0b/fa/graduation-cap-solid.svg' | url
-                  }}#cap"
-                ></use>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </article>
-  <article class="page-block is-paper is-inbetween">
-    <section class="section is-medium">
-      <div class="container">
-        <div class="portfolio-section">
-          <div class="clean-card popup-card">
-            <h3 class="card-title">{{ projects.title }}</h3>
-            <div class="card-content">
-              <p>
-                {{ projects.text }}
-              </p>
-            </div>
-          </div>
+          </picture>
+        </frame-layout>
+        
+        <h1 class="welcomeMessage" data-hero="message">
+          I'm rob, I make ... 
+          <span id="miscSkill">stuff</span>
+        </h1>
+        
+        <cluster-layout data-hero="links" space="var(--s-2)">
+          <!-- TWITTER -->
+          <a href="https://twitter.com/Robbb_J" class="circleButton" data-accent="twitter">
+            <icon-layout label="Twitter">
+              {% icon 'twitter' %}
+            </icon-layout>
+          </a>
           
-          {% for project in collections.projects | newestFirst | notDraft | slice(0,3) %}
-            {% include 'project-card.njk' %}
-          {% endfor %}
-
-          <div class="view-more-holder">
-            <a class="view-more is-light" href="{{ '/projects' | url }}"> {{ projects.action }} </a>
-          </div>
-        </div>
+          <!-- GITHUB -->
+          <a href="https://github.com/robb-j" class="circleButton" data-accent="github">
+            <icon-layout label="GitHub">
+              {% icon 'github' %}
+            </icon-layout>
+          </a>
+          
+          <!-- Docker Hub -->
+          <a href="https://hub.docker.com/u/robbj" class="circleButton" data-accent="dockerhub">
+            <icon-layout label="DockerHub">
+              {% icon 'dockerhub' %}
+            </icon-layout>
+          </a>
+          
+          <!-- Instagram -->
+          <a href="https://hub.docker.com/u/robbj" class="circleButton" data-accent="instagram">
+            <icon-layout label="Instagram">
+              {% icon 'instagram' %}
+            </icon-layout>
+          </a>
+          
+          <!-- Scholar -->
+          <a href="https://scholar.google.co.uk/citations?user=sL5l7hIAAAAJ&hl=en" class="circleButton" data-accent="scholar">
+            <icon-layout label="Google Scholar">
+              {% icon 'scholar' %}
+            </icon-layout>
+          </a>
+        </cluster-layout>
       </div>
-    </section>
-  </article>
-  <article class="page-block is-magenta has-slope-before has-slope-after">
-    <section class="section is-medium">
-      <div class="container">
-        <div class="a4-section">
-          <div class="a4-page">
-            <div class="content">
-              {{ content | safe }}
-            </div>
-            <p class="has-text-right">
-              <a class="view-more" href="https://blog.r0b.io">Blog</a>
-            </p>
-          </div>
+    </center-layout>
+  </cover-layout>
+</div>
+
+<div class="pageBlock" data-block="second">
+  <box-layout borderWidth="0">
+    <center-layout>
+      <section class="portfolioSection">
+        <div class="portfolioSection-card">
+          <h2>Latest Projects</h2>
+          <p>I'm a developer making apps and services on the web. I've made technologies like virtual conference schedules, digital posters, interview tagging interfaces, JavaScript frameworks and native apps.</p>
         </div>
-      </div>
-    </section>
-  </article>
-  <article class="page-block is-paper is-inbetween">
-    <section class="section is-medium">
-      <div class="container">
-        <div class="trello-board is-abstract">
-          <div class="board-header">
-            <h3>{{ board.title }}</h3>
-          </div>
-          <div class="board-lists">
-            {% for list in labs %}
-            <div class="trello-list">
-              <p class="list-title">{{ list.name }}</p>
-
-              {% for project in list.projects %}
-              <div class="project-card">
-                <a class="card-cover-image" href="{{ project.href }}">
-                  <div
-                    style="background-image: url({{ project.image | url }})"
-                  ></div>
-                </a>
-                <div class="card-content">
-                  <p>
-                    <a href="{{ project.href }}">{{ project.name }}</a>
-                  </p>
-                </div>
-              </div>
-              {% endfor %}
-            </div>
-
-            {% endfor %}
-          </div>
-        </div>
-      </div>
-    </section>
-  </article>
-</main>
-
-{% include 'footer.njk' %}
+      </section>
+    </center-layout>
+  </box-layout>
+</div>

@@ -33,6 +33,15 @@ module.exports = function (eleventyConfig) {
     return `<figure class="figureImage">${img}${caption}</figure>`
   })
 
+  eleventyConfig.addShortcode('icon', (name) => {
+    const url = eleventyConfig.getFilter('url')('/img/brands.svg')
+    return `<svg><use xlink:href="${url}#${name}"></use></svg>`
+  })
+
+  eleventyConfig.addShortcode('cleanAnchor', () => {
+    return `rel="noopener"`
+  })
+
   //
   // ...
   //
