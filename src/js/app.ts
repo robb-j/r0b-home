@@ -69,7 +69,7 @@ function konamify(block: () => void) {
 window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     e.preventDefault()
-    window.document.body.classList.remove('is-glitched')
+    window.document.body.classList.remove('isGlitched')
     glitched.innerHTML = ''
   }
 })
@@ -78,7 +78,7 @@ window.addEventListener('keydown', (e) => {
 // Do something magical when they enter the Konami code
 //
 konamify(() => {
-  window.document.body.classList.add('is-glitched')
+  window.document.body.classList.add('isGlitched')
   window.fathom.trackGoal('UTUCKJMG', 0)
 
   setTimeout(() => {
@@ -87,8 +87,8 @@ konamify(() => {
       h('iframe', {
         width: window.screen.width,
         height: window.screen.height,
-        src: 'https://www.youtube.com/embed/5CdoyqsNdaE?controls=0&autoplay=1',
-        title: 'YouTube video player',
+        src: 'https://www.youtube-nocookie.com/embed/5CdoyqsNdaE?controls=0&autoplay=1',
+        title: "Now it's Skyrim",
         frameborder: '0',
         allow: 'autoplay; encrypted-media; picture-in-picture',
         allowfullscreen: true,

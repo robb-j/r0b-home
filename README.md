@@ -17,18 +17,17 @@ npm run build
 # -> Reloads on change using BrowserSync
 npm run serve
 
-# Deploy the site (WIP)
-# -> Need ssh access to r0b.io
-npm run deploy
-
 # Manually lint code
 npm run lint
+
+# Manually format code
+npm run format
 ```
 
 ## dev setup
 
 - prettier.io on git commit
-- eslint w/ standard for javascript errors
+- TypeScript javascript errors
 - editorconfig for indentation management
 
 ## future work
@@ -37,11 +36,5 @@ npm run lint
 
 ## merge todos
 
-- go through various TODO comments
-- think about Bulma "content" class
-- tidy up and refactor
 - merge alembic changes back
 - cool cards thingy
-- ensure feature parity
-- fix easter eggs
-- update build/dev docs
