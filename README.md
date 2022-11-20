@@ -1,7 +1,7 @@
 # www.r0b.io [![Netlify Status](https://api.netlify.com/api/v1/badges/ed3d45ba-da8f-471d-9e03-da6a2e4668ec/deploy-status)](https://app.netlify.com/sites/sharp-newton-2d30e6/deploys)
 
 My personal website, a static site generated with [11ty](https://www.11ty.dev/)
-using [r0b-design](https://github.com/robb-j/r0b-design/)
+using [@openlab/alembic](https://github.com/digitalinteraction/alembic/)
 and pushed to [www.r0b.io](https://www.r0b.io).
 
 ## dev scripts
@@ -33,18 +33,15 @@ npm run lint
 
 ## future work
 
-- merge style changes back into r0b-design
-- add opengraph tags for page(s)
+- n/a
 
 ## merge todos
 
-- localise fonts
 - go through various TODO comments
-- thing about Bulma "content" class
+- think about Bulma "content" class
 - tidy up and refactor
 - merge alembic changes back
 - cool cards thingy
 - ensure feature parity
 - fix easter eggs
-- tidy up dependencies
 - update build/dev docs

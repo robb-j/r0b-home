@@ -20,7 +20,9 @@ module.exports = class {
       sourcemap: !isProduction,
       target: isProduction ? 'es6' : 'esnext',
       loader: {
-        '.png': 'base64',
+        '.png': 'file',
+        '.ttf': 'file',
+        '.woff2': 'file',
       },
     })
   }

@@ -11,9 +11,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./src/')
 
   eleventyConfig.addPassthroughCopy({
-    'node_modules/@robb_j/r0b-design/dist': 'r0b',
-    // 'src/css': 'css',
     'src/img': 'img',
+    'src/font': 'font',
   })
 
   eleventyConfig.addPlugin(filters)

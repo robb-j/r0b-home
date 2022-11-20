@@ -1,36 +1,19 @@
 ---
-layout: html.njk
+layout: project.njk
+navWidth: 75ch
 ---
 
-<main>
-  <div class="pageBlock" data-accent="berry">
-    <cover-layout centered="center-layout" minHeight="200px" space="var(--s0)">
-      {% include 'nav.njk' %}
-      <center-layout max="75ch" gutters="var(--s1)">
-        <div class="projectHero">
-          <h1>{{ title }}</h1>
-          <p>{{ subtitle }}</p>
-        </div>
-      </center-layout>
-    </cover-layout>
-  </div>
-  
-  <div class="pageBlock">
-    <center-layout max="75ch" gutters="var(--s1)">
-      <stack-layout space="var(--s0)">
-        <p>
-          <a href="{{ '/projects' }}" class="button is-text">
-            <icon-layout>
-              {% icon 'left' %}
-              Projects
-            </icon-layout>
-          </a>
-        </p>
-        
-        {{ content | safe }}
-      </stack-layout>
-    </center-layout>
-  </div>
-</main>
-
-{% include 'footer.njk' %}
+<center-layout max="75ch" gutters="var(--s1)">
+  <stack-layout space="var(--s0)">
+    <p>
+      <a href="{{ '/projects' | url }}" class="button is-text">
+        <icon-layout>
+          {% icon 'left' %}
+          Projects
+        </icon-layout>
+      </a>
+    </p>
+    
+    {{ content | safe }}
+  </stack-layout>
+</center-layout>
