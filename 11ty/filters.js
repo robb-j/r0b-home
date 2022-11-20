@@ -20,4 +20,7 @@ module.exports = function (eleventyConfig) {
     const url = new URL(path.replace(/^\/+/, '/'), this.ctx.site.url)
     return url.toString()
   })
+
+  eleventyConfig.addFilter('inert', (flag) => (flag ? 'inert' : ''))
+  eleventyConfig.addFilter('disabled', (flag) => (flag ? 'disabled' : ''))
 }

@@ -35,3 +35,16 @@ npm run lint
 
 - merge style changes back into r0b-design
 - add opengraph tags for page(s)
+
+## merge todos
+
+- localise fonts
+- go through various TODO comments
+- thing about Bulma "content" class
+- tidy up and refactor
+- merge alembic changes back
+- cool cards thingy
+- ensure feature parity
+- fix easter eggs
+- tidy up dependencies
+- update build/dev docs

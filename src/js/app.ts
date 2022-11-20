@@ -28,7 +28,7 @@ const randomThings = [
 ]
 
 // The element to add glitches to
-const glitched = document.querySelector('.glitched')!
+const glitched = document.querySelector('.glitched') as HTMLElement
 
 //
 // Create a dom element
@@ -112,7 +112,7 @@ function animateText(elem: Element, toText: string, duration: number) {
     stages.push(toText.slice(0, i + 1))
   }
 
-  elem.classList.add('has-text-animation')
+  elem.classList.add('isTyping')
 
   const tick = () => {
     const currentDuration = Date.now() - start
@@ -123,14 +123,14 @@ function animateText(elem: Element, toText: string, duration: number) {
     elem.innerHTML = stages[index] || '&nbsp'
 
     if (index < stages.length - 1) window.requestAnimationFrame(tick)
-    else elem.classList.remove('has-text-animation')
+    else elem.classList.remove('isTyping')
   }
 
   window.requestAnimationFrame(tick)
 }
 
 window.setInterval(() => {
-  const elem = document.querySelector('.strapline .skill')
+  const elem = document.getElementById('miscSkill')
   if (!elem) return
 
   const toPickFrom = randomThings.filter((skill) => skill !== elem.textContent)

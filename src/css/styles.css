@@ -5,6 +5,7 @@
   /* ... */
   --measure: 60ch;
 
+  --family-system: system-ui, sans-serif;
   --family-baloo: 'Baloo Bhai', system-ui, sans-serif;
   --family-mono: ui-monospace, SFMono-Regular, Consolas, Liberation Mono, Menlo,
     Courier, monospace;
@@ -14,31 +15,48 @@
   --color-magenta: #92374d;
   --color-berry: #8c5483;
   --color-liberty: #4a5899;
-  /* --color-offBlue: #559CAD; */
+  /* --color-offBlue: #559cad; */
   /* --color-silver: #c0b2aa; */
   /* --color-deepKoamaru: #392b58; */
-  /* --color-bluePen: #00188a; */
+  --color-bluePen: #00188a;
+
+  --color-dark: #4a4a4a;
+  --color-light: white;
+  --color-anchor: #3273dc;
 }
 
 html {
-  font-family: system-ui, sans-serif;
+  font-family: var(--family-system);
   line-height: 1.4;
+  color: var(--color-dark);
+  font-size: 16px;
+}
+a {
+  color: var(--color-anchor);
+}
+img {
+  height: auto;
+  max-width: 100%;
 }
 
-.navbar {
+/* 
+  Nav links
+*/
+.navItem {
   font-family: var(--family-baloo);
-}
-.navbar-item {
   font-size: 1.05em;
   color: #f5f5f5;
-  text-shadow: -1px 1px 0 #4a4a4a, 1px 1px 0 #4a4a4a, 1px -1px 0 #4a4a4a,
-    -1px -1px 0 #4a4a4a;
+  text-shadow: -1px 1px 0 var(--color-dark), 1px 1px 0 var(--color-dark),
+    1px -1px 0 var(--color-dark), -1px -1px 0 var(--color-dark);
   text-decoration: none;
 }
-.navbar-item:hover {
+.navItem:hover {
   color: var(--color-yellow);
 }
 
+/* 
+  Profile pic
+*/
 .profilePic {
   max-width: 256px;
   margin-inline: auto;
@@ -50,8 +68,11 @@ html {
     -0.5px -0.5px 0 rgba(255, 255, 255, 0.7);
 }
 
+/* 
+  Circle button
+*/
 .circleButton {
-  color: white;
+  color: var(--color-light);
   cursor: pointer;
   line-height: 0;
   padding: 0.35em;
@@ -83,6 +104,9 @@ html {
   transform: rotate(-10deg);
 }
 
+/* 
+  Welcome bit
+*/
 .welcomeCluster {
   align-items: center;
 }
@@ -97,36 +121,42 @@ html {
   align-self: flex-start;
 }
 
+/* 
+  Page block
+*/
 .pageBlock {
   position: relative;
   color: var(--block-color);
   background-color: var(--block-background);
 }
-.pageBlock[data-block='first'] {
-  --block-color: white;
+.pageBlock[data-accent='liberty'] {
+  --block-color: var(--color-light);
   --block-background: var(--color-liberty);
-  margin-block-end: 7vw;
 }
-.pageBlock[data-block='second'] {
-  margin-block: -7vw;
-  padding-block: 7vw;
-  background-image: url(./paper.png);
-  background-repeat: repeat;
-}
-.pageBlock[data-block='third'] {
-  margin-block: 7vw;
-  --block-color: white;
+.pageBlock[data-accent='magenta'] {
+  --block-color: var(--color-light);
   --block-background: var(--color-magenta);
 }
-.pageBlock[data-block='fourth'] {
+.pageBlock[data-accent='berry'] {
+  --block-color: var(--color-light);
+  --block-background: var(--color-berry);
+}
+
+.pageBlock:nth-child(even) {
   margin-block-start: -7vw;
   padding-block-start: 7vw;
   background-image: url(./paper.png);
   background-repeat: repeat;
 }
+.pageBlock:nth-child(even):not(:last-child) {
+  margin-block-end: -7vw;
+  padding-block-end: 7vw;
+}
 
-.pageBlock[data-block='first']::after,
-.pageBlock[data-block='third']::after {
+.pageBlock:nth-child(odd):not(:last-child) {
+  margin-block-end: 7vw;
+}
+.pageBlock:nth-child(odd):not(:last-child)::after {
   content: '';
   position: absolute;
   left: 0;
@@ -138,7 +168,10 @@ html {
   border-top: 1px solid var(--block-background);
 }
 
-.pageBlock[data-block='third']::before {
+.pageBlock:nth-child(odd):not(:first-child) {
+  margin-block-start: 7vw;
+}
+.pageBlock:nth-child(odd):not(:first-child)::before {
   content: '';
   position: absolute;
   left: 0;
@@ -149,7 +182,14 @@ html {
   border-top: 7vw solid transparent;
   border-bottom: 1px solid var(--block-background);
 }
+.pageBlock > center-layout {
+  padding-block: var(--s3);
+}
 
+/* 
+  Footer
+*/
+/* style based on aria stuff? */
 footer {
   background-image: url(./paper.png);
   background-repeat: repeat;
@@ -165,5 +205,226 @@ footer p {
 footer a {
   color: #363636;
   text-decoration: underline;
+  font-weight: bold;
+}
+
+/* 
+  MISC
+*/
+.isTyping {
+  padding-right: 0.1em;
+  border-right: 3px solid #ee8595;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* 
+  Portfolio
+*/
+.portfolioSection {
+  background-color: var(--color-berry);
+  color: var(--color-light);
+  border-radius: var(--s-3);
+  padding: var(--s1);
+  margin-top: var(--s1);
+}
+.portfolioHeader {
+  position: relative;
+  top: calc(-2 * var(--s1));
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  padding: var(--s0);
+  border-radius: var(--s-3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* 
+  Project card
+*/
+.projectCard {
+  border-radius: var(--s-3);
+  background: var(--color-light);
+  overflow: hidden;
+  box-shadow: 0 3px 1px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+.projectCard a {
+  display: block;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+}
+.projectCard:hover a {
+  text-decoration: underline;
+}
+.projectCard-banner {
+  padding: var(--s-2) var(--s0);
+}
+.projectCard-comingSoon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  cursor: not-allowed;
+}
+.projectCard-comingSoon span {
+  color: white;
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  transform: rotate(-7deg);
+  text-shadow: 1px 1px 2px black;
+}
+
+/* 
+  View more card
+*/
+.viewMoreCard {
+  justify-self: center;
+  align-self: center;
+}
+
+/* 
+  View more
+*/
+.viewMore {
+  color: inherit;
+
+  font-weight: 600;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-inline-end: 1em;
+  text-decoration: none;
+}
+.viewMore::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  bottom: 0;
+  background-color: currentColor;
+}
+.viewMore::after {
+  content: '';
+  position: absolute;
+  right: -1.4em;
+  bottom: 1px;
+  border-top: 1.05ex solid transparent;
+  border-right: 1.05ex solid transparent;
+  border-bottom: 1.05ex solid transparent;
+  border-left: 1.05ex solid currentcolor;
+}
+
+/* 
+  A4 page
+*/
+/* TODO: should paper be inlined multiple times? */
+.a4Page {
+  color: var(--color-bluePen);
+  font-family: Nunito; /* todo: fix this */
+  background-image: url(./paper.png);
+  background-repeat: repeat;
+  padding: calc(var(--s-3) + 3vw);
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.3);
+  font-size: 1.3em;
+}
+.a4Page a {
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+.a4Page .viewMore {
+  /* These overrides aren't ideal */
+  text-decoration: none;
+  font-family: var(--family-system);
+  color: var(--color-anchor);
+  font-weight: 400;
+}
+
+/* 
+  Image Grid
+*/
+reel-layout.imageGrid {
+  /* max-height: 60vh; */
+
+  background-color: #eeeeee;
+  border-radius: var(--s0) var(--s0) 0.4rem 0.4rem;
+  padding: var(--s0);
+
+  --color-foreground: var(--color-berry);
+  --color-background: #dddddd;
+}
+.imageGrid img,
+.imageGrid picture {
+  flex: 0 0 auto;
+  width: 600px;
+}
+
+/*
+  Figure Image 
+*/
+.figureImage {
+  max-width: 640px;
+  margin: 2rem auto !important;
+  text-align: center;
+}
+figcaption {
+  font-style: italic;
+}
+
+/* "content" like styles */
+
+/*
+  HACKS
+*/
+center-layout {
+  width: 100%;
+}
+
+/*
+  CONTENT WIP ...
+  What does bulma do?
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.125;
+}
+
+/*
+  Project Grid
+*/
+grid-layout.projectGrid {
+  background-color: #ededed;
+  padding: var(--s-1);
+  border-radius: var(--s-2);
+}
+
+/*
+  Project hero
+*/
+.projectHero {
+  font-size: 1.2rem;
+}
+.projectHero h1 {
+  font-size: 2.4rem;
   font-weight: bold;
 }

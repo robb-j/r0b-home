@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://twitter.com/Robbb_J",
+    "accent": "twitter",
+    "icon": "twitter",
+    "label": "Twitter"
+  },
+  {
+    "url": "https://github.com/robb-j",
+    "accent": "github",
+    "icon": "github",
+    "label": "GitHub"
+  },
+  {
+    "url": "https://hub.docker.com/u/robbj",
+    "accent": "dockerhub",
+    "icon": "dockerhub",
+    "label": "DockerHub"
+  },
+  {
+    "url": "https://hub.docker.com/u/robbj",
+    "accent": "instagram",
+    "icon": "instagram",
+    "label": "Instagram"
+  },
+  {
+    "url": "https://scholar.google.co.uk/citations?user=sL5l7hIAAAAJ&hl=en",
+    "accent": "scholar",
+    "icon": "scholar",
+    "label": "Google Scholar"
+  }
+]

@@ -2,28 +2,35 @@
 layout: html.njk
 ---
 
-{% include 'header.njk' %}
-
 <main>
-  <section class="page-block has-slope-after">
-    <section class="section is-flat">
-      <div class="container">
-        <h1 class="title is-1 has-text-white">{{ title }}</h1>
-        <p class="subtitle is-4 has-text-white">{{ subtitle }}</p>
-      </div>
-    </section>
-  </section>
-  <section class="section">
-    <div class="container is-small">
-      <p class="buttons is-size-4">
-        <a href="{{ '/projects' }}" class="button is-text">← Projects</a>
-      </p>
-      
-      <div class="content">
+  <div class="pageBlock" data-accent="berry">
+    <cover-layout centered="center-layout" minHeight="200px">
+      {% include 'nav.njk' %}
+      <center-layout max="75ch" gutters="var(--s1)">
+        <div class="projectHero">
+          <h1>{{ title }}</h1>
+          <p>{{ subtitle }}</p>
+        </div>
+      </center-layout>
+    </cover-layout>
+  </div>
+  
+  <div class="pageBlock">
+    <center-layout max="75ch" gutters="var(--s1)">
+      <stack-layout space="var(--s0)">
+        <p>
+          <a href="{{ '/projects' }}" class="button is-text">
+            <icon-layout>
+              {% icon 'left' %}
+              Projects
+            </icon-layout>
+          </a>
+        </p>
+        
         {{ content | safe }}
-      </div>
-    </div>
-  </section>
+      </stack-layout>
+    </center-layout>
+  </div>
 </main>
 
 {% include 'footer.njk' %}

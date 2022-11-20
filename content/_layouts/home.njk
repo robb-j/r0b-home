@@ -2,121 +2,90 @@
 layout: html.njk
 ---
 
-<div class="pageBlock" data-block="first" data-slopes="true">
-  <cover-layout minHeight="60vh" centered="center-layout" class="firstBlock" space="var(--s0)">
-    <div class="navbar">
-      <cluster-layout space="var(--s0)">
-        <a class="navbar-item" href="/">
-          <img src="{{ '/r0b/svg/r0b.svg' | url }}" alt="r0b" width="53" height="28" class="r0bBrand" />
-        </a>
-        
-        <div style="flex: 1;"></div>
-        
-        <a class="navbar-item" href="https://blog.r0b.io">Blog</a>
-        <a class="navbar-item" href="{{ '/projects' | url }}">Portfolio</a>
-      </cluster-layout>
-    </div>
-    
-    <center-layout max="90ch" style="width: 100%">
-      <sidebar-layout sideWidth="256px" contentMin="65%">
-        <frame-layout ratio="1:1" class="profilePic">
-          <picture>
-            <img 
-              width="256"
-              height="256"
-              src="{{ '/img/me.jpeg' | url }}"
-            >
-          </picture>
-        </frame-layout>
-          <cluster-layout space="var(--s-2)" class="welcomeCluster">
-            <h1>
-              I'm rob, I make ... 
-              <span id="miscSkill">stuff</span>
-            </h1>
-            <!-- TWITTER -->
-            <a href="https://twitter.com/Robbb_J" class="circleButton" data-accent="twitter">
-              <icon-layout label="Twitter">
-                {% icon 'twitter' %}
-              </icon-layout>
-            </a>
-            
-            <!-- GITHUB -->
-            <a href="https://github.com/robb-j" class="circleButton" data-accent="github">
-              <icon-layout label="GitHub">
-                {% icon 'github' %}
-              </icon-layout>
-            </a>
-            
-            <!-- Docker Hub -->
-            <a href="https://hub.docker.com/u/robbj" class="circleButton" data-accent="dockerhub">
-              <icon-layout label="DockerHub">
-                {% icon 'dockerhub' %}
-              </icon-layout>
-            </a>
-            
-            <!-- Instagram -->
-            <a href="https://hub.docker.com/u/robbj" class="circleButton" data-accent="instagram">
-              <icon-layout label="Instagram">
-                {% icon 'instagram' %}
-              </icon-layout>
-            </a>
-            
-            <!-- Scholar -->
-            <a href="https://scholar.google.co.uk/citations?user=sL5l7hIAAAAJ&hl=en" class="circleButton" data-accent="scholar">
-              <icon-layout label="Google Scholar">
-                {% icon 'scholar' %}
-              </icon-layout>
-            </a>
+<main>
+  <div class="pageBlock" data-accent="liberty">
+    <cover-layout minHeight="60vh" centered="center-layout" class="firstBlock" space="var(--s0)">
+      {% include 'nav.njk' %}
+      
+      <center-layout max="90ch" style="width: 100%">
+        <sidebar-layout sideWidth="256px" contentMin="65%">
+          <frame-layout ratio="1:1" class="profilePic">
+            <picture>
+              <img 
+                width="256"
+                height="256"
+                src="{{ '/img/me.jpeg' | url }}"
+              >
+            </picture>
+          </frame-layout>
+            <cluster-layout space="var(--s-2)" class="welcomeCluster">
+              <h1>
+                I'm rob, I make ... 
+                <span id="miscSkill">stuff</span>
+              </h1>
+              
+              {% for link in links %}
+              <a href="{{ link.url }}" class="circleButton" data-accent="{{ link.accent }}">
+                <icon-layout label="{{ link.label }}">
+                  {% icon link.icon %}
+                </icon-layout>
+              </a>
+              {% endfor %}
+            </cluster-layout>
+        </sidebar-layout>
+      </center-layout>
+    </cover-layout>
+  </div>
+  
+  <!-- Projects -->
+  <div class="pageBlock">
+    <center-layout max="120ch" gutters="var(--s0)">
+      <div class="portfolioSection">
+        <sidebar-layout noStretch="1" sideWidth="32ch">
+          <div class="portfolioHeader">
+            <stack-layout space="var(--s-1)">
+              <h2>Latest Projects</h2>
+              <p>I'm a developer making apps and services on the web. I've made technologies like virtual conference schedules, digital posters, interview tagging interfaces, JavaScript frameworks and native apps.</p>
+            </stack-layout>
+          </div>
+          <grid-layout min="300px">
+            {% for project in collections.projects | newestFirst | notDraft | slice(0,3) %}
+              {% include 'project-card.njk' %}
+            {% endfor %}
+            <div class="viewMoreCard">
+              <a class="viewMore" href="{{ '/projects' | url }}">
+                Projects
+              </a>
+            </div>
+          </grid-layout>
+        </sidebar-layout>
+      </div>
+    </center-layout>
+  </div>
+  
+  <!-- Blog but -->
+  <div class="pageBlock" data-accent="magenta">
+    <center-layout max="640px" gutters="var(--s0)">
+      <div class="a4Page">
+        <stack-layout>
+          {{ content | safe }}
+          <cluster-layout justify="flex-end">
+            <a href="https://blog.r0b.io" class="viewMore">Blog</a>
           </cluster-layout>
-      </sidebar-layout>
+        </stack-layout>
+      </div>
     </center-layout>
-  </cover-layout>
-</div>
+  </div>
+  
+  <!-- New bit -->
+  <div class="pageBlock">
+    <box-layout borderWidth="0">
+      <center-layout>
+        <h2>TODO: coming soon</h2>
+        
+      </center-layout>
+    </box-layout>
+  </div>
+</main>
 
-<div class="pageBlock" data-block="second">
-  <box-layout borderWidth="0">
-    <center-layout>
-      <section class="portfolioSection">
-        <div class="portfolioSection-card">
-          <h2>Latest Projects</h2>
-          <p>I'm a developer making apps and services on the web. I've made technologies like virtual conference schedules, digital posters, interview tagging interfaces, JavaScript frameworks and native apps.</p>
-        </div>
-      </section>
-    </center-layout>
-  </box-layout>
-</div>
-
-<div class="pageBlock" data-block="third" data-slopes="true">
-  <box-layout borderWidth="0">
-    <center-layout>
-      <section class="portfolioSection">
-        <div class="portfolioSection-card">
-          <h2>Latest Projects</h2>
-          <p>I'm a developer making apps and services on the web. I've made technologies like virtual conference schedules, digital posters, interview tagging interfaces, JavaScript frameworks and native apps.</p>
-        </div>
-      </section>
-    </center-layout>
-  </box-layout>
-</div>
-
-<div class="pageBlock" data-block="fourth">
-  <box-layout borderWidth="0">
-    <center-layout>
-      <section class="portfolioSection">
-        <div class="portfolioSection-card">
-          <h2>Latest Projects</h2>
-          <p>I'm a developer making apps and services on the web. I've made technologies like virtual conference schedules, digital posters, interview tagging interfaces, JavaScript frameworks and native apps.</p>
-        </div>
-      </section>
-    </center-layout>
-  </box-layout>
-</div>
-
-<footer>
-  <p>
-    Made by
-    <a href="https://twitter.com/robbb_J">@robbb_J</a>
-    and
-    <a href="https://github.com/robb-j/r0b-home">Open Source</a>
-  </p>
-</footer>
+{% include 'footer.njk' %}

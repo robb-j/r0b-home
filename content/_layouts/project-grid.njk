@@ -2,30 +2,37 @@
 layout: html.njk
 ---
 
-{% include 'header.njk' %}
-
 <main>
-  <section class="page-block has-slope-after">
-    <div class="container">
-      <section class="section is-flat">
-        <h1 class="title is-1 has-text-white">{{ title }}</h1>
-        <p class="subtitle is-4 has-text-white">{{ subtitle }}</p>
-      </section>
-    </div>
-  </section>
+  <div class="pageBlock" data-accent="berry">
+    <cover-layout centered="center-layout" minHeight="200px">
+      {% include 'nav.njk' %}
+      <center-layout max="130ch" gutters="var(--s1)">
+        <div class="projectHero">
+          <h1>{{ title }}</h1>
+          <p>{{ subtitle }}</p>
+        </div>
+      </center-layout>
+    </cover-layout>
+  </div>
   
-  <section class="section">
-    <div class="container">
-      <p class="buttons is-size-4">
-        <a class="button is-text" href="{{ '/' | url }}">
-          ← Home
-        </a>
-      </p>
-      <div class="projectGrid">
-        {% for project in collections.projects | newestFirst %}
-        {% include 'project-card.njk' %}
-        {% endfor %}
-      </div>
+  <div class="pageBlock">
+    <center-layout max="130ch" gutters="var(--s1)">
+      <stack-layout space="var(--s0)">
+        <p>
+          <a href="{{ '/' }}">
+            <icon-layout>
+              {% icon 'left' %}
+              Home
+            </icon-layout>
+          </a>
+        </p>
+        
+        <grid-layout class="projectGrid" minSize="350px" space="var(--s-1)">
+          {% for project in collections.projects | newestFirst %}
+          {% include 'project-card.njk' %}
+          {% endfor %}
+        </grid-layout>
+      </stack-layout>
     </div>
   </section>
 </main>

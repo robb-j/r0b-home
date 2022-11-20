@@ -19,7 +19,7 @@ module.exports = function (eleventyConfig) {
       })
     )
 
-    return `<div class="imageGrid">${contents.join('')}</div>`
+    return `<reel-layout class="imageGrid">${contents.join('')}</reel-layout>`
   })
 
   eleventyConfig.addNunjucksAsyncShortcode('figure', async (src, text) => {
@@ -34,7 +34,7 @@ module.exports = function (eleventyConfig) {
   })
 
   eleventyConfig.addShortcode('icon', (name) => {
-    const url = eleventyConfig.getFilter('url')('/img/brands.svg')
+    const url = eleventyConfig.getFilter('url')('/img/icons.svg')
     return `<svg><use xlink:href="${url}#${name}"></use></svg>`
   })
 
