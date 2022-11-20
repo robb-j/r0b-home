@@ -36,5 +36,5 @@ npm run format
 
 ## merge todos
 
-- merge alembic changes back
+- merge alembic fixes back
 - cool cards thingy

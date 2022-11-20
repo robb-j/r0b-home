@@ -1,9 +1,9 @@
 ---
 title: 'NotEqual: Catalyst'
 subtitle: An experimental call-for-proposal system
-coverImage: /img/projects/catalyst.png
+coverImage: /img/projects/not-equal-catalyst.png
 meta:
-  image: /img/projects/catalyst.png
+  image: /img/projects/not-equal-catalyst.png
   summary: An experimental call-for-proposal system using Trello, Google forms and a website to bring it all together
 date: 2019-12-13
 images:

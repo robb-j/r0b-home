@@ -1,0 +1,24 @@
+{# 'card' must be set #}
+
+<div class="flipCard" data-side="front">
+  <div class="flipCard-inner">
+    <frame-layout ratio="16:9" class="flipCard-front">
+      <img src="{{ card.image | url }}" width="320" height="180">
+    </frame-layout>
+    <frame-layout ratio="16:9" class="flipCard-back">
+      <stack-layout space="var(--s-1)">
+        <p>{{ card.text }}</p>
+        {% if card.url %}
+        <p>
+          <a href="{{ card.url | pathOrUrl }}">
+            <icon-layout>
+              View
+              {% icon 'right' %}
+            </icon-layout>
+          </a>
+        </p>
+        {% endif %}
+      </stack-layout>
+    </frame-layout>
+  </div>
+</div>

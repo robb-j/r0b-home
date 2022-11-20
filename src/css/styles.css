@@ -3,12 +3,12 @@
 
 @import 'prism-themes/themes/prism-dracula.css';
 
-@import './fonts.css';
 @import './globals.css';
 @import './blog.css';
 @import './me.css';
 @import './page.css';
 @import './projects.css';
+@import './deck.css';
 
 :root {
   /* ... */

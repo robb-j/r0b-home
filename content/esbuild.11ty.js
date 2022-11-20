@@ -21,6 +21,7 @@ module.exports = class {
       target: isProduction ? 'es6' : 'esnext',
       loader: {
         '.png': 'file',
+        '.jpg': 'file',
         '.ttf': 'file',
         '.woff2': 'file',
       },

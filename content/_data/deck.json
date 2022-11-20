@@ -1,0 +1,139 @@
+[
+  {
+    "image": "/img/projects/beagle.png",
+    "text": "Operations dashboard for Open Lab infrastructure"
+  },
+  {
+    "image": "/img/projects/browser-now.png",
+    "text": "macOS menu app to quickly swap the default browser",
+    "url": "https://apps.apple.com/gb/app/browsernow/id1633886387?mt=12"
+  },
+  {
+    "image": "/img/projects/climate-red.png",
+    "text": "36 hour climate conference hosted by the Red Cross",
+    "url": "https://climate-red.openlab.dev"
+  },
+  {
+    "image": "/img/projects/deconf.png",
+    "text": "Open Source virtual conference platform",
+    "url": "/projects/deconf"
+  },
+  {
+    "image": "/img/projects/digital-citizens.png",
+    "text": "Project website for Digital Citizens Centre"
+  },
+  {
+    "image": "/img/projects/gabber.png",
+    "text": "Interview recording, annotation and reporting app"
+  },
+  {
+    "image": "/img/projects/golden-retriever.png",
+    "text": "Personal search engine"
+  },
+  {
+    "image": "/img/projects/husky.png",
+    "text": "Trello-powered website and CMS",
+    "url": "/projects/husky-cms"
+  },
+  {
+    "image": "/img/projects/iris-msg.png",
+    "text": "SMS donation platform for Greek solidarity movements"
+  },
+  {
+    "image": "/img/projects/make-place.png",
+    "text": "Geograhpical mapping platform",
+    "url": "/projects/make-place"
+  },
+  {
+    "image": "/img/projects/metro-futures.png",
+    "text": "Newcastle metro online consultation"
+  },
+  {
+    "image": "/img/projects/mozfest.png",
+    "text": "MozFest virtual conference",
+    "url": "/projects/deconf"
+  },
+  {
+    "image": "/img/projects/not-equal-catalyst.png",
+    "text": "Project-matching app powered by Trello and Google Forms",
+    "url": "/projects/not-equal-catalyst"
+  },
+  {
+    "image": "/img/projects/nova-doofer.png",
+    "text": "Personal utilities for Nova.app",
+    "url": "https://github.com/robb-j/nova-doofer"
+  },
+  {
+    "image": "/img/projects/nova-gitfox.png",
+    "text": "Open Nova projects in GitFox",
+    "url": "https://github.com/robb-j/nova-gitfox"
+  },
+  {
+    "image": "/img/projects/nova-prisma.png",
+    "text": "Prisma syntax highlighting & LSP for Nova.app",
+    "url": "https://github.com/robb-j/nova-prisma"
+  },
+  {
+    "image": "/img/projects/nova-xml.png",
+    "text": "XML validation and formatting for Nova.app",
+    "url": "https://github.com/robb-j/nova-xml"
+  },
+  {
+    "image": "/img/projects/nova-yaml.png",
+    "text": "YAML validation and formatting for Nova.app",
+    "url": "https://github.com/robb-j/nova-yaml"
+  },
+  {
+    "image": "/img/projects/ocelot-docs.png",
+    "text": "RESTful API docs generator based on YAML definitions"
+  },
+  {
+    "image": "/img/projects/openlab-website.png",
+    "text": "Group website and publication aggregator",
+    "url": "https://openlab.ncl.ac.uk"
+  },
+  {
+    "image": "/img/projects/pdc-2022.png",
+    "text": "PDC global virtual conference",
+    "url": "/projects/deconf"
+  },
+  {
+    "image": "/img/projects/planet-red.png",
+    "text": "Virtual climate conference hosted by the Red Cross",
+    "url": "/projects/deconf"
+  },
+  {
+    "image": "/img/projects/pomadom.png",
+    "text": "Minimalistic macOS menu based pomadoro app"
+  },
+  {
+    "image": "/img/projects/r0b-blog.png",
+    "text": "My personal blog about app, web and iot tech",
+    "url": "https://blog.r0b.io"
+  },
+  {
+    "image": "/img/projects/r0b-home.png",
+    "text": "My personal website and project portfolio",
+    "url": "https://www.r0b.io"
+  },
+  {
+    "image": "/img/projects/snek.png",
+    "text": "A no-framework web game of snake",
+    "url": "https://snake.andrsn.uk"
+  },
+  {
+    "image": "/img/projects/solair.png",
+    "text": "Interactive workshops through the metaphore of a virtual airline journey",
+    "url": "/projects/deconf"
+  },
+  {
+    "image": "/img/projects/think-active.png",
+    "text": "Classroom-based interactive activity dashboard linked to smart bands"
+  },
+  { "image": "/img/projects/tinypoll.png", "text": "Microscopic poll app" },
+  {
+    "image": "/img/projects/what-futures.png",
+    "text": "Future forcasting game run for Red Cross volunteers",
+    "url": "https://whatfutures.org"
+  }
+]

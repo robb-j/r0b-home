@@ -21,6 +21,12 @@ module.exports = function (eleventyConfig) {
     return url.toString()
   })
 
+  eleventyConfig.addFilter('pathOrUrl', function (input) {
+    return input.startsWith('/')
+      ? eleventyConfig.getFilter('url')(input)
+      : input
+  })
+
   eleventyConfig.addFilter('inert', (flag) => (flag ? 'inert' : ''))
   eleventyConfig.addFilter('disabled', (flag) => (flag ? 'disabled' : ''))
 }

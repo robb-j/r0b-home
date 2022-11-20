@@ -57,8 +57,6 @@ layout: html.njk
                 Projects
               </a>
             </frame-layout>
-            <!-- <div class="viewMoreCard">
-            </div> -->
           </grid-layout>
         </sidebar-layout>
       </div>
@@ -81,12 +79,24 @@ layout: html.njk
   
   <!-- New bit -->
   <div class="pageBlock">
-    <box-layout borderWidth="0">
-      <center-layout>
-        <h2>TODO: coming soon</h2>
-        
-      </center-layout>
-    </box-layout>
+    <center-layout max="90vw" intrinsic>
+      <div class="projectDeck">
+        <p class="projectDeck-header">My stuff</p>
+        <reel-layout>
+          <div class="projectDeck-cards">
+            {% for card in deck %}
+              {% include 'flip-card.njk' %}
+            {% endfor %}
+          </div>
+        </reel-layout>
+        <div class="projectDeck-footer">
+          <cluster-layout space="var(--s-1)">
+            <button id="organiseDeck">Organise</button>
+            <button id="shuffleDeck">Shuffle</button>
+          </cluster-layout>
+        </div>
+      </div>
+    </center-layout>
   </div>
 </main>
 

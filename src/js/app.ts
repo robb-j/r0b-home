@@ -50,7 +50,6 @@ function konamify(block: () => void) {
   let nextKey = 0
 
   window.addEventListener('keydown', (e) => {
-    console.log(e.key)
     if (e.key === konamiCodes[nextKey]) {
       nextKey++
       if (nextKey >= konamiCodes.length) {
@@ -141,3 +140,96 @@ window.setInterval(() => {
     1200
   )
 }, 5000)
+
+document.addEventListener('DOMContentLoaded', () => {
+  let flipZ = 1
+  for (const card of document.querySelectorAll<HTMLElement>('.flipCard')) {
+    const parsePos = (str: string) => parseInt(str.replace(/px$/, ''))
+
+    let start: [number, number] | null = null
+
+    card.onpointerdown = (event) => {
+      event.preventDefault()
+      card.setPointerCapture(event.pointerId)
+      card.style.zIndex = `${flipZ++}`
+
+      start = [event.screenX, event.screenY]
+
+      card.onpointermove = (event) => {
+        card.style.left = `${parsePos(card.style.left) + event.movementX}px`
+        card.style.top = `${parsePos(card.style.top) + event.movementY}px`
+      }
+    }
+    card.onpointerup = (event) => {
+      if (start) {
+        let dx = event.screenX - start[0]
+        let dy = event.screenY - start[1]
+        if (dx === 0 && dy === 0) {
+          card.dataset.side = card.dataset.side === 'front' ? 'back' : 'front'
+        }
+      }
+
+      card.onpointermove = null
+      card.releasePointerCapture(event.pointerId)
+    }
+  }
+
+  document
+    .getElementById('shuffleDeck')
+    ?.addEventListener('click', () => shuffleCards())
+
+  document
+    .getElementById('organiseDeck')
+    ?.addEventListener('click', () => organiseDeck())
+
+  organiseDeck()
+})
+
+async function shuffleCards() {
+  const deck = document.querySelector('.projectDeck') as HTMLElement
+  const wrapper = document.querySelector('.projectDeck-cards') as HTMLElement
+  const cards = document.querySelectorAll<HTMLElement>('.flipCard')
+  deck.classList.add('isAnimating')
+
+  await new Promise((resolve) => setTimeout(resolve, 10))
+
+  for (const card of cards) {
+    const x = Math.round(
+      Math.random() * (wrapper.scrollWidth - card.clientWidth)
+    )
+    const y = Math.round(
+      Math.random() * (wrapper.clientHeight - card.clientHeight)
+    )
+
+    card.style.left = `${x}px`
+    card.style.top = `${y}px`
+  }
+
+  setTimeout(() => deck.classList.remove('isAnimating'), 500)
+}
+
+function organiseDeck() {
+  const deck = document.querySelector('.projectDeck') as HTMLElement
+  const wrapper = document.querySelector('.projectDeck-cards') as HTMLElement
+  const cards = document.querySelectorAll<HTMLElement>('.flipCard')
+  deck.classList.add('isAnimating')
+
+  const padding = 10
+
+  let y = padding
+  let x = padding
+  for (const card of cards) {
+    card.style.left = `${x}px`
+    card.style.top = `${y}px`
+
+    y += card.clientHeight + padding
+    if (y > wrapper.clientHeight - card.clientHeight) {
+      y = padding
+      x += card.clientWidth + padding
+    }
+  }
+
+  // ...
+
+  setTimeout(() => deck.classList.remove('isAnimating'), 500)
+}
