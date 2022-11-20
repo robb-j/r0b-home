@@ -4,7 +4,7 @@ layout: html.njk
 
 <main>
   <div class="pageBlock" data-accent="liberty">
-    <cover-layout minHeight="60vh" centered="center-layout" class="firstBlock" space="var(--s0)">
+    <cover-layout minHeight="60vh" centered="center-layout" space="var(--s0)">
       {% include 'nav.njk' %}
       
       <center-layout max="90ch" style="width: 100%">
@@ -52,11 +52,13 @@ layout: html.njk
             {% for project in collections.projects | newestFirst | notDraft | slice(0,3) %}
               {% include 'project-card.njk' %}
             {% endfor %}
-            <div class="viewMoreCard">
+            <frame-layout ratio="16:9">
               <a class="viewMore" href="{{ '/projects' | url }}">
                 Projects
               </a>
-            </div>
+            </frame-layout>
+            <!-- <div class="viewMoreCard">
+            </div> -->
           </grid-layout>
         </sidebar-layout>
       </div>

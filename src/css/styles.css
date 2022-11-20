@@ -60,6 +60,7 @@ img {
 .profilePic {
   max-width: 256px;
   margin-inline: auto;
+  padding: 2px;
 }
 .profilePic img {
   border-radius: 290486px;
@@ -112,7 +113,7 @@ img {
 }
 .welcomeCluster h1 {
   font-weight: 200;
-  font-size: 3em;
+  font-size: calc(1.5em + 2vw);
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
   flex: 100%;
   align-self: flex-end;
@@ -227,6 +228,9 @@ footer a {
   padding: var(--s1);
   margin-top: var(--s1);
 }
+.portfolioSection frame-layout {
+  align-self: center;
+}
 .portfolioHeader {
   position: relative;
   top: calc(-2 * var(--s1));
@@ -282,14 +286,6 @@ footer a {
   text-transform: uppercase;
   transform: rotate(-7deg);
   text-shadow: 1px 1px 2px black;
-}
-
-/* 
-  View more card
-*/
-.viewMoreCard {
-  justify-self: center;
-  align-self: center;
 }
 
 /* 
@@ -351,16 +347,13 @@ footer a {
   /* These overrides aren't ideal */
   text-decoration: none;
   font-family: var(--family-system);
-  color: var(--color-anchor);
-  font-weight: 400;
+  font-weight: 600;
 }
 
 /* 
   Image Grid
 */
 reel-layout.imageGrid {
-  /* max-height: 60vh; */
-
   background-color: #eeeeee;
   border-radius: var(--s0) var(--s0) 0.4rem 0.4rem;
   padding: var(--s0);
@@ -372,6 +365,7 @@ reel-layout.imageGrid {
 .imageGrid picture {
   flex: 0 0 auto;
   width: 600px;
+  max-width: unset;
 }
 
 /*
@@ -392,7 +386,7 @@ figcaption {
   HACKS
 */
 center-layout {
-  width: 100%;
+  /* width: 100%; */
 }
 
 /*

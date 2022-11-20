@@ -1,7 +1,7 @@
 {
   "name": "@robb_j/r0b-home",
   "private": true,
-  "repository": "robb-j/r0b-home",
+  "repository": "robb-j/www.r0b.io",
   "scripts": {
     "lint": "eslint src",
     "serve": "eleventy --serve",
