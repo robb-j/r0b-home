@@ -19,7 +19,7 @@ module.exports = function (eleventyConfig) {
       })
     )
 
-    return `<div class="imageGrid">${contents.join('')}</div>`
+    return `<reel-layout class="imageGrid">${contents.join('')}</reel-layout>`
   })
 
   eleventyConfig.addNunjucksAsyncShortcode('figure', async (src, text) => {
@@ -31,6 +31,15 @@ module.exports = function (eleventyConfig) {
     const img = Image.generateHTML(stats, { alt: text, loading: 'lazy' })
     const caption = `<figcaption>${text}</figcaption>`
     return `<figure class="figureImage">${img}${caption}</figure>`
+  })
+
+  eleventyConfig.addShortcode('icon', (name) => {
+    const url = eleventyConfig.getFilter('url')('/img/icons.svg')
+    return `<svg><use xlink:href="${url}#${name}"></use></svg>`
+  })
+
+  eleventyConfig.addShortcode('cleanAnchor', () => {
+    return `rel="noopener"`
   })
 
   //

@@ -1,29 +1,19 @@
 ---
-layout: html.njk
+layout: project.njk
+navWidth: 75ch
 ---
 
-{% include 'header.njk' %}
-
-<main>
-  <section class="page-block has-slope-after">
-    <section class="section is-flat">
-      <div class="container">
-        <h1 class="title is-1 has-text-white">{{ title }}</h1>
-        <p class="subtitle is-4 has-text-white">{{ subtitle }}</p>
-      </div>
-    </section>
-  </section>
-  <section class="section">
-    <div class="container is-small">
-      <p class="buttons is-size-4">
-        <a href="{{ '/projects' }}" class="button is-text">← Projects</a>
-      </p>
-      
-      <div class="content">
-        {{ content | safe }}
-      </div>
-    </div>
-  </section>
-</main>
-
-{% include 'footer.njk' %}
+<center-layout max="75ch" gutters="var(--s1)">
+  <stack-layout space="var(--s0)">
+    <p>
+      <a href="{{ '/projects' | url }}" class="button is-text">
+        <icon-layout>
+          {% icon 'left' %}
+          Projects
+        </icon-layout>
+      </a>
+    </p>
+    
+    {{ content | safe }}
+  </stack-layout>
+</center-layout>

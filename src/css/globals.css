@@ -1,0 +1,73 @@
+/*
+  FONTS
+*/
+
+@font-face {
+  font-family: 'Nunito';
+  src: url(../font/nunito/Nunito-VariableFont_wght.woff2)
+      format('woff2-variations'),
+    url(../font/nunito/Nunito-VariableFont_wght.ttf) format('ttf');
+
+  font-weight: 200 1000;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url(../font/nunito/Nunito-Italic-VariableFont_wght.woff2)
+      format('woff2-variations'),
+    url(../font/nunito/Nunito-Italic-VariableFont_wght.ttf) format('ttf');
+  font-weight: 200 1000;
+  font-style: italic;
+}
+
+/*
+  Globals
+*/
+html {
+  font-family: var(--family-system);
+  line-height: 1.4;
+  color: var(--color-dark);
+  font-size: 16px;
+}
+a {
+  color: var(--color-anchor);
+}
+img {
+  height: auto;
+  max-width: 100%;
+}
+[aria-hidden='true'] {
+  display: none;
+}
+
+/*
+  Figure Image 
+*/
+.figureImage {
+  max-width: 640px;
+  margin: 2rem auto !important;
+  text-align: center;
+}
+figcaption {
+  font-style: italic;
+}
+
+/*
+  CONTENT WIP ...
+  What does bulma do?
+  https://github.com/jgthms/bulma/blob/master/sass/elements/content.sass
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.125;
+}
+
+pre {
+  border-left: 5px solid #209cee;
+}

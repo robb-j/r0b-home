@@ -1,0 +1,73 @@
+@import '@openlab/alembic/reset.css';
+@import '@openlab/alembic/layouts.css';
+
+@import 'prism-themes/themes/prism-dracula.css';
+
+@import './globals.css';
+@import './blog.css';
+@import './me.css';
+@import './page.css';
+@import './projects.css';
+@import './deck.css';
+
+:root {
+  /* ... */
+  --measure: 60ch;
+
+  --family-system: system-ui, sans-serif;
+  --family-nunito: Nunito, system-ui, sans-serif;
+  --family-mono: ui-monospace, SFMono-Regular, Consolas, Liberation Mono, Menlo,
+    Courier, monospace;
+
+  /* https://github.com/robb-j/r0b-design/blob/master/src/styles/base/variables.sass */
+  --color-yellow: #ffdd57;
+  --color-magenta: #92374d;
+  --color-berry: #8c5483;
+  --color-liberty: #4a5899;
+  /* --color-offBlue: #559cad; */
+  /* --color-silver: #c0b2aa; */
+  /* --color-deepKoamaru: #392b58; */
+  --color-bluePen: #00188a;
+
+  --color-dark: #4a4a4a;
+  --color-light: white;
+  --color-anchor: #3273dc;
+}
+
+/* 
+  MISC
+*/
+.isTyping {
+  padding-right: 0.1em;
+  border-right: 3px solid #ee8595;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+body:not(.isGlitched) .glitched {
+  display: none;
+}
+body.isGlitched {
+  overflow: hidden;
+}
+.glitched {
+  position: fixed;
+  transition: background 3s ease;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: 4s ease glitched forwards;
+  z-index: 100;
+}
+.glitched iframe {
+  height: 100vh;
+  width: 100vw;
+}
+@keyframes glitched {
+  from {
+    background: transparent;
+  }
+  to {
+    background: black;
+  }
+}

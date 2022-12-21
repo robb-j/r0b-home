@@ -31,4 +31,4 @@ I deploy all my projects with [Docker](https://docker.com)
 and am doing a lot with [Kubernetes](https://kubernetes.io/) at the moment.
 
 My latest projects are always on [GitHub](https://github.com/robb-j)
-and my latest ramblings are on [Twitter](https://twitter.com/Robbb_J).
+and my latest ramblings are on [Twitter](https://twitter.com/robbb_j).

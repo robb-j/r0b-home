@@ -182,7 +182,7 @@ If it found that variable it opened the `index.html` and injected a tiny script 
 
 To demonstrate how it worked, if these variables were set:
 
-```env
+```
 CONFIG_KEYS="API_URL,APP_NAME"
 API_URL="https://api.gabber.audio"
 APP_NAME="Gabber"

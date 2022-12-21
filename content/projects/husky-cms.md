@@ -87,7 +87,7 @@ First, there are basic variables, that setup the actual site.
 Like the site's name, credentials to access the Trello API
 and the id of the list for the basic pages.
 
-```env
+```
 SITE_NAME=My fancy site
 TRELLO_APP_KEY=top_secret
 TRELLO_TOKEN=also_top_secret
@@ -99,7 +99,7 @@ Then you can turn on the blog and projects pages by setting the corresponding `_
 to the id of the list in Trello.
 The pages are further configured with variables to set a name, title and subtitle:
 
-```env
+```
 BLOG_LIST=<trello_id>
 BLOG_SLUG=my-blog
 BLOG_NAME=Rob's Blog
@@ -118,7 +118,7 @@ which allow you to load custom CSS or JavaScript onto the page.
 This works especially well with volume-mounting files into the container,
 any files inside of `/app/static` are automatically served over http.
 
-```env
+```
 CUSTOM_CSS_URL=/extra-styles.css
 CUSTOM_JS_URL=/my-script.js
 CUSTOM_BRAND_URL=/brand.img

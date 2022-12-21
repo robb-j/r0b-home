@@ -1,0 +1,93 @@
+/*
+  Project Grid
+*/
+grid-layout.projectGrid {
+  background-color: #ededed;
+  padding: var(--s-1);
+  border-radius: var(--s-2);
+}
+
+/* 
+  Project card
+*/
+.projectCard {
+  border-radius: var(--s-3);
+  background: var(--color-light);
+  overflow: hidden;
+  box-shadow: 0 3px 1px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+.projectCard a {
+  display: block;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+}
+.projectCard:hover a {
+  text-decoration: underline;
+}
+.projectCard-banner {
+  padding: var(--s-2) var(--s0);
+}
+.projectCard-comingSoon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  cursor: not-allowed;
+}
+.projectCard-comingSoon span {
+  color: white;
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  transform: rotate(-7deg);
+  text-shadow: 1px 1px 2px black;
+}
+
+/* 
+  Project section
+*/
+.projectsSection {
+  background-color: var(--color-berry);
+  color: var(--color-light);
+  border-radius: var(--s-3);
+  padding: var(--s1);
+  margin-top: var(--s1);
+}
+.projectsSection frame-layout {
+  align-self: center;
+}
+
+/* 
+  Project header
+*/
+.projectsHeader {
+  position: relative;
+  top: calc(-2 * var(--s1));
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  padding: var(--s0);
+  border-radius: var(--s-3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/*
+  Project hero
+*/
+.projectHero {
+  font-size: 1.2rem;
+}
+.projectHero h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
+}

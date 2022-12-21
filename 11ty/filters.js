@@ -20,4 +20,21 @@ module.exports = function (eleventyConfig) {
     const url = new URL(path.replace(/^\/+/, '/'), this.ctx.site.url)
     return url.toString()
   })
+
+  eleventyConfig.addFilter('pathOrUrl', function (input) {
+    return input.startsWith('/')
+      ? eleventyConfig.getFilter('url')(input)
+      : input
+  })
+
+  eleventyConfig.addFilter('inert', (flag) => (flag ? 'inert' : ''))
+  eleventyConfig.addFilter('disabled', (flag) => (flag ? 'disabled' : ''))
+
+  eleventyConfig.addFilter('sortCards', (collection) => {
+    const output = Array.from(collection)
+    output.sort((a, b) => {
+      return b.year - a.year
+    })
+    return output
+  })
 }

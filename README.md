@@ -1,8 +1,8 @@
-# r0b-home [![Netlify Status](https://api.netlify.com/api/v1/badges/ed3d45ba-da8f-471d-9e03-da6a2e4668ec/deploy-status)](https://app.netlify.com/sites/sharp-newton-2d30e6/deploys)
+# www.r0b.io [![Netlify Status](https://api.netlify.com/api/v1/badges/ed3d45ba-da8f-471d-9e03-da6a2e4668ec/deploy-status)](https://app.netlify.com/sites/sharp-newton-2d30e6/deploys)
 
 My personal website, a static site generated with [11ty](https://www.11ty.dev/)
-using [r0b-design](https://github.com/robb-j/r0b-design/)
-and pushed to [r0b.io](r0b.io).
+using [@openlab/alembic](https://github.com/digitalinteraction/alembic/)
+and pushed to [www.r0b.io](https://www.r0b.io).
 
 ## dev scripts
 
@@ -17,21 +17,24 @@ npm run build
 # -> Reloads on change using BrowserSync
 npm run serve
 
-# Deploy the site (WIP)
-# -> Need ssh access to r0b.io
-npm run deploy
-
 # Manually lint code
 npm run lint
+
+# Manually format code
+npm run format
 ```
 
 ## dev setup
 
 - prettier.io on git commit
-- eslint w/ standard for javascript errors
+- TypeScript javascript errors
 - editorconfig for indentation management
 
 ## future work
 
-- merge style changes back into r0b-design
-- add opengraph tags for page(s)
+- n/a
+
+## merge todos
+
+- merge alembic fixes back
+- cool cards thingy

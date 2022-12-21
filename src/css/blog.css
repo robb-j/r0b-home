@@ -1,0 +1,25 @@
+/* 
+  A4 page
+*/
+.a4Page {
+  color: var(--color-bluePen);
+  font-family: var(--family-nunito);
+  background-image: url(./paper.png);
+  background-repeat: repeat;
+  padding: calc(var(--s-3) + 3vw);
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.3);
+  font-size: 1.3em;
+}
+.a4Page a {
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+.a4Page .viewMore {
+  /* These overrides aren't ideal */
+  text-decoration: none;
+  font-family: var(--family-system);
+  font-weight: 600;
+}

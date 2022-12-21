@@ -1,0 +1,25 @@
+---
+layout: html.njk
+meta:
+  color: '#8c5483'
+---
+
+<main>
+  <div class="pageBlock" data-accent="berry">
+    <cover-layout centered="center-layout" minHeight="200px" space="var(--s0)">
+      {% include 'nav.njk' %}
+      <center-layout max="{{ navWidth }}" gutters="var(--s1)">
+        <div class="projectHero">
+          <h1>{{ title }}</h1>
+          <p>{{ subtitle }}</p>
+        </div>
+      </center-layout>
+    </cover-layout>
+  </div>
+  
+  <div class="pageBlock">
+    {{ content | safe }}
+  </div>
+</main>
+
+{% include 'footer.njk' %}

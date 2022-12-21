@@ -1,0 +1,160 @@
+.r0bBrand {
+  transform: rotate(-10deg);
+}
+
+/* 
+  Footer
+*/
+/* specify based on aria stuff? */
+footer {
+  background-image: url(./paper.png);
+  background-repeat: repeat;
+  border-bottom: 6px solid var(--color-liberty);
+  padding: 3em 0 0.5em;
+}
+footer p {
+  font-family: var(--family-mono);
+  font-size: 0.85em;
+  text-align: center;
+  color: #7a7a7a;
+}
+footer a {
+  color: #363636;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* 
+  Page block
+*/
+.pageBlock {
+  position: relative;
+  color: var(--block-color);
+  background-color: var(--block-background);
+}
+.pageBlock[data-accent='liberty'] {
+  --block-color: var(--color-light);
+  --block-background: var(--color-liberty);
+}
+.pageBlock[data-accent='magenta'] {
+  --block-color: var(--color-light);
+  --block-background: var(--color-magenta);
+}
+.pageBlock[data-accent='berry'] {
+  --block-color: var(--color-light);
+  --block-background: var(--color-berry);
+}
+
+.pageBlock:nth-child(even) {
+  margin-block-start: -7vw;
+  padding-block-start: 7vw;
+  background-image: url(./paper.png);
+  background-repeat: repeat;
+}
+.pageBlock:nth-child(even):not(:last-child) {
+  margin-block-end: -7vw;
+  padding-block-end: 7vw;
+}
+
+.pageBlock:nth-child(odd):not(:last-child) {
+  margin-block-end: 7vw;
+}
+.pageBlock:nth-child(odd):not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  bottom: -7vw;
+  border-left: 100vw solid var(--block-background);
+  border-bottom: 7vw solid transparent;
+  border-top: 1px solid var(--block-background);
+}
+
+.pageBlock:nth-child(odd):not(:first-child) {
+  margin-block-start: 7vw;
+}
+.pageBlock:nth-child(odd):not(:first-child)::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  top: -7vw;
+  border-left: 100vw solid var(--block-background);
+  border-top: 7vw solid transparent;
+  border-bottom: 1px solid var(--block-background);
+}
+.pageBlock > center-layout {
+  padding-block: var(--s3);
+}
+
+/* 
+  Nav links
+*/
+.navItem {
+  font-family: var(--family-nunito);
+  font-size: 1.05em;
+  color: var(--white);
+  text-shadow: -1px 1px 0 var(--color-dark), 1px 1px 0 var(--color-dark),
+    1px -1px 0 var(--color-dark), -1px -1px 0 var(--color-dark);
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+.navItem:hover {
+  color: var(--color-yellow);
+}
+
+/* 
+  Image Grid
+*/
+reel-layout.imageGrid {
+  background-color: #eeeeee;
+  border-radius: var(--s0) var(--s0) 0.4rem 0.4rem;
+  padding: var(--s0);
+
+  --color-foreground: var(--color-berry);
+  --color-background: #dddddd;
+}
+.imageGrid img,
+.imageGrid picture {
+  flex: 0 0 auto;
+  width: 600px;
+  max-width: unset;
+}
+
+/* 
+  View more
+*/
+.viewMore {
+  color: inherit;
+
+  font-weight: 600;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-inline-end: 1em;
+  text-decoration: none;
+}
+.viewMore::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  bottom: 0;
+  background-color: currentColor;
+}
+.viewMore::after {
+  content: '';
+  position: absolute;
+  right: -1.4em;
+  bottom: 1px;
+  border-top: 1.05ex solid transparent;
+  border-right: 1.05ex solid transparent;
+  border-bottom: 1.05ex solid transparent;
+  border-left: 1.05ex solid currentcolor;
+}

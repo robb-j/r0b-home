@@ -1,15 +1,20 @@
 {# 'project' must be set #}
 
-<div class="projectCard">
+<div class="projectCard" {{ project.data.draft | inert }}>
   {% if project.data.draft %}
   <p class="projectCard-comingSoon"><span>TODO:</span></p>
   {% endif %}
-  <a href="{{ project.url }}">
-    <img class="projectCard-cover" src="{{ project.data.coverImage | url }}" alt="{{ project.data.title }}">
+  <a href="{{ project.url }}" {{ project.data.draft | disabled }}>
+    <frame-layout ratio="16:9">
+      <img src="{{ project.data.coverImage | url }}" alt="{{ project.data.title }}">
+    </frame-layout>
   </a>
   <div class="projectCard-banner">
-    <a href="{{ project.url }}">
-      {{ project.data.title }}
+    <a href="{{ project.url }}" {{ project.data.draft | disabled }}>
+      <icon-layout>
+        {{ project.data.title }}
+        {% icon 'right' %}
+      </icon-layout>
     </a>
   </div>
 </div>

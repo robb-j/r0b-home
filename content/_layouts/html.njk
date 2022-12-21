@@ -4,13 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>{{ title + ' |' if title }} {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ '/r0b/styles.css' | url }}" />
-    <link rel="stylesheet" href="{{ '/css/custom.css' | url }}" />
-    <link rel="icon" href="{{ '/r0b/png/favicon.png' | url }}" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Nunito:400,700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="{{  '/dist/css/styles.css' | url }}" />
+    <link rel="icon" href="{{ '/img/favicon.png' | url }}" />
+    <meta name="theme-color" content="{{ meta.color or '#4a5899' }}" />
     <meta
       property="og:title"
       content="{{ meta.title or title or site.title }}"
@@ -22,13 +18,14 @@
     />
     <meta property="og:url" content="{{ page.url | fullUrl }}" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@{{ site.twitter }}" />
+    <meta name="twitter:site" content="@robbb_j" />
     <meta property="og:description" content="{{ meta.summary or summary }}" />
+    <!-- @openlab/alembic inject-css -->
   </head>
   <body>
     {{ content | safe }}
     <div class="glitched"></div>
-    <script src="{{ '/dist/app.js' | url }}"></script>
+    <script src="{{ '/dist/js/app.js' | url }}"></script>
     <!-- Fathom - beautiful, simple website analytics -->
     <script src="https://truthful-stirring.r0b.io/script.js" data-site="LYDSSVMX" defer></script>
     <!-- / Fathom -->
