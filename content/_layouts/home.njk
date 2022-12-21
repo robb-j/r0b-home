@@ -25,7 +25,7 @@ layout: html.njk
               </h1>
               
               {% for link in links %}
-              <a href="{{ link.url }}" class="circleButton" data-accent="{{ link.accent }}">
+              <a href="{{ link.url }}" class="circleButton" data-accent="{{ link.accent }}" rel="me">
                 <icon-layout label="{{ link.label }}">
                   {% icon link.icon %}
                 </icon-layout>

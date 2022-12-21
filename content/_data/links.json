@@ -1,5 +1,11 @@
 [
   {
+    "url": "https://hyem.tech/@rob",
+    "accent": "mastodon",
+    "icon": "mastodon",
+    "label": "Mastodon"
+  },
+  {
     "url": "https://twitter.com/robbb_j",
     "accent": "twitter",
     "icon": "twitter",
@@ -16,12 +22,6 @@
     "accent": "dockerhub",
     "icon": "dockerhub",
     "label": "DockerHub"
-  },
-  {
-    "url": "https://www.instagram.com/robb_j/",
-    "accent": "instagram",
-    "icon": "instagram",
-    "label": "Instagram"
   },
   {
     "url": "https://scholar.google.co.uk/citations?user=sL5l7hIAAAAJ&hl=en",
