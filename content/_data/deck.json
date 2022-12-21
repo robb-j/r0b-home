@@ -8,7 +8,7 @@
   {
     "image": "/img/projects/browser-now.png",
     "text": "macOS menu app to quickly swap the default browser",
-    "url": "https://apps.apple.com/gb/app/browsernow/id1633886387?mt=12",
+    "url": "https://apps.apple.com/gb/app/browsernow/id1633886387",
     "tags": ["Native"],
     "year": 2022
   },
@@ -75,7 +75,7 @@
     "text": "MozFest virtual conference",
     "url": "/projects/deconf",
     "tags": ["Web"],
-    "year": 2023
+    "year": 2022
   },
   {
     "image": "/img/projects/not-equal-catalyst.png",
@@ -198,5 +198,12 @@
     "url": "https://whatfutures.org",
     "tags": ["Web"],
     "year": 2019
+  },
+  {
+    "image": "/img/projects/yoath.png",
+    "text": "A Menu Bar Extras app to quickly get YubiKey OATH codes",
+    "url": "https://apps.apple.com/gb/app/yoath/id1660931205",
+    "tags": ["Native"],
+    "year": 2022
   }
 ]
