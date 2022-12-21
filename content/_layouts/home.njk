@@ -84,15 +84,18 @@ layout: html.njk
         <p class="projectDeck-header">My stuff</p>
         <reel-layout>
           <div class="projectDeck-cards">
-            {% for card in deck %}
+            {% for card in deck | sortCards %}
               {% include 'flip-card.njk' %}
             {% endfor %}
           </div>
         </reel-layout>
         <div class="projectDeck-footer">
           <cluster-layout space="var(--s-1)">
-            <button id="organiseDeck">Organise</button>
+            <button id="organiseDeck">Chronological</button>
             <button id="shuffleDeck">Shuffle</button>
+            <button class="taggedDeck" data-tag="Web">Web</button>
+            <button class="taggedDeck" data-tag="Native">Native</button>
+            <button class="taggedDeck" data-tag="Nova">Nova</button>
           </cluster-layout>
         </div>
       </div>

@@ -37,6 +37,9 @@ img {
   height: auto;
   max-width: 100%;
 }
+[aria-hidden='true'] {
+  display: none;
+}
 
 /*
   Figure Image 

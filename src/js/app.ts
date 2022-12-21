@@ -182,20 +182,31 @@ document.addEventListener('DOMContentLoaded', () => {
     .getElementById('organiseDeck')
     ?.addEventListener('click', () => organiseDeck())
 
+  for (const button of document.querySelectorAll<HTMLButtonElement>(
+    'button.taggedDeck'
+  )) {
+    const { tag } = button.dataset
+    if (!tag) continue
+    button.onclick = () => organiseDeck([tag])
+  }
+
   organiseDeck()
 })
 
 async function shuffleCards() {
   const deck = document.querySelector('.projectDeck') as HTMLElement
-  const wrapper = document.querySelector('.projectDeck-cards') as HTMLElement
+  const wrapper = document.querySelector(
+    '.projectDeck reel-layout'
+  ) as HTMLElement
   const cards = document.querySelectorAll<HTMLElement>('.flipCard')
   deck.classList.add('isAnimating')
 
   await new Promise((resolve) => setTimeout(resolve, 10))
 
   for (const card of cards) {
+    delete card.dataset.hidden
     const x = Math.round(
-      Math.random() * (wrapper.scrollWidth - card.clientWidth)
+      Math.random() * (wrapper.clientWidth - card.clientWidth)
     )
     const y = Math.round(
       Math.random() * (wrapper.clientHeight - card.clientHeight)
@@ -208,25 +219,46 @@ async function shuffleCards() {
   setTimeout(() => deck.classList.remove('isAnimating'), 500)
 }
 
-function organiseDeck() {
+function organiseDeck(onlyTags?: string[]) {
   const deck = document.querySelector('.projectDeck') as HTMLElement
   const wrapper = document.querySelector('.projectDeck-cards') as HTMLElement
   const cards = document.querySelectorAll<HTMLElement>('.flipCard')
   deck.classList.add('isAnimating')
 
+  const gap = 40
   const padding = 10
+  let lastYear: string | undefined = undefined
 
   let y = padding
   let x = padding
   for (const card of cards) {
+    const { year, tags } = card.dataset
+
+    const hideCard = Boolean(
+      onlyTags && tags && !onlyTags.some((t) => tags.includes(t))
+    )
+    console.log(onlyTags && tags && !onlyTags.some((t) => tags.includes(t)))
+    if (hideCard) {
+      card.dataset.hidden = 'true'
+      continue
+    }
+
+    delete card.dataset.hidden
+
+    if (lastYear && lastYear !== year) {
+      y = padding
+      x += card.clientWidth + padding + gap
+    } else if (y > wrapper.clientHeight - card.clientHeight) {
+      y = padding
+      x += card.clientWidth + padding
+    }
+
+    lastYear = year
+
     card.style.left = `${x}px`
     card.style.top = `${y}px`
 
     y += card.clientHeight + padding
-    if (y > wrapper.clientHeight - card.clientHeight) {
-      y = padding
-      x += card.clientWidth + padding
-    }
   }
 
   // ...

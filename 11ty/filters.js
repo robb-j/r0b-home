@@ -29,4 +29,12 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter('inert', (flag) => (flag ? 'inert' : ''))
   eleventyConfig.addFilter('disabled', (flag) => (flag ? 'disabled' : ''))
+
+  eleventyConfig.addFilter('sortCards', (collection) => {
+    const output = Array.from(collection)
+    output.sort((a, b) => {
+      return b.year - a.year
+    })
+    return output
+  })
 }

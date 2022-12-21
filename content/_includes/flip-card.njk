@@ -1,6 +1,6 @@
 {# 'card' must be set #}
 
-<div class="flipCard" data-side="front">
+<div class="flipCard" data-side="front" data-tags="{{ card.tags.join(' ') }}" data-year="{{ card.year }}">
   <div class="flipCard-inner">
     <frame-layout ratio="16:9" class="flipCard-front">
       <img src="{{ card.image | url }}" width="320" height="180">
@@ -19,6 +19,7 @@
         </p>
         {% endif %}
       </stack-layout>
+      <p class="flipCard-year">{{ card.year }}</p>
     </frame-layout>
   </div>
 </div>

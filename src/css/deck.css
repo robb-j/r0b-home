@@ -38,7 +38,7 @@
 }
 
 .projectDeck.isAnimating .flipCard {
-  transition: top 300ms ease, left 300ms ease;
+  transition: top 300ms ease, left 300ms ease, opacity 300ms ease;
 }
 
 /* https://www.w3schools.com/howto/howto_css_flip_card.asp */
@@ -54,6 +54,7 @@
 
   box-shadow: 0 3px 1px rgba(0, 0, 0, 0.05);
   cursor: move;
+  opacity: 1;
 }
 .flipCard-inner {
   position: relative;
@@ -83,4 +84,13 @@
   transform: rotateY(180deg);
   padding: var(--s-1);
   border: var(--s-3) solid var(--color-dark);
+}
+.flipCard-year {
+  position: absolute;
+  right: var(--s-1);
+  bottom: var(--s-1);
+  font-weight: 400;
+}
+.flipCard[data-hidden='true'] {
+  opacity: 0;
 }
