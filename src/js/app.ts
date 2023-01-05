@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
     button.onclick = () => organiseDeck([tag])
   }
 
-  organiseDeck()
+  shuffleCards()
 })
 
 async function shuffleCards() {
