@@ -144,8 +144,6 @@ window.setInterval(() => {
 document.addEventListener('DOMContentLoaded', () => {
   let flipZ = 1
   for (const card of document.querySelectorAll<HTMLElement>('.flipCard')) {
-    const parsePos = (str: string) => parseInt(str.replace(/px$/, ''))
-
     let start: [number, number] | null = null
 
     card.onpointerdown = (event) => {
@@ -156,8 +154,8 @@ document.addEventListener('DOMContentLoaded', () => {
       start = [event.screenX, event.screenY]
 
       card.onpointermove = (event) => {
-        card.style.left = `${parsePos(card.style.left) + event.movementX}px`
-        card.style.top = `${parsePos(card.style.top) + event.movementY}px`
+        card.style.left = `${card.offsetLeft + event.movementX}px`
+        card.style.top = `${card.offsetTop + event.movementY}px`
       }
     }
     card.onpointerup = (event) => {
@@ -190,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
     button.onclick = () => organiseDeck([tag])
   }
 
-  shuffleCards()
+  organiseDeck()
 })
 
 async function shuffleCards() {
