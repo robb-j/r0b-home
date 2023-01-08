@@ -16,19 +16,19 @@ board:
 ## About me
 
 I'm a developer interested in making web platforms and services.
-I'm a Senior Research Software Engineer at [Open Lab](https://openlab.ncl.ac.uk),
-a cross-disciplinary research group at Newcastle University.
-I make technologies to support projects ranging from [virtual conference schedule's](https://climate-red.openlab.dev)
-to [innovative platforms](https://catalyst.not-equal.tech/)
-and even [global WhatsApp games](https://whatfutures.org/).
+I'm a Senior Research Software Engineer at [Open Lab](https://openlab.ncl.ac.uk/people/rob-anderson/),
+a cross-disciplinary HCI research group at Newcastle University.
+I make technologies for projects ranging from [virtual conference schedule's]({{ '/projects/deconf' | url }})
+to [innovative platforms]({{ '/projects/not-equal-catalyst' | url }})
+and even [global WhatsApp games]({{ '/projects/what-futures' | url }}).
 
-I make use of a lot of technologies and methodologies.
+I play with a lot of technologies and ideas.
 I'm a keen test driven developer, agile worker and always like to try out different frameworks.
-For instance this site uses [Eleventy](https://www.11ty.io/)
-and [Nunjucks](https://mozilla.github.io/nunjucks/)
-with a sprinkle of [Sass](https://sass-lang.com/).
-I deploy all my projects with [Docker](https://docker.com)
-and am doing a lot with [Kubernetes](https://kubernetes.io/) at the moment.
+For instance I made this site with [Eleventy](https://www.11ty.io/),
+[Nunjucks](https://mozilla.github.io/nunjucks/)
+and a sprinkle of [Sass](https://sass-lang.com/).
+I'm big into devops, containerising things with [Docker](https://docker.com)
+and have been quite liking [Kubernetes](https://kubernetes.io/) recently.
 
-My latest projects are always on [GitHub](https://github.com/robb-j)
-and my latest ramblings are on [Twitter](https://twitter.com/robbb_j).
+Most of my projects are on [GitHub](https://github.com/robb-j)
+and my latest ramblings are on [Mastodon]({{ site.mastodon }}).
