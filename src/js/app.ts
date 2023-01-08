@@ -140,12 +140,24 @@ window.setInterval(() => {
   )
 }, 5000)
 
+function inRange(a: [number, number], b: [number, number], r: number) {
+  return Math.pow(a[0] - b[0], 2) + Math.pow(a[1] - b[1], 2) < Math.pow(r, 2)
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   let flipZ = 1
   for (const card of document.querySelectorAll<HTMLElement>('.flipCard')) {
     let start: [number, number] | null = null
 
     card.onpointerdown = (event) => {
+      // Ignore this event if it is not a left-click or touch or if an anchor
+      if (
+        event.button !== 0 ||
+        event.composedPath().some((e) => e instanceof HTMLAnchorElement)
+      ) {
+        return
+      }
+
       event.preventDefault()
       card.setPointerCapture(event.pointerId)
       card.style.zIndex = `${flipZ++}`
@@ -158,12 +170,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
     card.onpointerup = (event) => {
-      if (start) {
-        let dx = event.screenX - start[0]
-        let dy = event.screenY - start[1]
-        if (dx === 0 && dy === 0) {
-          card.dataset.side = card.dataset.side === 'front' ? 'back' : 'front'
-        }
+      if (start && inRange([event.screenX, event.screenY], start, 5)) {
+        card.dataset.side = card.dataset.side === 'front' ? 'back' : 'front'
       }
 
       card.onpointermove = null
