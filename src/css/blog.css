@@ -15,7 +15,7 @@
   text-decoration: none;
   color: inherit;
   text-decoration: underline;
-  text-decoration-style: wavy;
+  text-decoration-style: dotted;
 }
 .a4Page .viewMore {
   /* These overrides aren't ideal */
