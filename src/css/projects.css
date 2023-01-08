@@ -13,7 +13,6 @@ grid-layout.projectGrid {
 .projectCard {
   border-radius: var(--s-3);
   background: var(--color-light);
-  overflow: hidden;
   box-shadow: 0 3px 1px rgba(0, 0, 0, 0.05);
   position: relative;
 }
@@ -22,6 +21,10 @@ grid-layout.projectGrid {
   text-decoration: none;
   font-weight: 600;
   text-align: center;
+}
+.projectCard img {
+  border-top-left-radius: var(--s-3);
+  border-top-right-radius: var(--s-3);
 }
 .projectCard:hover a {
   text-decoration: underline;
