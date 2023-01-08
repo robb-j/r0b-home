@@ -17,14 +17,13 @@ const randomThings = [
   'stuff',
   'games',
   'websites',
-  'frameworks',
-  'libraries',
-  'apps',
-  'code',
-  'tech',
+  'mac apps',
+  'blog posts',
+  'nova extensions',
   'things',
   'tools',
   'easter eggs',
+  'lego',
 ]
 
 // The element to add glitches to

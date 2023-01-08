@@ -29,6 +29,11 @@
 .welcomeCluster a {
   align-self: flex-start;
 }
+@media (max-width: 60ch) {
+  .welcomeCluster-prefix {
+    display: block;
+  }
+}
 
 /* 
   Circle button
