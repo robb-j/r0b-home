@@ -1,5 +1,4 @@
-@import '@openlab/alembic/reset.css';
-@import '@openlab/alembic/layouts.css';
+@import '@openlab/alembic/everything.css';
 
 @import 'prism-themes/themes/prism-dracula.css';
 

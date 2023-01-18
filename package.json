@@ -9,7 +9,7 @@
     "build": "eleventy"
   },
   "dependencies": {
-    "@openlab/alembic": "^0.2.4"
+    "@openlab/alembic": "^0.3.0-beta1"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",

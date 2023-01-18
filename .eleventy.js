@@ -1,10 +1,9 @@
-require('@openlab/alembic/fake-dom-env')
 require('dotenv/config')
 
-const { injectLayoutStyles } = require('@openlab/alembic')
 const markdown = require('markdown-it')
 const markdownAnchor = require('markdown-it-anchor')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
+const { eleventyAlembic } = require('@openlab/alembic/11ty')
 
 const shortcodes = require('./11ty/shortcodes')
 const filters = require('./11ty/filters')
@@ -29,16 +28,10 @@ module.exports = function (eleventyConfig) {
     'src/font': 'font',
   })
 
+  eleventyConfig.addPlugin(eleventyAlembic)
   eleventyConfig.addPlugin(filters)
   eleventyConfig.addPlugin(shortcodes)
   eleventyConfig.addPlugin(syntaxHighlight)
-
-  // if (NODE_ENV === 'production') {
-  eleventyConfig.addTransform('html', (content) => {
-    if (typeof content !== 'string') return content
-    return injectLayoutStyles(content)
-  })
-  // }
 
   return {
     dir: {
