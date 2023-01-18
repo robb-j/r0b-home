@@ -4,35 +4,44 @@ layout: html.njk
 
 <main>
   <div class="pageBlock" data-accent="liberty">
-    <cover-layout minHeight="60vh" centered="center-layout" space="var(--s0)">
+    <cover-layout minHeight="60vh" centered="#welcome" space="var(--s0)" style="gap: var(--s1)">
       {% include 'nav.njk' %}
       
-      <center-layout max="90ch" style="width: 100%">
+      <center-layout max="90ch" style="width: 100%" id="welcome">
         <sidebar-layout sideWidth="256px" contentMin="65%">
           <frame-layout ratio="1:1" class="profilePic">
             <picture>
               <img 
                 width="256"
                 height="256"
-                src="{{ '/img/me.jpeg' | url }}"
+                src="{{ '/img/me.jpg' | url }}"
               >
             </picture>
           </frame-layout>
-            <cluster-layout space="var(--s-2)" class="welcomeCluster">
-              <h1>
-                <span class="welcomeCluster-prefix">I'm rob, I make ...</span>
-                <span id="miscSkill">stuff</span>
-              </h1>
-              
-              {% for link in links %}
-              <a href="{{ link.url }}" class="circleButton" data-accent="{{ link.accent }}" rel="me">
-                <icon-layout label="{{ link.label }}">
-                  {% icon link.icon %}
-                </icon-layout>
-              </a>
-              {% endfor %}
-            </cluster-layout>
+          <cluster-layout space="var(--s-2)" class="welcomeCluster">
+            <h1>
+              <span class="welcomeCluster-prefix">I'm rob, I make ...</span>
+              <span id="miscSkill">stuff</span>
+            </h1>
+            
+            {% for link in links %}
+            <a href="{{ link.url }}" class="circleButton" data-accent="{{ link.accent }}" rel="me">
+              <icon-layout label="{{ link.label }}">
+                {% icon link.icon %}
+              </icon-layout>
+            </a>
+            {% endfor %}
+          </cluster-layout>
         </sidebar-layout>
+      </center-layout>
+      <center-layout style="width: 100%">
+        <details class="nowSection">
+          <summary>What am I up to now?</summary>
+          <script src="https://omgnow.rknight.me/now.js?a=r0b" defer></script>
+          <p class="nowSection-info">
+            This is my <a href="https://r0b.omg.lol/now">now page</a>, you should make one! <a href="https://nownownow.com/about">What is this</a>?
+          </p>
+        </details>
       </center-layout>
     </cover-layout>
   </div>

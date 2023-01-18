@@ -144,59 +144,7 @@ function inRange(a: [number, number], b: [number, number], r: number) {
   return Math.pow(a[0] - b[0], 2) + Math.pow(a[1] - b[1], 2) < Math.pow(r, 2)
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  let flipZ = 1
-  for (const card of document.querySelectorAll<HTMLElement>('.flipCard')) {
-    let start: [number, number] | null = null
-
-    card.onpointerdown = (event) => {
-      // Ignore this event if it is not a left-click or touch or if an anchor
-      if (
-        event.button !== 0 ||
-        event.composedPath().some((e) => e instanceof HTMLAnchorElement)
-      ) {
-        return
-      }
-
-      event.preventDefault()
-      card.setPointerCapture(event.pointerId)
-      card.style.zIndex = `${flipZ++}`
-
-      start = [event.screenX, event.screenY]
-
-      card.onpointermove = (event) => {
-        card.style.left = `${card.offsetLeft + event.movementX}px`
-        card.style.top = `${card.offsetTop + event.movementY}px`
-      }
-    }
-    card.onpointerup = (event) => {
-      if (start && inRange([event.screenX, event.screenY], start, 5)) {
-        card.dataset.side = card.dataset.side === 'front' ? 'back' : 'front'
-      }
-
-      card.onpointermove = null
-      card.releasePointerCapture(event.pointerId)
-    }
-  }
-
-  document
-    .getElementById('shuffleDeck')
-    ?.addEventListener('click', () => shuffleCards())
-
-  document
-    .getElementById('organiseDeck')
-    ?.addEventListener('click', () => organiseDeck())
-
-  for (const button of document.querySelectorAll<HTMLButtonElement>(
-    'button.taggedDeck'
-  )) {
-    const { tag } = button.dataset
-    if (!tag) continue
-    button.onclick = () => organiseDeck([tag])
-  }
-
-  shuffleCards()
-})
+document.addEventListener('DOMContentLoaded', () => main())
 
 async function shuffleCards() {
   const deck = document.querySelector('.projectDeck') as HTMLElement
@@ -269,4 +217,58 @@ function organiseDeck(onlyTags?: string[]) {
   // ...
 
   setTimeout(() => deck.classList.remove('isAnimating'), 500)
+}
+
+function main() {
+  let flipZ = 1
+  for (const card of document.querySelectorAll<HTMLElement>('.flipCard')) {
+    let start: [number, number] | null = null
+
+    card.onpointerdown = (event) => {
+      // Ignore this event if it is not a left-click or touch or if an anchor
+      if (
+        event.button !== 0 ||
+        event.composedPath().some((e) => e instanceof HTMLAnchorElement)
+      ) {
+        return
+      }
+
+      event.preventDefault()
+      card.setPointerCapture(event.pointerId)
+      card.style.zIndex = `${flipZ++}`
+
+      start = [event.screenX, event.screenY]
+
+      card.onpointermove = (event) => {
+        card.style.left = `${card.offsetLeft + event.movementX}px`
+        card.style.top = `${card.offsetTop + event.movementY}px`
+      }
+    }
+    card.onpointerup = (event) => {
+      if (start && inRange([event.screenX, event.screenY], start, 5)) {
+        card.dataset.side = card.dataset.side === 'front' ? 'back' : 'front'
+      }
+
+      card.onpointermove = null
+      card.releasePointerCapture(event.pointerId)
+    }
+  }
+
+  document
+    .getElementById('shuffleDeck')
+    ?.addEventListener('click', () => shuffleCards())
+
+  document
+    .getElementById('organiseDeck')
+    ?.addEventListener('click', () => organiseDeck())
+
+  for (const button of document.querySelectorAll<HTMLButtonElement>(
+    'button.taggedDeck'
+  )) {
+    const { tag } = button.dataset
+    if (!tag) continue
+    button.onclick = () => organiseDeck([tag])
+  }
+
+  shuffleCards()
 }

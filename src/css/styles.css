@@ -9,6 +9,7 @@
 @import './page.css';
 @import './projects.css';
 @import './deck.css';
+@import './now.css';
 
 :root {
   /* ... */

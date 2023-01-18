@@ -1,0 +1,43 @@
+.nowSection {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  padding: var(--s0);
+  border-radius: var(--s-3);
+  box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+}
+
+.nowSection summary {
+  cursor: pointer;
+  font-size: 1.4em;
+}
+
+.nowSection .now_before {
+  display: none;
+}
+
+.now_after > * + * {
+  margin-top: 1em;
+}
+
+.nowSection ul {
+  margin-block-end: 0;
+  padding-inline-start: 1.5em;
+}
+
+.nowSection * + ul {
+  margin-block-start: 0.5em;
+}
+
+.nowSection summary + * {
+  margin-block-start: 1em;
+}
+
+.nowSection-info {
+  margin-block-start: 1em;
+  font-style: italic;
+}
+
+.nowSection hr {
+  border: none;
+  border-bottom: 2px dashed #ccc;
+}
