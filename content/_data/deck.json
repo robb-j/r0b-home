@@ -73,14 +73,14 @@
   {
     "image": "/img/projects/mozfest.png",
     "text": "MozFest virtual conference",
-    "url": "/projects/deconf",
+    "url": "https://schedule.mozillafestival.org",
     "tags": ["Web"],
     "year": 2022
   },
   {
     "image": "/img/projects/not-equal-catalyst.png",
     "text": "Project-matching app powered by Trello and Google Forms",
-    "url": "/projects/not-equal-catalyst",
+    "url": "https://catalyst.not-equal.tech",
     "tags": ["Web"],
     "year": 2019
   },
@@ -94,28 +94,28 @@
   {
     "image": "/img/projects/nova-gitfox.png",
     "text": "Open Nova projects in GitFox",
-    "url": "https://github.com/robb-j/nova-gitfox",
+    "url": "https://extensions.panic.com/extensions/robb-j/robb-j.Gitfox/",
     "tags": ["Nova"],
     "year": 2021
   },
   {
     "image": "/img/projects/nova-prisma.png",
     "text": "Prisma syntax highlighting & LSP for Nova.app",
-    "url": "https://github.com/robb-j/nova-prisma",
+    "url": "https://extensions.panic.com/extensions/robb-j/robb-j.Prisma/",
     "tags": ["Nova"],
     "year": 2021
   },
   {
     "image": "/img/projects/nova-xml.png",
     "text": "XML validation and formatting for Nova.app",
-    "url": "https://github.com/robb-j/nova-xml",
+    "url": "https://extensions.panic.com/extensions/robb-j/robb-j.XML/",
     "tags": ["Nova"],
     "year": 2021
   },
   {
     "image": "/img/projects/nova-yaml.png",
     "text": "YAML validation and formatting for Nova.app",
-    "url": "https://github.com/robb-j/nova-yaml",
+    "url": "https://extensions.panic.com/extensions/robb-j/robb-j.yaml/",
     "tags": ["Nova"],
     "year": 2022
   },
@@ -135,7 +135,7 @@
   {
     "image": "/img/projects/pdc-2022.png",
     "text": "PDC global virtual conference",
-    "url": "/projects/deconf",
+    "url": "https://schedule.pdc2022.org",
     "tags": ["Web"],
     "year": 2022
   },
