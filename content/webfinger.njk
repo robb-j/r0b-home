@@ -1,0 +1,28 @@
+---
+permalink: '.well-known/webfinger'
+eleventyExcludeFromCollections: true
+dynamicPermalink: false
+---
+{
+  "subject": "acct:rob@hyem.tech",
+  "aliases": [
+    "https://hyem.tech/@rob",
+    "https://hyem.tech/users/rob"
+  ],
+  "links": [
+    {
+      "rel": "http://webfinger.net/rel/profile-page",
+      "type": "text/html",
+      "href": "https://hyem.tech/@rob"
+    },
+    {
+      "rel": "self",
+      "type": "application/activity+json",
+      "href": "https://hyem.tech/users/rob"
+    },
+    {
+      "rel": "http://ostatus.org/schema/1.0/subscribe",
+      "template": "https://hyem.tech/authorize_interaction?uri={uri}"
+    }
+  ]
+}
