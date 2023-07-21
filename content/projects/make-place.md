@@ -1,9 +1,9 @@
 ---
 title: Make Place
 subtitle: A map-based feedback platform
-coverImage: /img/projects/make-place.png
+coverImage: /img/projects/make-place.webp
 meta:
-  image: /img/projects/make-place.png
+  image: /img/projects/make-place.webp
   summary: A web platform for geographical place-making activities and consultation
 date: 2017-07-01
 images:

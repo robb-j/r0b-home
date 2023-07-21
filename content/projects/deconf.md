@@ -1,9 +1,9 @@
 ---
 title: Deconf
 subtitle: A virtual conference framework and platform
-coverImage: /img/projects/deconf.png
+coverImage: /img/projects/deconf.webp
 meta:
-  image: /img/projects/deconf.png
+  image: /img/projects/deconf.webp
   summary: A virtual conference framework and platform
 date: 2022-10-01
 images:

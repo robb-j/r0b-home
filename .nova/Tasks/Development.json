@@ -4,6 +4,10 @@
       "enabled" : true,
       "script" : "#!\/bin\/sh\nnpm run build"
     },
+    "clean" : {
+      "enabled" : true,
+      "script" : "#!\/bin\/sh\nrm -rf _site"
+    },
     "run" : {
       "enabled" : true,
       "script" : "#!\/bin\/sh\nnpm run serve"

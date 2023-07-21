@@ -1,9 +1,9 @@
 ---
 title: Gabber
 subtitle: An app for preparing, recording and annotating conversations
-coverImage: /img/projects/gabber.png
+coverImage: /img/projects/gabber.webp
 meta:
-  image: /img/projects/gabber.png
+  image: /img/projects/gabber.webp
   summary: A privacy-focussed platform for facilitating structured conversations, collaborative analysis and open reporting
 date: 2018-06-04
 images:

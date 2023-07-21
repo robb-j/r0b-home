@@ -1,9 +1,9 @@
 ---
 title: Husky CMS
 subtitle: An experimental Trello-based website CMS
-coverImage: /img/projects/husky.png
+coverImage: /img/projects/husky.webp
 meta:
-  image: /img/projects/husky.png
+  image: /img/projects/husky.webp
   summary: An experimental Trello-based website CMS
 date: 2019-05-29
 images:

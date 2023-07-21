@@ -1,209 +1,304 @@
 [
   {
-    "image": "/img/projects/beagle.png",
+    "image": "/img/projects/beagle.webp",
     "text": "Operations dashboard for Open Lab infrastructure",
     "tags": ["Web"],
     "year": 2019
   },
   {
-    "image": "/img/projects/browser-now.png",
+    "image": "/img/projects/browser-now.webp",
     "text": "macOS menu app to quickly swap the default browser",
     "url": "https://apps.apple.com/gb/app/browsernow/id1633886387",
     "tags": ["Native"],
     "year": 2022
   },
   {
-    "image": "/img/projects/climate-red.png",
+    "image": "/img/projects/climate-red.webp",
     "text": "36 hour climate conference hosted by the Red Cross",
     "url": "https://climate-red.openlab.dev",
     "tags": ["Web"],
     "year": 2020
   },
   {
-    "image": "/img/projects/deconf.png",
+    "image": "/img/projects/deconf.webp",
     "text": "Open Source virtual conference platform",
     "url": "/projects/deconf",
     "tags": ["Web"],
     "year": 2021
   },
   {
-    "image": "/img/projects/digital-citizens.png",
+    "image": "/img/projects/digital-citizens.webp",
     "text": "Project website for Digital Citizens Centre",
     "tags": ["Web"],
     "year": 2021
   },
   {
-    "image": "/img/projects/gabber.png",
+    "image": "/img/projects/gabber.webp",
     "text": "Interview recording, annotation and reporting app",
     "tags": ["Web"],
     "year": 2018
   },
   {
-    "image": "/img/projects/golden-retriever.png",
+    "image": "/img/projects/golden-retriever.webp",
     "text": "Personal search engine",
     "tags": ["Web"],
     "year": 2018
   },
   {
-    "image": "/img/projects/husky.png",
+    "image": "/img/projects/husky.webp",
     "text": "Trello-powered website and CMS",
     "url": "/projects/husky-cms",
     "tags": ["Web"],
     "year": 2018
   },
   {
-    "image": "/img/projects/iris-msg.png",
+    "image": "/img/projects/iris-msg.webp",
     "text": "SMS donation platform for Greek solidarity movements",
     "tags": ["Native", "Web"],
     "year": 2018
   },
   {
-    "image": "/img/projects/make-place.png",
+    "image": "/img/projects/make-place.webp",
     "text": "Geograhpical mapping platform",
     "url": "/projects/make-place",
     "tags": ["Web"],
     "year": 2017
   },
   {
-    "image": "/img/projects/metro-futures.png",
+    "image": "/img/projects/metro-futures.webp",
     "text": "Newcastle metro online consultation",
     "tags": ["Web"],
     "year": 2016
   },
   {
-    "image": "/img/projects/mozfest.png",
+    "image": "/img/projects/mozfest.webp",
     "text": "MozFest virtual conference",
     "url": "https://schedule.mozillafestival.org",
     "tags": ["Web"],
     "year": 2022
   },
   {
-    "image": "/img/projects/not-equal-catalyst.png",
+    "image": "/img/projects/not-equal-catalyst.webp",
     "text": "Project-matching app powered by Trello and Google Forms",
     "url": "https://catalyst.not-equal.tech",
     "tags": ["Web"],
     "year": 2019
   },
   {
-    "image": "/img/projects/nova-doofer.png",
+    "image": "/img/projects/nova-doofer.webp",
     "text": "Personal utilities for Nova.app",
     "url": "https://github.com/robb-j/nova-doofer",
     "tags": ["Nova"],
     "year": 2021
   },
   {
-    "image": "/img/projects/nova-gitfox.png",
+    "image": "/img/projects/nova-gitfox.webp",
     "text": "Open Nova projects in GitFox",
     "url": "https://extensions.panic.com/extensions/robb-j/robb-j.Gitfox/",
     "tags": ["Nova"],
     "year": 2021
   },
   {
-    "image": "/img/projects/nova-prisma.png",
+    "image": "/img/projects/nova-prisma.webp",
     "text": "Prisma syntax highlighting & LSP for Nova.app",
     "url": "https://extensions.panic.com/extensions/robb-j/robb-j.Prisma/",
     "tags": ["Nova"],
     "year": 2021
   },
   {
-    "image": "/img/projects/nova-xml.png",
+    "image": "/img/projects/nova-xml.webp",
     "text": "XML validation and formatting for Nova.app",
     "url": "https://extensions.panic.com/extensions/robb-j/robb-j.XML/",
     "tags": ["Nova"],
     "year": 2021
   },
   {
-    "image": "/img/projects/nova-yaml.png",
+    "image": "/img/projects/nova-yaml.webp",
     "text": "YAML validation and formatting for Nova.app",
     "url": "https://extensions.panic.com/extensions/robb-j/robb-j.yaml/",
     "tags": ["Nova"],
     "year": 2022
   },
   {
-    "image": "/img/projects/ocelot-docs.png",
+    "image": "/img/projects/ocelot-docs.webp",
     "text": "RESTful API docs generator based on YAML definitions",
     "tags": ["Web"],
     "year": 2017
   },
   {
-    "image": "/img/projects/openlab-website.png",
+    "image": "/img/projects/openlab-website.webp",
     "text": "Group website and publication aggregator",
     "url": "https://openlab.ncl.ac.uk",
     "tags": ["Web"],
     "year": 2021
   },
   {
-    "image": "/img/projects/pdc-2022.png",
+    "image": "/img/projects/pdc-2022.webp",
     "text": "PDC global virtual conference",
     "url": "https://schedule.pdc2022.org",
     "tags": ["Web"],
     "year": 2022
   },
   {
-    "image": "/img/projects/planet-red.png",
+    "image": "/img/projects/planet-red.webp",
     "text": "Virtual climate conference hosted by the Red Cross",
     "url": "/projects/deconf",
     "tags": ["Web"],
     "year": 2021
   },
   {
-    "image": "/img/projects/pomadom.png",
+    "image": "/img/projects/pomadom.webp",
     "text": "Minimalistic macOS menu based pomadoro app",
     "tags": ["Native"],
     "year": 2021
   },
   {
-    "image": "/img/projects/r0b-blog.png",
+    "image": "/img/projects/r0b-blog.webp",
     "text": "My personal blog about app, web and iot tech",
     "url": "https://blog.r0b.io",
     "tags": ["Web"],
     "year": 2019
   },
   {
-    "image": "/img/projects/r0b-home.png",
+    "image": "/img/projects/r0b-home.webp",
     "text": "My personal website and project portfolio",
     "url": "https://www.r0b.io",
     "tags": ["Web"],
     "year": 2019
   },
   {
-    "image": "/img/projects/snek.png",
+    "image": "/img/projects/snek.webp",
     "text": "A no-framework web game of snake",
     "url": "https://snake.andrsn.uk",
     "tags": ["Web"],
     "year": 2018
   },
   {
-    "image": "/img/projects/solair.png",
+    "image": "/img/projects/solair.webp",
     "text": "Interactive workshops through the metaphore of a virtual airline journey",
     "url": "/projects/deconf",
     "tags": ["Web"],
     "year": 2021
   },
   {
-    "image": "/img/projects/think-active.png",
+    "image": "/img/projects/think-active.webp",
     "text": "Classroom-based interactive activity dashboard linked to smart bands",
     "tags": ["Web"],
     "year": 2019
   },
   {
-    "image": "/img/projects/tinypoll.png",
+    "image": "/img/projects/tinypoll.webp",
     "text": "Microscopic poll app",
     "tags": ["Web"],
     "year": 2019
   },
   {
-    "image": "/img/projects/what-futures.png",
+    "image": "/img/projects/what-futures.webp",
     "text": "Future forcasting game run for Red Cross volunteers",
     "url": "https://whatfutures.org",
     "tags": ["Web"],
     "year": 2019
   },
   {
-    "image": "/img/projects/yoath.png",
+    "image": "/img/projects/yoath.webp",
     "text": "A Menu Bar Extras app to quickly get YubiKey OATH codes",
     "url": "https://apps.apple.com/gb/app/yoath/id1660931205",
     "tags": ["Native"],
     "year": 2022
+  },
+  {
+    "image": "/img/projects/alembic.webp",
+    "text": "A design system for Open Lab research projects",
+    "url": "https://alembic.openlab.dev/",
+    "tags": ["Web"],
+    "year": 2022
+  },
+  {
+    "image": "/img/projects/appstore-downloads.webp",
+    "text": "A mini API to get your total App Store downloads",
+    "url": "https://github.com/robb-j/appstore-downloads",
+    "tags": ["Web"],
+    "year": 2023
+  },
+  {
+    "image": "/img/projects/data-diaries.webp",
+    "text": "A diary and reminder system for recalling and annotating web interactions",
+    "url": "https://hub.openlab.dev/things/13",
+    "tags": ["Web"],
+    "year": 2022
+  },
+  {
+    "image": "/img/projects/gamedoy.webp",
+    "text": "A little fantasy console, kinda like a gameboy, for the web",
+    "url": "https://gamedoy.r0b.io",
+    "tags": ["Web"],
+    "year": 2023
+  },
+  {
+    "image": "/img/projects/lets-talk-parks.webp",
+    "text": "A web engagement consulting on the direction of Newcastle's parks",
+    "url": "https://letstalkparks.co.uk/",
+    "tags": ["Web"],
+    "year": 2017
+  },
+  {
+    "image": "/img/projects/openlab-hub.webp",
+    "text": "A curated set of mini services to help Open Lab members",
+    "url": "https://hub.openlab.dev/things/16",
+    "tags": ["Web"],
+    "year": 2023
+  },
+  {
+    "image": "/img/projects/pitch-black.webp",
+    "text": "A side-scrolling zombie survival game where illumination is in limited supply",
+    "tags": ["Native"],
+    "year": 2013
+  },
+  {
+    "image": "/img/projects/please-no-w3.webp",
+    "text": "A web extension to hide w3schools search results",
+    "url": "https://github.com/robb-j/please-no-w3schools",
+    "tags": ["Web"],
+    "year": 2022
+  },
+  {
+    "image": "/img/projects/portals.webp",
+    "text": "Web and server libraries to setup and manage WebRTC experiences",
+    "url": "https://github.com/digitalinteraction/portals",
+    "tags": ["Web"],
+    "year": 2022
+  },
+  {
+    "image": "/img/projects/registry-ui.webp",
+    "text": "A lightweight web app to view the contents of a container registry",
+    "tags": ["Web"],
+    "year": 2023
+  },
+  {
+    "image": "/img/projects/repo-api-service.webp",
+    "text": "A RESTful API for querying a git repository and commiting changes back",
+    "url": "https://github.com/robb-j/repo-api-service",
+    "tags": ["Web"],
+    "year": 2023
+  },
+  {
+    "image": "/img/projects/sketch-svg-spritesheet.webp",
+    "text": "Plugin for Sketch to generate a spritesheet of SVG assets for the web",
+    "url": "https://github.com/robb-j/sketch-svg-spritesheet",
+    "tags": ["Web"],
+    "year": 2023
+  },
+  {
+    "image": "/img/projects/sticker-stories.webp",
+    "text": "Web engagement platform for anonymous feedback on physical locations using QR codes and A.I. moderation",
+    "url": "https://hub.openlab.dev/things/14",
+    "tags": ["Web"],
+    "year": 2022
+  },
+  {
+    "image": "/img/projects/swift-runner.webp",
+    "text": "A side-scrolling endless runner game with procedural generation",
+    "tags": ["Native"],
+    "year": 2015
   }
 ]

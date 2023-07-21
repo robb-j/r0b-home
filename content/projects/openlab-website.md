@@ -1,9 +1,9 @@
 ---
 title: Open Lab Website
 subtitle: A virtual conference about the climate crisis
-coverImage: /img/projects/openlab-website.png
+coverImage: /img/projects/openlab-website.webp
 meta:
-  image: /img/projects/openlab-website.png
+  image: /img/projects/openlab-website.webp
   summary: TODO
 date: 2020-07-01
 draft: true
