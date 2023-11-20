@@ -69,3 +69,9 @@
 .circleButton[data-accent='scholar'] {
   background-color: #4c90fe;
 }
+.circleButton[data-accent='strava'] {
+  background-color: #f55308;
+}
+.circleButton[data-accent='letterboxd'] {
+  background-color: #1f282f;
+}

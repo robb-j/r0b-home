@@ -12,10 +12,22 @@
     "label": "GitHub"
   },
   {
-    "url": "https://hub.docker.com/u/robbj",
-    "accent": "dockerhub",
-    "icon": "dockerhub",
-    "label": "DockerHub"
+    "url": "https://www.strava.com/athletes/25065165",
+    "accent": "strava",
+    "icon": "strava",
+    "label": "Strava"
+  },
+  {
+    "url": "https://boxd.it/5C89d",
+    "accent": "letterboxd",
+    "icon": "letterboxd",
+    "label": "Letterboxd"
+  },
+  {
+    "url": "https://scholar.google.co.uk/citations?user=wiTYWScAAAAJ&hl=en",
+    "accent": "scholar",
+    "icon": "scholar",
+    "label": "Google Scholar"
   },
   {
     "url": "https://tweets.r0b.io/",
@@ -24,9 +36,9 @@
     "label": "Twitter"
   },
   {
-    "url": "https://scholar.google.co.uk/citations?user=wiTYWScAAAAJ&hl=en",
-    "accent": "scholar",
-    "icon": "scholar",
-    "label": "Google Scholar"
+    "url": "https://hub.docker.com/u/robbj",
+    "accent": "dockerhub",
+    "icon": "dockerhub",
+    "label": "DockerHub"
   }
 ]
