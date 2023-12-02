@@ -183,7 +183,7 @@
   {
     "image": "/img/projects/think-active.webp",
     "text": "Classroom-based interactive activity dashboard linked to smart bands",
-    "tags": ["Web"],
+    "tags": ["Web", "Physical"],
     "year": 2019
   },
   {
@@ -203,7 +203,7 @@
     "image": "/img/projects/yoath.webp",
     "text": "A Menu Bar Extras app to quickly get YubiKey OATH codes",
     "url": "https://apps.apple.com/gb/app/yoath/id1660931205",
-    "tags": ["Native"],
+    "tags": ["Native", "Physical"],
     "year": 2022
   },
   {
@@ -217,7 +217,7 @@
     "image": "/img/projects/appstore-downloads.webp",
     "text": "A mini API to get your total App Store downloads",
     "url": "https://github.com/robb-j/appstore-downloads",
-    "tags": ["Web"],
+    "tags": ["Infra"],
     "year": 2023
   },
   {
@@ -245,7 +245,7 @@
     "image": "/img/projects/openlab-hub.webp",
     "text": "A curated set of mini services to help Open Lab members",
     "url": "https://hub.openlab.dev/things/16",
-    "tags": ["Web"],
+    "tags": ["Web", "Infra"],
     "year": 2023
   },
   {
@@ -265,7 +265,7 @@
     "image": "/img/projects/portals.webp",
     "text": "Web and server libraries to setup and manage WebRTC experiences",
     "url": "https://github.com/digitalinteraction/portals",
-    "tags": ["Web"],
+    "tags": ["Web", "Physical"],
     "year": 2022
   },
   {
@@ -301,5 +301,47 @@
     "text": "A side-scrolling endless runner game with procedural generation",
     "tags": ["Native"],
     "year": 2015
+  },
+  {
+    "image": "/img/projects/accounts-officer.webp",
+    "text": "A tool for querying hosting platforms and getting that data into a managable AirTable",
+    "url": "https://github.com/digitalinteraction/accounts-officer",
+    "tags": ["Infra"],
+    "year": 2020
+  },
+  {
+    "image": "/img/projects/coffee-club.webp",
+    "text": "A system for fairly buying coffee beans for a shared bean-to-cup machine",
+    "url": "https://github.com/digitalinteraction/beancounter",
+    "tags": ["Web", "Physical"],
+    "year": 2021
+  },
+  {
+    "image": "/img/projects/fonts-openlab-dev.webp",
+    "text": "A local CDN of fonts for Open Lab",
+    "url": "https://fonts.openlab.dev",
+    "tags": ["Web", "Infra"],
+    "year": 2022
+  },
+  {
+    "image": "/img/projects/open-blab.webp",
+    "text": "A self-hosted podcast recorded at Open Lab",
+    "url": "https://blab.openlab.dev",
+    "tags": ["Web"],
+    "year": 2023
+  },
+  {
+    "image": "/img/projects/poster-vote.webp",
+    "text": "A system for making ordinary posters interactive through flexible circuits and telephony",
+    "url": "https://postervote.openlab.ncl.ac.uk",
+    "tags": ["Web", "Physical"],
+    "year": 2018
+  },
+  {
+    "image": "/img/projects/tech-tuesdays.png",
+    "text": "A irregular get together to talk about tech with an Eleventy website that hosts the calendar",
+    "url": "https://tuesday.openlab.dev",
+    "tags": ["Web"],
+    "year": 2023
   }
 ]

@@ -88,7 +88,17 @@ layout: html.njk
   <div class="pageBlock">
     <center-layout max="90vw" intrinsic>
       <div class="projectDeck">
-        <p class="projectDeck-header">My stuff</p>
+        <p class="projectDeck-header">
+          <cluster-layout space="var(--s-1)">
+            <button id="organiseDeck">Chronological</button>
+            <button id="shuffleDeck">Shuffle</button>
+            <button class="taggedDeck" data-tag="Web">Web</button>
+            <button class="taggedDeck" data-tag="Native">Native</button>
+            <button class="taggedDeck" data-tag="Nova">Nova</button>
+            <button class="taggedDeck" data-tag="Physical">Physical</button>
+            <button class="taggedDeck" data-tag="Infra">Infra</button>
+          </cluster-layout>
+        </p>
         <reel-layout>
           <div class="projectDeck-cards">
             {% for card in deck | sortCards %}
@@ -96,15 +106,6 @@ layout: html.njk
             {% endfor %}
           </div>
         </reel-layout>
-        <div class="projectDeck-footer">
-          <cluster-layout space="var(--s-1)">
-            <button id="organiseDeck">Chronological</button>
-            <button id="shuffleDeck">Shuffle</button>
-            <button class="taggedDeck" data-tag="Web">Web</button>
-            <button class="taggedDeck" data-tag="Native">Native</button>
-            <button class="taggedDeck" data-tag="Nova">Nova</button>
-          </cluster-layout>
-        </div>
       </div>
     </center-layout>
   </div>

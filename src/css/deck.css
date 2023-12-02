@@ -26,6 +26,7 @@
   min-width: 1048px;
   position: relative;
 }
+.projectDeck-header button,
 .projectDeck-footer button {
   font-family: var(--family-alt);
   font-weight: 600;

@@ -16,7 +16,7 @@ footer {
   border-bottom: var(--s-3) solid var(--color-primary);
   padding: var(--s4) 0 var(--s-1);
 }
-footer a {
+footer a:not([class]) {
   color: #363636;
   text-decoration: underline;
   font-weight: bold;
