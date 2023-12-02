@@ -340,7 +340,7 @@
   {
     "image": "/img/projects/tech-tuesdays.png",
     "text": "A irregular get together to talk about tech with an Eleventy website that hosts the calendar",
-    "url": "https://tuesday.openlab.dev",
+    "url": "https://tuesdays.openlab.dev",
     "tags": ["Web"],
     "year": 2023
   }
