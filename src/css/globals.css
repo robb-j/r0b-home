@@ -74,10 +74,3 @@ code {
   font-size: 0.875em;
   font-weight: normal;
 }
-
-/*
-  hacks
-*/
-cover-layout > center-layout {
-  width: 100%;
-}
