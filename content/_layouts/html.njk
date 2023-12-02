@@ -4,8 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>{{ title + ' |' if title }} {{ site.title }}</title>
-    <link rel="stylesheet" href="{{  '/dist/css/styles.css' | url }}" />
-    <link rel="icon" href="{{ '/img/favicon.jpg' | url }}?v=2" />
+    <link rel="icon" href="/img/favicon.png" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/font/nunito/nunito.css" />
     <meta name="theme-color" content="{{ meta.color or '#4a5899' }}" />
     <meta
       property="og:title"
@@ -26,7 +27,7 @@
   <body>
     {{ content | safe }}
     <div class="glitched"></div>
-    <script src="{{ '/dist/js/app.js' | url }}"></script>
+    <script src="/dist/js/app.js"></script>
     <script src="https://cdn.usefathom.com/script.js" data-site="LYDSSVMX" defer></script>
   </body>
 </html>

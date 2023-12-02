@@ -6,16 +6,12 @@ layout: html.njk
   <div class="pageBlock" data-accent="liberty">
     <cover-layout minHeight="60vh" centered="#welcome" space="var(--s0)" style="gap: var(--s1)">
       {% include 'nav.njk' %}
-      
+
       <center-layout max="90ch" style="width: 100%" id="welcome">
         <sidebar-layout sideWidth="256px" contentMin="65%">
           <frame-layout ratio="1:1" class="profilePic">
             <picture>
-              <img 
-                width="256"
-                height="256"
-                src="{{ '/img/me.jpg' | url }}"
-              >
+              <img width="256" height="256" src="/img/me.jpg" />
             </picture>
           </frame-layout>
           <cluster-layout space="var(--s-2)" class="welcomeCluster">
@@ -23,7 +19,7 @@ layout: html.njk
               <span class="welcomeCluster-prefix">I'm rob, I make ...</span>
               <span id="miscSkill">stuff</span>
             </h1>
-            
+
             {% for link in links %}
             <a href="{{ link.url }}" class="circleButton" data-accent="{{ link.accent }}" rel="me">
               <icon-layout label="{{ link.label }}">
@@ -45,7 +41,7 @@ layout: html.njk
       </center-layout>
     </cover-layout>
   </div>
-  
+
   <!-- Projects -->
   <div class="pageBlock">
     <center-layout max="120ch" gutters="var(--s0)">
@@ -54,7 +50,11 @@ layout: html.njk
           <div class="projectsHeader">
             <stack-layout space="var(--s-1)">
               <h2>Latest Projects</h2>
-              <p>I make web stuff and tinker with native apps. Less JavaScript, modern CSS and more mac-assed apps. These are the latest of my projects that I've written up.</p>
+              <p>
+                I make web stuff and tinker with native apps. Less JavaScript,
+                modern CSS and more mac-assed apps. These are the latest of my
+                projects that I've written up.
+              </p>
             </stack-layout>
           </div>
           <grid-layout min="300px">
@@ -62,18 +62,16 @@ layout: html.njk
               {% include 'project-card.njk' %}
             {% endfor %}
             <frame-layout ratio="16:9">
-              <a class="viewMore" href="{{ '/projects' | url }}">
-                Projects
-              </a>
+              <a class="viewMore" href="/projects"> Projects </a>
             </frame-layout>
           </grid-layout>
         </sidebar-layout>
       </div>
     </center-layout>
   </div>
-  
-  <!-- Blog but -->
-  <div class="pageBlock" data-accent="magenta">
+
+  <!-- Blog bit -->
+  <div class="pageBlock" data-accent="blog">
     <center-layout max="640px" gutters="var(--s0)">
       <div class="a4Page">
         <stack-layout>
@@ -85,7 +83,7 @@ layout: html.njk
       </div>
     </center-layout>
   </div>
-  
+
   <!-- New bit -->
   <div class="pageBlock">
     <center-layout max="90vw" intrinsic>

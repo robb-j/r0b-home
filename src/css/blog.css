@@ -3,8 +3,8 @@
 */
 .a4Page {
   color: var(--color-bluePen);
-  font-family: var(--family-nunito);
-  background-image: url(./paper.png);
+  font-family: var(--family-alt);
+  background-image: url(/img/paper.png);
   background-repeat: repeat;
   padding: calc(var(--s-3) + 3vw);
   box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.3);
@@ -20,6 +20,6 @@
 .a4Page .viewMore {
   /* These overrides aren't ideal */
   text-decoration: none;
-  font-family: var(--family-system);
+  font-family: var(--family-main);
   font-weight: 600;
 }

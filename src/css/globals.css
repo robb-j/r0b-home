@@ -1,31 +1,8 @@
 /*
-  FONTS
-*/
-
-@font-face {
-  font-family: 'Nunito';
-  src: url(../font/nunito/Nunito-VariableFont_wght.woff2)
-      format('woff2-variations'),
-    url(../font/nunito/Nunito-VariableFont_wght.ttf) format('ttf');
-
-  font-weight: 200 1000;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Nunito';
-  src: url(../font/nunito/Nunito-Italic-VariableFont_wght.woff2)
-      format('woff2-variations'),
-    url(../font/nunito/Nunito-Italic-VariableFont_wght.ttf) format('ttf');
-  font-weight: 200 1000;
-  font-style: italic;
-}
-
-/*
   Globals
 */
 html {
-  font-family: var(--family-system);
+  font-family: var(--family-main);
   line-height: 1.4;
   color: var(--color-dark);
   font-size: 16px;
@@ -54,9 +31,7 @@ figcaption {
 }
 
 /*
-  CONTENT WIP ...
-  What does bulma do?
-  https://github.com/jgthms/bulma/blob/master/sass/elements/content.sass
+  Headings
 */
 h1,
 h2,
@@ -70,4 +45,11 @@ h6 {
 
 pre {
   border-left: 5px solid #209cee;
+}
+
+/*
+  hacks
+*/
+cover-layout > center-layout {
+  width: 100%;
 }

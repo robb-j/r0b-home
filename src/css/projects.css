@@ -30,6 +30,7 @@ grid-layout.projectGrid {
   text-decoration: underline;
 }
 .projectCard-banner {
+  color: var(--color-anchor);
   padding: var(--s-2) var(--s0);
 }
 .projectCard-comingSoon {

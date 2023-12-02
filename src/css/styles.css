@@ -1,6 +1,3 @@
-@import '@openlab/alembic/reset.css';
-@import '@openlab/alembic/layouts.css';
-
 @import 'prism-themes/themes/prism-dracula.css';
 
 @import './globals.css';
@@ -15,8 +12,8 @@
   /* ... */
   --measure: 60ch;
 
-  --family-system: system-ui, sans-serif;
-  --family-nunito: Nunito, system-ui, sans-serif;
+  --family-main: system-ui, sans-serif;
+  --family-alt: Nunito, system-ui, sans-serif;
   --family-mono: ui-monospace, SFMono-Regular, Consolas, Liberation Mono, Menlo,
     Courier, monospace;
 
@@ -24,11 +21,14 @@
   --color-yellow: #ffdd57;
   --color-magenta: #92374d;
   --color-berry: #8c5483;
-  --color-liberty: #4a5899;
+  --color-liberty: #38488d;
   /* --color-offBlue: #559cad; */
   /* --color-silver: #c0b2aa; */
   /* --color-deepKoamaru: #392b58; */
   --color-bluePen: #00188a;
+  --color-blog: #377c85;
+
+  --color-primary: var(--color-liberty);
 
   --color-dark: #4a4a4a;
   --color-light: white;

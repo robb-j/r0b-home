@@ -1,4 +1,5 @@
 .projectDeck {
+  width: 100%;
   background-size: cover;
   background-image: url(../img/abstract-background.jpg);
   border-radius: var(--s-1);
@@ -26,7 +27,7 @@
   position: relative;
 }
 .projectDeck-footer button {
-  font-family: var(--family-nunito);
+  font-family: var(--family-alt);
   font-weight: 600;
   font-size: 1.2em;
   color: inherit;
