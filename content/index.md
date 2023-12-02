@@ -4,13 +4,11 @@ title: Hey!
 projects:
   title: Latest Projects
   text: >
-    I'm a developer making apps and services on the web. I've
-    made technologies like virtual conference schedules, digital
+    I'm a developer that makes apps and websites. I've
+    made technologies to host virtual conferences, novel digital
     posters, interview tagging interfaces, JavaScript frameworks
     and native apps.
   action: Projects
-board:
-  title: 🔗 Quick Links
 ---
 
 ## About me
