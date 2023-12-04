@@ -15,7 +15,7 @@ grid-layout.projectGrid {
   background: var(--color-light);
   box-shadow: 0 3px 1px rgba(0, 0, 0, 0.05);
   position: relative;
-  overflow: hidden;
+/*   overflow: hidden; this breaks the frame-layout on Safari mobile :S */
 }
 .projectCard a {
   display: block;
