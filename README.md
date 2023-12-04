@@ -1,4 +1,4 @@
-# www.r0b.io [![Netlify Status](https://api.netlify.com/api/v1/badges/ed3d45ba-da8f-471d-9e03-da6a2e4668ec/deploy-status)](https://app.netlify.com/sites/sharp-newton-2d30e6/deploys)
+# www.r0b.io [![Netlify Status](https://api.netlify.com/api/v1/badges/ed3d45ba-da8f-471d-9e03-da6a2e4668ec/deploy-status)](https://app.netlify.com/sites/www-r0b-io/deploys)
 
 My personal website, a static site generated with [11ty](https://www.11ty.dev/)
 using [@openlab/alembic](https://github.com/digitalinteraction/alembic/)
