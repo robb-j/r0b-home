@@ -1,0 +1,111 @@
+---
+layout: html.njk
+title: Hey!
+---
+
+<style>
+#columns {
+  display: flex;
+  padding: 1em;
+  gap: 1em;
+}
+#columns > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+#middle {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#rain {
+  height: 100vh;
+  overflow: hidden;
+}
+#a {
+  animation: a var(--duration) linear infinite;
+}
+#b {
+  animation: b var(--duration) linear infinite;
+}
+#c {
+  animation: c var(--duration) linear infinite;
+}
+#d {
+  animation: d var(--duration) linear infinite;
+}
+
+@keyframes a {
+  0% { transform: translate(0, -50%); }
+  100% { transform: translate(0, calc(0% + 0.5em)); }
+}
+@keyframes b {
+  0% { transform: translate(0, calc(-50% - 50px)); }
+  100% { transform: translate(0, calc(0% + 0.5em - 50px)); }
+}
+@keyframes c {
+  0% { transform: translate(0, calc(-50% - 100px)); }
+  100% { transform: translate(0, calc(0% + 0.5em - 100px)); }
+}
+@keyframes d {
+  0% { transform: translate(0, calc(-50% - 150px)); }
+  100% { transform: translate(0, calc(0% + 0.5em - 150px)) }
+}
+
+</style>
+
+<div id="rain">
+  <div id="columns">
+    <div id="a"></div>
+    <div id="b"></div>
+    <div id="c"></div>
+    <div id="d"></div>
+  </div>
+</div>
+
+<script type="module">
+const {rain,a,b,c,d} = window
+
+const data = JSON.parse(`{{ deck | dump | safe }}`)
+
+rain.style.setProperty("--duration", `${data.length}s`);
+
+
+// https://stackoverflow.com/q/2450954
+function shuffle(array) {
+  let currentIndex = array.length;
+  while (currentIndex != 0) {
+    let randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+    [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+  }
+}
+
+shuffle(data)
+
+function add(project, column) {
+  const img = column.appendChild(document.createElement('img'))
+  img.src = project.image
+  img.width = '768'
+  img.height = '432'
+  img.loading = 'eager'
+}
+
+let columns = [a,b,c,d]
+let column = 0
+
+for (const project of data) {
+  add(project, columns[column])
+  column = (column + 1) % 4
+}
+
+// Double the content so it can be looped at 50% through
+columns[0].innerHTML += columns[0].innerHTML
+columns[1].innerHTML += columns[1].innerHTML
+columns[2].innerHTML += columns[2].innerHTML
+columns[3].innerHTML += columns[3].innerHTML
+
+
+</script>
