@@ -25,16 +25,16 @@ title: Hey!
   overflow: hidden;
 }
 #a {
-  animation: a var(--duration) linear infinite;
+  animation: a calc(var(--duration) + 3s) linear infinite;
 }
 #b {
-  animation: b var(--duration) linear infinite;
+  animation: b calc(var(--duration) + 0s) linear infinite;
 }
 #c {
-  animation: c var(--duration) linear infinite;
+  animation: c calc(var(--duration) - 3s) linear infinite;
 }
 #d {
-  animation: d var(--duration) linear infinite;
+  animation: d calc(var(--duration) - 6s) linear infinite;
 }
 
 @keyframes a {
